@@ -11,12 +11,12 @@ const Footer = () => {
                 <span>Follow us!</span>
                 <a href="http://instagram.com/veciiin" target="_blank" rel="noreferrer"><h3>@Veciiin</h3></a>
             </div>
-            <div className="footer-social-images">
+            <div className="scroll">
                 <div className="footer-social-images-container">
                     <Image src={footer1} alt="" />
                 </div>
                 <div className="footer-social-images-container">
-                    <Image src={footer2} alt="" />
+                    <Image src={footer2} alt=""/>
                 </div>
                 <div className="footer-social-images-container">
                     <Image src={footer3} alt="" />

@@ -47,7 +47,7 @@
 
   &-open {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: -100%;
     position: fixed;
     display: flex;
@@ -177,7 +177,7 @@
 
   .hamburger-container{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     flex:1;
     @media(max-width:1023px){
       flex: none;
