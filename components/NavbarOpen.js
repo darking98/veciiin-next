@@ -1,9 +1,24 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Bubble from "./Bubble";
 
 const NavbarOpen = ({ active, handleActive }) => {
+  const [querie, setQuerie] = useState('');
+  const list = typeof window !== "undefined" && window.matchMedia('(max-width:1023px)')
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      list.onchange = (e) => {
+        if(e.matches){
+          setQuerie('medium')
+        }else{
+          setQuerie('big')
+        }
+      }
+    }
+  },[list])
+
   const router = useRouter();
   const links = [
     [
@@ -55,10 +70,8 @@ const NavbarOpen = ({ active, handleActive }) => {
   return (
     <div className={active ? "navbar-open nav-transititon" : "navbar-open"}>
       <div className="navbar-open-container">
-        {/*<div className="navbar-container">*/}
-
         <div className="navbar-links-wrapper">
-          {links.map((link, index) => {
+          {links.map((link) => {
             return <div className="navbar-pairs">
               {link.map((element) => (
                 <Link href={element.path} onClick={handleActive}>
@@ -66,7 +79,7 @@ const NavbarOpen = ({ active, handleActive }) => {
                   {router.pathname == element.path ? (
                     <div className="navlink-router">
                       <span className="numeral-link">{element.order}</span>
-                      <Bubble size="medium" background="#CECF70">
+                      <Bubble size={querie} background="#CECF70">
                         {element.title}
                       </Bubble>
                     </div>
@@ -81,32 +94,7 @@ const NavbarOpen = ({ active, handleActive }) => {
               ))}
             </div>;
           })}
-          {/*links.map((link) => {
-            return (
-              link.order % 2 !== 0 && (
-                <Link href={link.path} onClick={handleActive}>
-                  <a className onClick={handleActive}>
-                    {router.pathname == link.path ? (
-                      <div className="navlink-router">
-                        <span className="numeral-link">{link.order}</span>
-                        <Bubble size="medium" background="#CECF70">
-                          {link.title}
-                        </Bubble>
-                      </div>
-                    ) : (
-                      <>
-                        <span className="numeral-link">{link.order}</span>
-                        <div className="title-link">{link.title}</div>
-                      </>
-                    )}
-                  </a>
-                </Link>
-              )
-            );
-          })*/}
         </div>
-        {/*</div>*/}
-
         <div className="navbar-social">
           <Link href="https://instagram.com">
             <a>

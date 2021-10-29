@@ -16,7 +16,6 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -890,6 +889,24 @@ section {
   color: #242424;
 }
 
+@media (max-width: 1280px) {
+  .projects {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .projects {
+    padding: 100px 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100vw;
+  }
+}
+
 .projects-fixed {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -904,16 +921,39 @@ section {
   height: 100%;
 }
 
+.projects-fixed .bubble-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #f5ede7;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: "Raleway";
+  margin-top: -120px;
+}
+
+@media (max-width: 1180px) {
+  .projects-fixed .bubble-container {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .projects-fixed {
+    position: static;
+    margin-bottom: 40px;
+  }
+}
+
 .projects-fixed span {
   text-transform: uppercase;
   opacity: 0.7;
   font-size: 12px;
-}
-
-.projects-fixed p {
-  font-size: 16px;
-  width: 548px;
-  line-height: 30px;
 }
 
 .projects-fixed-container-title {
@@ -924,9 +964,21 @@ section {
   white-space: pre-wrap;
 }
 
+@media (max-width: 1180px) {
+  .projects-fixed-container-title {
+    width: auto;
+  }
+}
+
 .projects-fixed-container-title h3 {
   font-weight: 400;
-  font-size: 120px;
+  font-size: 10vh;
+}
+
+@media (max-width: 1180px) {
+  .projects-fixed-container-title h3 {
+    font-size: 7vh;
+  }
 }
 
 .projects-fixed-container-title .bubble {
@@ -947,6 +999,19 @@ section {
   margin-left: 100px;
 }
 
+@media (max-width: 1180px) {
+  .projects-gallery-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .projects-gallery-container .projects-gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -961,6 +1026,19 @@ section {
   margin-top: -100px;
 }
 
+@media (max-width: 1280px) {
+  .projects-gallery-container .group1 {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .projects-gallery-container .group1 {
+    margin-top: 0px;
+    margin-right: 0px;
+  }
+}
+
 .projects-gallery-container .projects-gallery-element {
   position: relative;
   margin-bottom: 100px;
@@ -968,6 +1046,12 @@ section {
   display: -ms-flexbox;
   display: flex;
   color: #f5ede7;
+}
+
+@media (max-width: 1180px) {
+  .projects-gallery-container .projects-gallery-element {
+    margin-bottom: 40px;
+  }
 }
 
 .projects-gallery-container .projects-gallery-element:hover > .projects-gallery-info {
@@ -996,6 +1080,112 @@ section {
 
 .projects-gallery-container .projects-gallery-element .projects-gallery-info h4 {
   font-size: 40px;
+}
+
+@media (max-width: 1280px) {
+  .projects-gallery-container .projects-gallery-element .projects-gallery-info h4 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .projects-gallery-container .projects-gallery-element .projects-gallery-info p {
+    font-size: 12px;
+  }
+}
+
+.projects-asked-question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media (max-width: 1180px) {
+  .projects-asked-question {
+    padding: 100px 30px;
+  }
+}
+
+.projects-asked-question span {
+  text-transform: uppercase;
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+.projects-asked-question-title {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.projects-asked-question-title div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projects-asked-question-title div .bubble {
+  margin-left: 20px;
+  color: #f5ede7;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "Raleway";
+}
+
+.projects-asked-question-title h3 {
+  font-size: 8vh;
+  opacity: 0.8;
+}
+
+@media (max-width: 1180px) {
+  .projects-asked-question-title h3 {
+    font-size: 6vh;
+  }
+}
+
+.projects-asked-question-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+}
+
+@media (max-width: 1180px) {
+  .projects-asked-question-grid {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.projects-asked-question-grid .asked-question-grid-item .grid-item-title {
+  margin-bottom: 20px;
+}
+
+.projects-asked-question-grid .asked-question-grid-item .grid-item-title h3 {
+  font-family: "Raleway";
+  font-weight: normal;
+  font-size: 24px;
+}
+
+.projects-asked-question-grid .asked-question-grid-item .grid-item-description {
+  font-size: 12px;
+  line-height: 1.5rem;
 }
 
 .services {
@@ -1599,6 +1789,7 @@ section {
   font-weight: 600;
   letter-spacing: 1px;
   font-size: 12px;
+  text-transform: uppercase;
 }
 
 .quiz {

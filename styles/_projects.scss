@@ -1,83 +1,204 @@
-.projects{
+.projects {
+  display: flex;
+  min-height: 100vh;
+  background-color: $white;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 250px;
+  padding-bottom: 100px;
+  color: $black;
+  @media (max-width: 1280px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  @media (max-width: 1180px) {
+    padding: 100px 30px;
+    flex-direction: column;
+    width: 100vw;
+  }
+  &-fixed {
     display: flex;
-    min-height: 100vh;
-    background-color: $white;
-    padding-left:150px;
-    padding-right: 150px;
-    padding-top:250px;
-    padding-bottom: 100px;
-    color: $black;
-    &-fixed{
+    flex-direction: column;
+    position: sticky;
+    top: 80px;
+    height: 100%;
+
+    .bubble-container {
+      display: flex;
+      justify-content: flex-end;
+      color: $white;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-family: $raleway;
+      margin-top: -120px;
+      @media (max-width: 1180px) {
+        margin-top: 0px;
+      }
+    }
+    @media (max-width: 1180px) {
+      position: static;
+      margin-bottom: 40px;
+    }
+    span {
+      text-transform: uppercase;
+      opacity: 0.7;
+      font-size: 12px;
+    }
+    &-container-title {
+      width: 631px;
+      display: flex;
+      white-space: pre-wrap;
+      @media (max-width: 1180px) {
+        width: auto;
+      }
+      h3 {
+        font-weight: 400;
+        font-size: 10vh;
+
+        @media (max-width: 1180px) {
+          font-size: 7vh;
+        }
+      }
+
+      .bubble {
+        align-self: flex-end;
+        margin-bottom: 50px;
+        margin-left: -100px;
+      }
+    }
+  }
+
+  &-gallery-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 100px;
+
+    @media (max-width: 1180px) {
+      flex-direction: column;
+      margin-left: 0px;
+      align-items: center;
+    }
+    .projects-gallery {
+      display: flex;
+      flex-direction: column;
+    }
+    .group1 {
+      margin-top: -100px;
+      @media (max-width: 1280px) {
+        margin-right: 20px;
+      }
+
+      @media (max-width: 1180px) {
+        margin-top: 0px;
+        margin-right: 0px;
+      }
+    }
+
+    .projects-gallery-element {
+      position: relative;
+      margin-bottom: 100px;
+      display: flex;
+      color: $white;
+
+      @media (max-width: 1180px) {
+        margin-bottom: 40px;
+      }
+
+      &:hover > .projects-gallery-info {
+        opacity: 1;
+      }
+      .projects-gallery-info {
+        height: 100%;
         display: flex;
         flex-direction: column;
-        position:sticky;
-        top:80px;
-        height: 100%;
-        span{
-            text-transform: uppercase;
-            opacity: 0.7;
+        justify-content: center;
+        padding: 20px;
+        position: absolute;
+        opacity: 0;
+        background-color: #4b0705ab;
+        transition: 300ms ease-in-out;
+        h4 {
+          font-size: 40px;
+          @media (max-width: 1280px) {
+            font-size: 20px;
+          }
+        }
+        p {
+          @media (max-width: 1280px) {
             font-size: 12px;
+          }
         }
-        p{
-            font-size: 16px;
-            width: 548px;
-            line-height: 30px;
-        }
+      }
+    }
+  }
+}
+.projects-asked-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top:100px ;
+  padding-bottom: 100px;
+  @media(max-width:1180px){
+    padding: 100px 30px;  
+}
+  span {
+    text-transform: uppercase;
+    opacity: 0.7;
+    font-size: 12px;
+  }
 
-        &-container-title{
-            width: 631px;
-            display: flex;
-            white-space: pre-wrap;
+  &-title {
+    text-align: center;
+    margin-bottom: 100px;
+    div {
+      display: flex;
+      justify-content: center;
+      .bubble {
+        margin-left: 20px;
+        color: $white;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: $raleway;
+      }
+    }
+    h3 {
+      font-size: 8vh;
+      opacity: 0.8;
 
+      @media(max-width:1180px){
+          font-size: 6vh;
+      }
+    }
+  }
+
+  &-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 100px;
+    @media(max-width:1180px){
+        grid-template-columns: repeat(1,1fr);
+    }
+    .asked-question-grid-item{
+        .grid-item-title{
             h3{
-                font-weight: 400;
-                font-size: 120px;
+                font-family: $raleway;
+                font-weight: normal;
+                font-size: 24px;
             }
+            margin-bottom: 20px;
+        }
+        .grid-item-description{
+            font-size: 12px;
+            line-height: 1.5rem;
+        }
+    }
     
-            .bubble{
-                align-self: flex-end;
-                margin-bottom: 50px;
-                margin-left: -100px;
-            }
-        }
-    }
-
-    &-gallery-container{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        margin-left: 100px;
-        .projects-gallery{
-            display: flex;
-            flex-direction: column;
-        }
-        .group1{
-            margin-top: -100px;
-        }
-
-        .projects-gallery-element{
-            position: relative;
-            margin-bottom: 100px;
-            display: flex;
-            color: $white;
-
-            &:hover > .projects-gallery-info{
-                opacity: 1;
-            }
-            .projects-gallery-info{
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                padding: 20px;
-                position: absolute;
-                opacity:0;
-                background-color: #4b0705ab;
-                transition: 300ms ease-in-out;
-                h4{
-                    font-size: 40px;
-                }
-            }
-        }
-    }
+  }
 }
