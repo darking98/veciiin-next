@@ -7,7 +7,7 @@ import Head from "next/head";
 import Bubble from "../../components/Bubble";
 import aboutImages from "../../images/about/about-images.png";
 import aboutHorizontal from "../../images/about/fotoNaty.png";
-import aboutFeatured from '../../images/about/imagen-22.png'
+import aboutFeatured from '../../images/about/Imagen-22.png'
 import naty from "../../images/about/naty.png";
 const About = () => {
   return (
