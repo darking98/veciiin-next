@@ -15,7 +15,7 @@ import image13 from "../../images/quiz/image13.jpg";
 import image14 from "../../images/quiz/image14.jpg";
 import image15 from "../../images/quiz/image15.jpg";
 import image16 from "../../images/quiz/image16.jpg";
-import QuizElement from "./components/QuizElement";
+import QuizElement from '../../components/QuizElement'
 //import { NavbarContext } from "../context/NavProvider";
 import Bubble from "../../components/Bubble";
 

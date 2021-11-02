@@ -9,6 +9,7 @@ const QuizElement = ({
   setStylesSelected,
 }) => {
 
+  console.log(room)
   const MAX_STYLES = 2;
   const handleClick = () => {
       if(room.type){
