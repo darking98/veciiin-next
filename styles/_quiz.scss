@@ -1,23 +1,45 @@
 .quiz {
   display: flex;
   flex-direction: column;
-
+  padding: 100px 0px;
   &-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: $black;
-    height: 80vh;
+    //height: 80vh;
     padding: 0px 500px;
     text-align: center;
+    @media(max-width:1500px){
+      padding: 0px 250px;
+    }
+
+    @media(max-width:1000px){
+      padding: 0px 30px;
+      text-align: start;
+      align-items: flex-start;
+    }
     h3 {
-      font-size: 120px;
+      font-size: 10.5vh;
+
+      @media(max-width:1000px){
+        font-size: 6vh;
+      }
+    }
+    p{
+      font-size: 12px;
+      width: 50%;
+
+      @media(max-width:1000px){
+        width: auto;
+      }
     }
     span {
       font-size: 12px;
       opacity: 0.7;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
   }
 
@@ -29,6 +51,13 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     padding: 40px;
+
+    @media(max-width:1280px){
+      grid-template-columns: repeat(2,1fr);
+    }
+    @media(max-width:1000px){
+      grid-template-columns: repeat(1,1fr);
+    }
     .active {
       filter: grayscale(0.8);
     }
@@ -71,12 +100,18 @@
         position: absolute;
         top: 90%;
 
+        @media(max-width:1000px){
+          top: 85%;
+        }
         p {
           text-transform: uppercase;
           font-weight: 400;
           position: relative;
           margin: 0px 20px;
           letter-spacing: 1px;
+          @media(max-width:1280px){
+            font-size: 12px;
+          }
           &:after {
             content: "";
             height: 1px;

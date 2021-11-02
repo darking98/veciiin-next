@@ -1,118 +1,168 @@
-.about{
+.about {
+  display: flex;
+  flex-direction: column;
+  padding: 200px 100px;
+
+  @media(max-width:1024px){
+    padding: 150px 30px;
+  }
+  .second-about{
+      margin-top: 70px;
+      @media(max-width:1024px){
+        margin-top: 0px;
+      }
+  }
+  
+  .about-image{
     display: flex;
-    flex-direction: column;
-    .about-info{
-        height: 80vh;
-        padding: 80px 100px;
-        
-        background-color: $white;
-        display: flex;
-        justify-content: space-between;
-        color: $black;
-        &-text{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            h3{
-                font-size: 80px;
-                width: 700px;
-            }
-            span{
-                text-transform: uppercase;
-                opacity: 0.7;
-                font-size: 12px;
-            }
-        }
-        &-image{
-            z-index: 5;
-            height: 120%;
-            img{
-                height: 100%;
-            }
-        }
+    justify-content: center;
+    @media(max-width:1024px){
+      margin-top: 40px;
     }
-    &-profile{
-        background-color: white;
-        padding: 300px 250px 100px  250px;
-        display: flex;
-        justify-content: space-between;
+    
+  }
+  &-profile {
+    display: flex;
+    justify-content: space-between;
 
-        & > :nth-child(2){
-            margin-left: 100px;
-        }
-
-        &-col{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            .col-header{
-                display: flex;
-                flex-direction: column;
-                :first-child{
-                    justify-content: flex-start;
-                }
-                & > :nth-child(2){
-                    h3{
-                        margin-right: 40px;
-                    }
-                }
-                &-div{
-                    display: flex;
-                    justify-content: flex-end;
-                }
-                h3{
-                    font-size: 130px;
-                    font-weight: 400;
-
-                }
-            }
-            &:nth-child(2) .col-text{
-                margin-bottom: 20px;
-            }
-            .col-text{
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-
-                p{
-                    line-height: 30px;
-                    opacity: 0.8;
-                }
-            }
-        }
+    @media(max-width:1024px){
+      flex-direction: column;
     }
-    &-featured{
+    
+    .second-profile-col{
+      margin-right:15px;
+      flex: 1;
+
+      @media(max-width:1024px){
+        margin-right: 0px;
+      }
+    }
+
+    .third-profile-col{
+      margin-left:15px;
+      flex: 1;
+      align-self:flex-start;
+      @media(max-width:1024px){
+        margin-left:0px;
+      }
+    }
+
+    &-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      
+      p{
+          font-size: 12px;
+          opacity: 0.8;
+          line-height: 1.5rem;
+          @media(max-width:767px){
+            font-size: 10px;
+          }
+          @media(max-width:1024px){
+            margin-top: 40px;
+
+          }
+      }
+      .col-header {
         display: flex;
         flex-direction: column;
-        background-color: $white;
-        padding: 130px 300px;
-
-        &-header{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            h3{
-                font-size: 80px;
-            }
-            span{
-                font-size: 12px;
-                opacity: 0.7;
-                text-transform: uppercase;
-            }
+        margin-right: 200px;
+        @media(max-width:1024px){
+          margin-right: 0px;
         }
-        &-companies{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
+        .bubble {
+          margin-left: 40px;
+          color: $white;
+          font-weight: 600;
+          letter-spacing: 1px;
+          font-size: 10px;
+          text-transform: uppercase;
+          font-family: $raleway;
 
-            .companies-row{
-                width: 100%;
-                display: flex;
-                justify-content: space-around;
-                margin: 100px 0px;
-            }
+          @media(max-width:1024px){
+            font-size: 8px;
+          }
         }
+        :first-child {
+          justify-content: flex-start;
+          @media(max-width:1024px){
+            justify-content: center;
+          }
+        }
+        &-div {
+          display: flex;
+          justify-content: flex-end;
+          @media(max-width:1024px){
+            justify-content: center;
+          }
+        }
+        h3 {
+          font-size: 12vh;
+          font-weight: 400;
+          opacity: 0.9;
+
+          @media(max-width:1024px){
+            font-size: 8vh;
+          }
+        }
+      }
+      &:nth-child(2) .col-text {
+        margin-bottom: 20px;
+      }
     }
+  }
+  &-featured {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: $red;
+    padding: 130px 300px;
+    color: $white;
+
+    @media(max-width:1024px){
+      padding: 50px 50px;
+    }
+    &-header {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h3 {
+        font-size: 10vh;
+        white-space: pre;
+        @media(max-width:1024px){
+          font-size: 6vh;
+        }
+      }
+      span {
+        font-size: 12px;
+        opacity: 0.7;
+        text-transform: uppercase;
+
+        @media(max-width:1000px){
+          font-size: 10px;
+        }
+      }
+    }
+    &-companies {
+      display: flex;
+        justify-content: center;
+        flex:1;
+        align-self: center;
+        align-items:center;
+
+    }
+  }
+}
+.about-image-horizontal{
+  @media(max-width:1000px){
+    display: none;
+  }
+}
+.about-image-vertical{
+  @media(min-width:1000px){
+    display: none;
+  }
 }
