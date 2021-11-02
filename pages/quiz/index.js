@@ -146,7 +146,7 @@ const Quiz = () => {
           <div className="contact-wrapper">
             <div className="contact-info">
               <span>We will get in touch</span>
-              <h3 style={{ fontSize: "8.5vh" }}>Let’s build your space</h3>
+              <h3 className="quiz-h3">Let’s build your space</h3>
             </div>
             <form className="contact-form">
               <label for="name">NAME</label>

@@ -25,6 +25,12 @@
         font-size: 12px;
         text-transform: uppercase;
       }
+      .quiz-h3{
+        font-size:10vh;
+        @media(max-width:1180px){
+          font-size: 7vh;
+        }
+      }
       h3 {
         font-size: 10vh;
         @media(max-width:1180px){

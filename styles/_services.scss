@@ -204,32 +204,65 @@
     }
   }
   &-quiz {
-    height: 100vh;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
     background-color: $white;
     color: $black;
-    padding: 100px 130px;
+    padding: 100px 80px;
+
+    @media(max-width:1000px){
+      padding: 100px 30px;
+      min-height: auto;
+    }
     &-wrapper {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
     &-images {
       display: flex;
       flex-direction: column;
-      height: 100%;
+      //height: 100%;
       div {
         margin-bottom: 40px;
+
+        @media(max-width:1000px){
+          display: none;
+        }
       }
     }
     &-info {
       display: flex;
       flex-direction: column;
+      width:50%;
+
+      @media(max-width:1280px){
+        width: 62%;
+        margin-right:20px;
+      }
+      @media(max-width:1000px){
+        width: auto;
+      }
       .bubble {
         align-self: flex-end;
+        color: $white;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 10px;
+        font-family: $raleway;
+        text-transform: uppercase;
       }
       h3 {
         text-align: start;
-        font-size: 120px;
-        width: 720px;
+        font-size: 12vh;
+        //width: 720px;
+        @media(max-width:1280px){
+          font-size: 8vh;
+        }
+        @media(max-width:1000px){
+          font-size: 6vh;
+        }
       }
       & > span {
         font-size: 12px;

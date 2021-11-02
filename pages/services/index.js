@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useContext, useEffect } from "react";
 import { gsap } from "gsap";
 import serviceImage from "../../images/services/image1.jpg";
@@ -6,7 +5,7 @@ import Bubble from "../../components/Bubble";
 import image2 from "../../images/services/image2.jpg";
 import image3 from "../../images/services/image3.jpg";
 //import { NavbarContext } from "../context/NavProvider";
-import Image from 'next/image'
+import Image from "next/image";
 const Service = () => {
   //const {useNavColor, colors} = useContext(NavbarContext)
   //const [mouse, setMouse] = useState(colors.white);
@@ -53,7 +52,7 @@ const Service = () => {
 
   const ServiceOption = ({ title, subtitle, order, img }) => {
     const [toggleOption, setToggleOption] = useState(false);
-    const image = useRef();
+    const imageHover = useRef(null);
 
     return (
       <div
@@ -61,14 +60,14 @@ const Service = () => {
           toggleOption ? "services-option open" : "services-option closed"
         }
         onClick={() => setToggleOption(!toggleOption)}
-        onMouseEnter={(e) => gsap.to(image.current, { autoAlpha: 1 })}
-        onMouseLeave={(e) => gsap.to(image.current, { autoAlpha: 0 })}
+        onMouseEnter={(e) => gsap.to(imageHover.current, { autoAlpha: 1 })}
+        onMouseLeave={(e) => gsap.to(imageHover.current, { autoAlpha: 0 })}
         onMouseMove={(e) =>
           !toggleOption
-            ? gsap.set(image.current, {
+            ? gsap.set(imageHover.current, {
                 x: e.clientX - 1000 + "px",
               })
-            : gsap.to(image.current, { autoAlpha: 0 })
+            : gsap.to(imageHover.current, { autoAlpha: 0 })
         }
       >
         <div className="services-option-header">
@@ -78,7 +77,7 @@ const Service = () => {
             <p className="service-option-text">{subtitle}</p>
             <span className="service-option-text">Inquire</span>
           </div>
-          <Image src={img} alt="" ref={image} />
+          <Image src={img} alt="" ref={imageHover} />
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -148,12 +147,11 @@ const Service = () => {
           />
         ))}
       </div>
-      {/*
-      }
+      <div className="services-quiz">
         <div className="services-quiz-wrapper">
           <div className="services-quiz-info">
             <span>Hey!</span>
-            <h3>Can’t find what you are looking for?</h3>
+            <h3>Didn’t find what you are looking for?</h3>
             <Bubble background="#CECF70">Take our quiz!</Bubble>
           </div>
           <div className="services-quiz-images">
@@ -165,11 +163,8 @@ const Service = () => {
             </div>
           </div>
         </div>
-
-        </div>
-    */}
-
-        </div>
+      </div>
+    </div>
   );
 };
 
