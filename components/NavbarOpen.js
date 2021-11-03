@@ -2,23 +2,10 @@ import React, {useEffect, useState} from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Bubble from "./Bubble";
-
+import useWindowDimensions from '../hooks/useWindowsDimensions';
 const NavbarOpen = ({ active, handleActive }) => {
-  const [querie, setQuerie] = useState('');
-  const list = typeof window !== "undefined" && window.matchMedia('(max-width:1023px)')
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      list.onchange = (e) => {
-        if(e.matches){
-          setQuerie('medium')
-        }else{
-          setQuerie('big')
-        }
-      }
-    }
-  },[list])
-
+  
+  const { height, width } = useWindowDimensions();
   const router = useRouter();
   const links = [
     [
@@ -79,7 +66,7 @@ const NavbarOpen = ({ active, handleActive }) => {
                   {router.pathname == element.path ? (
                     <div className="navlink-router">
                       <span className="numeral-link">{element.order}</span>
-                      <Bubble size={querie} background="#CECF70">
+                      <Bubble size={width > 1001 ? 'big' : 'medium'} background="#CECF70">
                         {element.title}
                       </Bubble>
                     </div>
