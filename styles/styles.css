@@ -908,6 +908,7 @@ section {
 @media (max-width: 1023px) {
   .navbar-open .navbar-open-container .navbar-links-wrapper {
     width: auto;
+    margin-top: 40px;
   }
 }
 
@@ -1905,6 +1906,7 @@ section {
   font-size: 10px;
   font-family: "Raleway";
   text-transform: uppercase;
+  text-align: center;
 }
 
 .services-quiz-info h3 {
