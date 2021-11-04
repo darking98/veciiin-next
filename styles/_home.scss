@@ -245,6 +245,7 @@
       display: flex;
       width: 100%;
       justify-content: space-between;
+
       @media(max-width:1300px){
         flex-direction: column;
       }
@@ -254,8 +255,15 @@
       flex-direction: column;
       //margin-left: 180px;
       //padding: 200px 0px;
+      @media(max-width:1500px){
+        margin-right:150px; 
+      }
+      @media(max-width:1300px){
+        margin-right: 0px;
+      }
       @media(max-width:1000px){
         padding: 30px;
+
       }
       
       .home-projects-header {

@@ -571,6 +571,18 @@ section {
           flex-direction: column;
 }
 
+@media (max-width: 1500px) {
+  .home-projects-wrapper .home-projects-info {
+    margin-right: 150px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .home-projects-wrapper .home-projects-info {
+    margin-right: 0px;
+  }
+}
+
 @media (max-width: 1000px) {
   .home-projects-wrapper .home-projects-info {
     padding: 30px;
