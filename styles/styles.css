@@ -695,6 +695,8 @@ section {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    min-height: auto;
+    height: 7vh;
   }
 }
 

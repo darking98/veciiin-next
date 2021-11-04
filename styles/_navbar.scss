@@ -13,6 +13,8 @@
   @media(max-width:1023px){
     padding: 10px 20px;
     justify-content: space-between;
+    min-height: auto;
+    height: 7vh;
   }
 
   &-title {
