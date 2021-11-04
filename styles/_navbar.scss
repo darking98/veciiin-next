@@ -105,7 +105,10 @@
           font-size: 0.8rem;
           margin:50px 0px;
           transform: rotate(90deg);
-
+          transition: all 300ms ease-in-out;
+          &:hover{
+            color: $yellow;
+          }
           @media(max-width:1023px){
             margin: 0px 20px;
             transform: rotate(0deg);
@@ -152,6 +155,9 @@
         .numeral-link{
           margin-right: 20px;
           font-size: 15px;
+          @media(max-width:1000px){
+            font-size: 12px;
+          }
         }
 
         a {

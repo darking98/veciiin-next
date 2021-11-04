@@ -13,13 +13,13 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div className="bubble-container">
-        <BubbleNav border={'#4B0705'}>Let's Chat!</BubbleNav>
+        <BubbleNav border={navColor}>Let's Chat!</BubbleNav>
 
         </div>
         <div className="navbar-title">
           <Link href="/">
             <a>
-              <h2 style={{ color: "#4B0705" }}>Veciiin</h2>
+              <h2 style={{ color: navColor }}>Veciiin</h2>
             </a>
           </Link>
         </div>
@@ -31,11 +31,11 @@ const Navbar = () => {
         >
           <div
             className="hamburger-bar"
-            style={{ backgroundColor: "#4B0705" }}
+            style={{ backgroundColor: navColor}}
           ></div>
           <div
             className="hamburger-bar"
-            style={{ backgroundColor: "#4B0705" }}
+            style={{ backgroundColor: navColor }}
           ></div>
         </div>
         </div>

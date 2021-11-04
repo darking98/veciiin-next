@@ -1,15 +1,23 @@
-import about1 from "../../images/about/about1.png";
-import about2 from "../../images/about/about2.jpg";
-import vogue from "../../images/about/vogue.png";
-import houseGarden from "../../images/about/houseGarden.png";
+import React, { useContext, useState, useEffect } from "react";
+import { NavbarContext } from "../../context/NavProvider";
 import Image from "next/image";
-import Head from "next/head";
 import Bubble from "../../components/Bubble";
 import aboutImages from "../../images/about/about-images.png";
 import aboutHorizontal from "../../images/about/fotoNaty.png";
 import aboutFeatured from '../../images/about/Imagen-22.png'
 import naty from "../../images/about/naty.png";
 const About = () => {
+  const { useNavColor, colors, open } = useContext(NavbarContext);
+  const [mouse, setMouse] = useState(colors.red);
+
+  useNavColor(mouse);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      (window.scrollY < 1600)? setMouse(colors.red) : setMouse(colors.white)
+    })
+    
+  },[mouse])
   return (
     <div className="about-container">
       <div className="about">

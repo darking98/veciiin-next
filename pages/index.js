@@ -1,5 +1,4 @@
-
-import {useState, useEffect} from 'react'
+import { useState, useEffect, useContext } from "react";
 import Image from "next/image";
 import Bubble from "../components/Bubble";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,10 +9,24 @@ import project1 from "../images/home/project1.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import useWindowDimensions from '../hooks/useWindowsDimensions';
+import useWindowDimensions from "../hooks/useWindowsDimensions";
+import { NavbarContext } from "../context/NavProvider";
+SwiperCore.use([Navigation]);
+
 export default function Home() {
-  SwiperCore.use([Navigation]);
   const { height, width } = useWindowDimensions();
+  const {useNavColor, colors, open} = useContext(NavbarContext)
+
+  const [mouse, setMouse] = useState(colors.white);
+
+  useNavColor(mouse)
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      (window.scrollY < 900 || (window.scrollY > 1900 && window.scrollY <2800)) ? setMouse(colors.white) : setMouse(colors.red)
+    })
+    
+  },[mouse])
   return (
     <div className="home">
       <div className="home-image-wrapper">
@@ -29,8 +42,7 @@ export default function Home() {
           <div className="home-about-title">
             <h3>New ways of transforming your space.</h3>
             <div className="bubble-container">
-            <Bubble background="#CECF70">Learn More</Bubble>
-
+              <Bubble background="#CECF70">Learn More</Bubble>
             </div>
           </div>
           <div className="home-about-info">
@@ -108,7 +120,20 @@ export default function Home() {
           </Swiper>
         </div>
       </section>
-
-      </div>
+      <section className="home-projects-wrapper">
+        <div className="home-projects-info-wrapper">
+          <div className="home-projects-info">
+            <p>Our Work</p>
+            <div className="home-projects-header">
+              <h3>Fresh, contemporary ideas & functional designs.</h3>
+              <Bubble background={"#CECF70"}>Projects</Bubble>
+            </div>
+          </div>
+          <div className="home-projects-image">
+            <Image src={project1}/>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

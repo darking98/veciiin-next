@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-//import { NavbarContext } from "../context/NavProvider";
+import { NavbarContext } from "../../context/NavProvider";
 import Bubble from "../../components/Bubble";
 const Contact = () => {
-  //const { useNavColor, colors, open } = useContext(NavbarContext);
+  const { useNavColor, colors, open } = useContext(NavbarContext);
 
-  //useNavColor(!open && colors.red);
+  useNavColor(!open && colors.red);
 
   return (
     <div className="contact">

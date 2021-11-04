@@ -4,13 +4,13 @@ import serviceImage from "../../images/services/image1.jpg";
 import Bubble from "../../components/Bubble";
 import image2 from "../../images/services/image2.jpg";
 import image3 from "../../images/services/image3.jpg";
-//import { NavbarContext } from "../context/NavProvider";
+import { NavbarContext } from "../../context/NavProvider";
 import Image from "next/image";
 const Service = () => {
-  //const {useNavColor, colors} = useContext(NavbarContext)
-  //const [mouse, setMouse] = useState(colors.white);
+  const {useNavColor, colors} = useContext(NavbarContext)
+  const [mouse, setMouse] = useState(colors.white);
 
-  /*useNavColor(mouse)
+  useNavColor(mouse)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -18,7 +18,7 @@ const Service = () => {
     })
     
   },[mouse])
-  */
+  
   const options = [
     {
       title: "Styling Refresh",
