@@ -362,6 +362,12 @@ section {
   }
 }
 
+@media (max-width: 1300px) {
+  .home-about-wrapper .home-about-info p {
+    width: 400px;
+  }
+}
+
 @media (max-width: 1024px) {
   .home-about-wrapper .home-about-info p {
     font-size: 12px;
@@ -387,7 +393,7 @@ section {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-bottom: 0px;
+    padding-bottom: 50px;
   }
 }
 
@@ -576,7 +582,7 @@ section {
           justify-content: space-between;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
   .home-projects-wrapper .home-projects-info-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -643,7 +649,7 @@ section {
   text-transform: uppercase;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
   .home-projects-wrapper .home-projects-info .home-projects-header .bubble {
     margin-left: 0px;
     margin-bottom: 0px;
@@ -667,10 +673,10 @@ section {
   width: 748px;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1500px) {
   .home-projects-wrapper .home-projects-info h3 {
-    font-size: 8vh;
-    width: auto;
+    font-size: 10vh;
+    width: 50%;
   }
 }
 
@@ -708,6 +714,12 @@ section {
 .home-projects-wrapper .home-projects-info .bubble {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+@media (max-width: 1500px) {
+  .home-projects-wrapper .home-projects-image {
+    width: 100%;
+  }
 }
 
 .navbar {
@@ -1649,6 +1661,13 @@ section {
   opacity: 0.8;
 }
 
+@media (max-width: 1000px) {
+  .services .services-info span {
+    width: 100%;
+    text-align: start;
+  }
+}
+
 .services .services-info p {
   text-align: center;
   font-size: 13px;
@@ -1660,6 +1679,7 @@ section {
   .services .services-info p {
     padding: 0px;
     font-size: 12px;
+    text-align: start;
   }
 }
 
@@ -1677,6 +1697,7 @@ section {
 @media (max-width: 1000px) {
   .services .services-info h3 {
     font-size: 7vh;
+    margin: 30px 0px;
   }
 }
 
@@ -2598,6 +2619,7 @@ section {
 .quiz-info h3 {
   font-size: 11.5vh;
   line-height: 1;
+  margin: 20px 0px;
 }
 
 @media (max-width: 1500px) {
