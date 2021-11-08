@@ -10,7 +10,7 @@ const Contact = () => {
     <div className="contact">
       <div className="contact-wrapper">
         <div className="contact-info">
-          <span>Get in touch</span>
+          <span className="letter-spacing">Get in touch</span>
           <h3>Let's work Together</h3>
           <div className="contact-info-paragraph">
             <p>Our studio is located in Bogotá, Colombia.</p>

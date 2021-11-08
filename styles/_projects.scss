@@ -97,6 +97,12 @@
       }
     }
 
+    .group2{
+      :last-child{
+        margin-bottom: 0px;
+      }
+    }
+
     .projects-gallery-element {
       position: relative;
       margin-bottom: 100px;
@@ -118,23 +124,34 @@
         padding: 20px;
         position: absolute;
         opacity: 0;
-        background-color: #4b0705ab;
+        background-color: #4b0705db;
         transition: 300ms ease-in-out;
         h4 {
           font-size: 40px;
           @media(max-width:1500px){
             font-size: 30px;
           }
-          @media (max-width: 1280px) {
-            font-size: 20px;
+          @media (max-width: 1400px) {
+            font-size: 24px;
+            //margin-bottom: 20px;
+          }
+
+          @media(max-width:1280px){
+            font-size:21px;
+            margin-bottom: 20px;
           }
         }
         p {
+          font-size: 12px;
+          line-height: 1.5rem;
+          @media(max-width:1500px){
+            line-height: 1.1rem;
+          }
           @media(max-width:1280px){
-            line-height: 1.5rem;
+            line-height: 1rem;
           }
           @media (max-width: 1500px) {
-            font-size: 12px;
+            font-size: 7px;
             
           }
         }

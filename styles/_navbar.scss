@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   min-height: 7vh;
-  position: fixed;
+  position:absolute;
   justify-content: center;
   align-items: center;
   padding: 20px 70px;
@@ -131,9 +131,10 @@
         .navbar-pairs{
           display: flex;
           justify-content: space-between;
-          
+          margin-top: 60px;
           @media(max-width:1023px){
             flex-direction: column;
+            margin-top: 0px;
           }
         }
         

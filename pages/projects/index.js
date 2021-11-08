@@ -21,7 +21,7 @@ const Projects = () => {
     <div className="projects-container">
       <div className="projects">
         <div className="projects-fixed">
-          <span>Our Work</span>
+          <span className="letter-spacing">Our Work</span>
           <div className="projects-fixed-container-title">
             <h3>A curated selection of projects.</h3>
             {/*<Bubble background="#CECF70">Services</Bubble>*/}
@@ -50,7 +50,7 @@ const Projects = () => {
               </div>
             ))}
           </div>
-          <div className="projects-gallery">
+          <div className="projects-gallery group2">
             {imagesGroup2.map((element) => (
               <div className="projects-gallery-element">
                 <Image src={element} alt="" />
@@ -69,7 +69,7 @@ const Projects = () => {
         </div>
       </div>
       <div className="projects-asked-question">
-        <span>Have a question?</span>
+        <span className="letter-spacing">Have a question?</span>
         <div className="projects-asked-question-title">
           <div>
             <h3>Frequently</h3>

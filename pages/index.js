@@ -3,8 +3,8 @@ import Image from "next/image";
 import Bubble from "../components/Bubble";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
-import carousel1 from "../images/home/carousel-home-1.jpg";
-import carousel2 from "../images/home/carousel-home-2.jpg";
+import carousel1 from "../images/home/carousel1.png";
+import carousel2 from "../images/home/carousel2.png";
 import project1 from "../images/home/project1.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -36,7 +36,7 @@ export default function Home() {
 
       <section className="home-about-wrapper">
         <div className="home-about-header">
-          <span>About the Studio</span>
+          <span className="letter-spacing">About the Studio</span>
         </div>
         <div className="home-about-text">
           <div className="home-about-title">
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
         <div className="home-service-carousel">
           <Swiper
-            spaceBetween={width > 1000 ? 80 : 30}
+            spaceBetween={width > 1000 ? 10 : 30}
             slidesPerView={width > 1000 ? 2 : 1}
             navigation
             pagination={{ clickable: true, el: ".swiper-pagination" }}
@@ -123,7 +123,7 @@ export default function Home() {
       <section className="home-projects-wrapper">
         <div className="home-projects-info-wrapper">
           <div className="home-projects-info">
-            <p>Our Work</p>
+            <p className="letter-spacing">Our Work</p>
             <div className="home-projects-header">
               <h3>Fresh, contemporary ideas & functional designs.</h3>
               <Bubble background={"#CECF70"}>Projects</Bubble>

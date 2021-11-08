@@ -121,7 +121,7 @@ const Service = () => {
   return (
     <div className="services">
       <div className="services-info">
-        <span>Our Services</span>
+        <span className="letter-spacing">Our Services</span>
         <h3>Encontrá el servicio para vos</h3>
         <p>
           Pregunta por nuestras asesorías especializadas para ti con visitas
@@ -150,7 +150,7 @@ const Service = () => {
       <div className="services-quiz">
         <div className="services-quiz-wrapper">
           <div className="services-quiz-info">
-            <span>Hey!</span>
+            <span className="letter-spacing">Hey!</span>
             <h3>Didn’t find what you are looking for?</h3>
             <Bubble background="#CECF70">Take our quiz!</Bubble>
           </div>
