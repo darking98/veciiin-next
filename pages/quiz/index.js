@@ -126,9 +126,10 @@ const Quiz = () => {
           <div className="quiz-info">
             <h3>Pick the styles you like</h3>
             <p>
-              Wich of these inspire you? Don't overthink it; go with your
-              instinct.
+              Wich of these inspire you? 
             </p>
+            <p>Don't overthink it; go with your
+              instinct.</p>
           </div>
           <div className="quiz-game-container">
             {styles.map((room) => (

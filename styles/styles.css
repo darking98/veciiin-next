@@ -47,6 +47,13 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-Light.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -234,6 +241,11 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.home-about-wrapper .home-about-text h3 {
+  line-height: 1;
+  margin-top: 20px;
 }
 
 @media (max-width: 1024px) {
@@ -605,6 +617,10 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.home-projects-wrapper .home-projects-info .home-projects-header h3 {
+  line-height: 1;
 }
 
 @media (max-width: 1000px) {
@@ -1323,6 +1339,7 @@ section {
 .projects-fixed-container-title h3 {
   font-weight: 400;
   font-size: 10vh;
+  line-height: 1;
 }
 
 @media (max-width: 1180px) {
@@ -1455,6 +1472,12 @@ section {
   }
 }
 
+@media (max-width: 968px) {
+  .projects-gallery-container .projects-gallery-element .projects-gallery-info h4 {
+    font-size: 30px;
+  }
+}
+
 .projects-gallery-container .projects-gallery-element .projects-gallery-info p {
   font-size: 12px;
   line-height: 1.5rem;
@@ -1475,6 +1498,12 @@ section {
 @media (max-width: 1500px) {
   .projects-gallery-container .projects-gallery-element .projects-gallery-info p {
     font-size: 7px;
+  }
+}
+
+@media (max-width: 968px) {
+  .projects-gallery-container .projects-gallery-element .projects-gallery-info p {
+    font-size: 10px;
   }
 }
 
@@ -1563,7 +1592,7 @@ section {
 
 .projects-asked-question-grid .asked-question-grid-item .grid-item-title h3 {
   font-family: "Raleway";
-  font-weight: normal;
+  font-weight: lighter;
   font-size: 24px;
 }
 
@@ -1598,7 +1627,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 150px 480px;
+  padding: 200px 480px;
 }
 
 @media (max-width: 1500px) {
@@ -1636,6 +1665,7 @@ section {
 
 .services .services-info h3 {
   font-size: 12vh;
+  line-height: 1;
 }
 
 @media (max-width: 1280px) {
@@ -1714,6 +1744,15 @@ section {
   padding-top: 100px;
 }
 
+.services-options-container :nth-child(2) {
+  border-bottom: none !important;
+  border-top: none !important;
+}
+
+.services-options-container :nth-child(3) {
+  border-bottom: none !important;
+}
+
 .services-options-container .services-option {
   width: 100%;
   height: 100%;
@@ -1755,11 +1794,18 @@ section {
 .services-options-container .services-option-header span {
   font-size: 20px;
   opacity: 0.8;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: left;
 }
 
 @media (max-width: 1000px) {
   .services-options-container .services-option-header span {
     font-size: 12px;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
   }
 }
 
@@ -1791,6 +1837,17 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+@media (max-width: 1000px) {
+  .services-options-container .services-option-header .services-title-subtitle {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+  }
 }
 
 .services-options-container .services-option-header .services-title-subtitle .service-option-text {
@@ -1814,11 +1871,21 @@ section {
   font-size: 60px;
   font-weight: 400;
   z-index: 10;
+  width: 100%;
+  text-align: start;
+}
+
+@media (max-width: 1400px) {
+  .services-options-container .services-option-header .services-title-subtitle h4 {
+    font-size: 50px;
+  }
 }
 
 @media (max-width: 1000px) {
   .services-options-container .services-option-header .services-title-subtitle h4 {
-    font-size: 5vh;
+    font-size: 4vh;
+    text-align: center;
+    padding: 0px 10px;
   }
 }
 
@@ -1832,8 +1899,13 @@ section {
   height: 400px;
 }
 
+@media (max-width: 1000px) {
+  .services-options-container .open {
+    height: 300px;
+  }
+}
+
 .services-options-container .open .services-title-subtitle {
-  height: 60%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1844,12 +1916,20 @@ section {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  text-align: center;
+  text-align: initial;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 1280px) {
   .services-options-container .open .services-title-subtitle h4 {
     font-size: 5vh;
+  }
+}
+
+@media (max-width: 1000px) {
+  .services-options-container .open .services-title-subtitle h4 {
+    text-align: center;
   }
 }
 
@@ -1976,6 +2056,7 @@ section {
 .services-quiz-info h3 {
   text-align: start;
   font-size: 12vh;
+  line-height: 1;
 }
 
 @media (max-width: 1280px) {
@@ -2128,11 +2209,13 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-right: 200px;
+  margin-bottom: 60px;
 }
 
 @media (max-width: 1024px) {
   .about-profile-col .col-header {
     margin-right: 0px;
+    margin-bottom: 20px;
   }
 }
 
@@ -2187,6 +2270,7 @@ section {
   font-size: 12vh;
   font-weight: 400;
   opacity: 0.9;
+  line-height: 1;
 }
 
 @media (max-width: 1024px) {
@@ -2358,7 +2442,9 @@ section {
 }
 
 .contact-wrapper .contact-info h3 {
+  line-height: 1;
   font-size: 10vh;
+  margin: 40px 0px;
 }
 
 @media (max-width: 1180px) {
@@ -2489,19 +2575,19 @@ section {
       -ms-flex-align: center;
           align-items: center;
   color: #242424;
-  padding: 0px 500px;
+  padding: 150px 500px;
   text-align: center;
 }
 
 @media (max-width: 1500px) {
   .quiz-info {
-    padding: 0px 250px;
+    padding: 100px 250px;
   }
 }
 
 @media (max-width: 1000px) {
   .quiz-info {
-    padding: 0px 30px;
+    padding: 50px 30px;
     text-align: start;
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -2510,18 +2596,26 @@ section {
 }
 
 .quiz-info h3 {
-  font-size: 10.5vh;
+  font-size: 11.5vh;
+  line-height: 1;
+}
+
+@media (max-width: 1500px) {
+  .quiz-info h3 {
+    font-size: 10.5vh;
+  }
 }
 
 @media (max-width: 1000px) {
   .quiz-info h3 {
-    font-size: 6vh;
+    font-size: 8vh;
   }
 }
 
 .quiz-info p {
   font-size: 12px;
   width: 50%;
+  line-height: 1.2rem;
 }
 
 @media (max-width: 1000px) {
@@ -2550,7 +2644,7 @@ section {
   padding: 40px;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1180px) {
   .quiz-game-container {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);

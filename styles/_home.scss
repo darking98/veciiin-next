@@ -42,7 +42,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
+      h3{
+        line-height: 1;
+        margin-top: 20px;
+      }
       @media (max-width: 1024px) {
         flex-direction: column;
       }
@@ -272,6 +275,9 @@
       
       .home-projects-header {
         display: flex;
+        h3{
+          line-height: 1;
+        }
         @media(max-width:1000px){
           flex-direction: column;
         }

@@ -60,7 +60,7 @@ export default function Home() {
       <section className="home-service-wrapper">
         <div className="home-service-header-wrapper">
           <div className="home-service-header">
-            <p>We can help you with</p>
+            <p className="letter-spacing">We can help you with</p>
             <h3>Our services</h3>
           </div>
         </div>

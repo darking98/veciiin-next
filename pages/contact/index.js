@@ -11,7 +11,7 @@ const Contact = () => {
       <div className="contact-wrapper">
         <div className="contact-info">
           <span className="letter-spacing">Get in touch</span>
-          <h3>Let's work Together</h3>
+          <h3>Let's work together!</h3>
           <div className="contact-info-paragraph">
             <p>Our studio is located in Bogotá, Colombia.</p>
             <p>Opening times: Monday to Friday 8am to 5pm.</p>
