@@ -2026,6 +2026,18 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 60%;
+}
+
+@media (max-width: 1500px) {
+  .services-quiz-images :first-child {
+    margin-right: 40px;
+  }
+}
+
+.services-quiz-images :nth-child(2) {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .services-quiz-images div {
@@ -2051,7 +2063,7 @@ section {
 
 @media (max-width: 1280px) {
   .services-quiz-info {
-    width: 62%;
+    width: 50%;
     margin-right: 20px;
   }
 }
