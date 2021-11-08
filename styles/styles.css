@@ -724,6 +724,26 @@ section {
   }
 }
 
+.swiper-button-next, .swiper-button-prev {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: calc(var(--swiper-navigation-size)/ 30 * 27) !important;
+  height: 50px;
+}
+
+.swiper-button-next {
+  background-image: url(../images/home/right-arrow.png);
+}
+
+.swiper-button-prev {
+  background-image: url(../images/home/left-arrow.png);
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  display: none;
+}
+
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;

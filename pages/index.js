@@ -11,9 +11,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import useWindowDimensions from "../hooks/useWindowsDimensions";
 import { NavbarContext } from "../context/NavProvider";
+import {BsArrowRight, BsArrowLeft} from 'react-icons/bs'
 SwiperCore.use([Navigation]);
 
 export default function Home() {
+  console.log(<BsArrowRight/>, 'algo')
   const { height, width } = useWindowDimensions();
   const {useNavColor, colors, open} = useContext(NavbarContext)
 
@@ -21,14 +23,9 @@ export default function Home() {
 
   useNavColor(mouse)
 
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      (window.scrollY < 900 || (window.scrollY > 1900 && window.scrollY <2800)) ? setMouse(colors.white) : setMouse(colors.red)
-    })
-    
-  },[mouse])
   return (
     <div className="home">
+      <BsArrowRight/>
       <div className="home-image-wrapper">
         <div className="home-image home-image-left"></div>
         <div className="home-image home-image-right"></div>
