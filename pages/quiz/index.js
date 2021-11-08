@@ -143,7 +143,7 @@ const Quiz = () => {
         </>
       )}
       {stylesSelected.length === 2 && (
-        <div className="contact">
+        <div className="contact contact-quiz">
           <div className="contact-wrapper">
             <div className="contact-info">
               <span>We will get in touch</span>
