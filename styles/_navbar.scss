@@ -53,7 +53,7 @@
     top: -100%;
     position: fixed;
     display: flex;
-    padding: 0px 150px;
+    padding: 0px 70px;
     align-items: center;
     background-color: $white;
     font-family: $ogg;
@@ -86,7 +86,7 @@
         }
       }
       .navbar-social{
-        flex: 1;
+        //flex: 1;
         display: flex;
         align-items: flex-end;
         justify-content: center;
@@ -123,15 +123,26 @@
       .navbar-links-wrapper {
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 100%;
         @media(max-width:1023px){
           width: auto;
           margin-top:40px;
         }
         .navbar-pairs{
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           margin-top: 60px;
+          a:first-child{
+            flex: 1;
+          }
+          a:nth-of-type(2){
+            //flex: 1;
+            //justify-content: center;
+
+          }
+          
+
+          
           @media(max-width:1023px){
             flex-direction: column;
             margin-top: 0px;

@@ -70,6 +70,7 @@
       }
       .bubble-container {
         align-self: flex-end;
+        margin-top: 180px;
       }
       .bubble {
         color: $white;
@@ -110,7 +111,9 @@
           width: 600px;
         }
         @media(max-width:1300px){
-          width: 400px;
+          width: 500px;
+          font-size: 12px;
+
         }
         font-size: 14px;
         line-height: 30px;
@@ -145,6 +148,7 @@
         display: flex;
         flex-direction: column;
         h3 {
+          line-height: 1;
           font-size: 80px;
           @media (max-width: 1000px) {
             font-size: 6vh;
@@ -200,11 +204,11 @@
         flex-direction: column;
         padding: 0px 30px;
         @media (max-width: 1280px) {
-          padding: 30px;
+          padding: 30px 15px;
         }
         .slide-header {
           display: flex;
-          justify-content: space-between;
+          //justify-content: space-between;
           align-items: center;
           width: 100%;
           .bubble {
@@ -216,10 +220,11 @@
             font-family: $raleway;
           }
           h3 {
+            margin-right: 60px;
             //margin: 0px 20px 0px -20px;
             font-size: 7vh;
             @media (max-width: 1280px) {
-              font-size: 4vh;
+              font-size: 5vh;
             }
           }
         }
@@ -246,7 +251,7 @@
     display: flex;
     //justify-content: space-between;
     width: 100%;
-    padding: 100px;
+    padding: 70px;
     background-color: $white;
     color: $black;
     height: auto !important;
@@ -280,9 +285,7 @@
       
       .home-projects-header {
         display: flex;
-        h3{
-          line-height: 1;
-        }
+
         @media(max-width:1000px){
           flex-direction: column;
         }
@@ -349,6 +352,7 @@
       }
     }
     .home-projects-image {
+      display: flex;
       @media(max-width:1500px){
         width: 100%;
       }

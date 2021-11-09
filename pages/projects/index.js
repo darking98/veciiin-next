@@ -25,12 +25,13 @@ const Projects = () => {
           <div className="projects-fixed-container-title">
             <h3>A curated selection of projects.</h3>
             {/*<Bubble background="#CECF70">Services</Bubble>*/}
-          </div>
-          <div className="bubble-container">
+            <div className="bubble-container">
             <Bubble size="small" background="#CECF70">
               Services
             </Bubble>
           </div>
+          </div>
+          
         </div>
 
         <div className="projects-gallery-container">

@@ -4,21 +4,22 @@ import serviceImage from "../../images/services/image1.jpg";
 import Bubble from "../../components/Bubble";
 import image2 from "../../images/services/image2.jpg";
 import image3 from "../../images/services/image3.jpg";
+import image4 from "../../images/services/image4.png";
+import image5 from "../../images/services/image5.png";
 import { NavbarContext } from "../../context/NavProvider";
 import Image from "next/image";
 const Service = () => {
-  const {useNavColor, colors} = useContext(NavbarContext)
+  const { useNavColor, colors } = useContext(NavbarContext);
   const [mouse, setMouse] = useState(colors.white);
 
-  useNavColor(mouse)
+  useNavColor(mouse);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      (window.scrollY < 800)? setMouse(colors.white) : setMouse(colors.red)
-    })
-    
-  },[mouse])
-  
+    window.addEventListener("scroll", () => {
+      window.scrollY < 800 ? setMouse(colors.white) : setMouse(colors.red);
+    });
+  }, [mouse]);
+
   const options = [
     {
       title: "Styling Refresh",
@@ -78,41 +79,78 @@ const Service = () => {
             <span className="service-option-text">Inquire</span>
           </div>
           <Image src={img} alt="" ref={imageHover} />
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="56.232"
-            height="94"
-            viewBox="0 0 56.232 94"
-          >
-            <g
-              id="Grupo_79"
-              data-name="Grupo 79"
-              transform="translate(-1775.384 -1235)"
+          {toggleOption ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40.101"
+              height="66"
+              viewBox="0 0 40.101 66"
             >
-              <path
-                id="Trazado_85"
-                data-name="Trazado 85"
-                d="M28.116,0C43.762,2.857,56.232,10.074,56.232,22.5S43.66,48.824,28.116,45,0,34.926,0,22.5,12.47-2.857,28.116,0Z"
-                transform="translate(1775.384 1259)"
-                fill="#cecf70"
-              />
-              <text
-                id="_"
-                data-name="+"
-                transform="translate(1787 1310)"
-                fill="#f7f3f0"
-                font-size="80"
-                font-family="Raleway-ExtraLight, Raleway"
-                font-weight="200"
-                letter-spacing="0.1em"
+              <g
+                id="Grupo_90"
+                data-name="Grupo 90"
+                transform="translate(0 0.02)"
               >
-                <tspan x="0" y={toggleOption === true ? "-8" : "0"}>
-                  {toggleOption === true ? "-" : "+"}
-                </tspan>
-              </text>
-            </g>
-          </svg>
+                <path
+                  id="Trazado_85"
+                  data-name="Trazado 85"
+                  d="M20.05-.115C31.208,1.923,40.1,7.069,40.1,15.931S31.135,34.7,20.05,31.976,0,24.792,0,15.931,8.893-2.153,20.05-.115Z"
+                  transform="translate(0 18.055)"
+                  fill="#cecf70"
+                />
+                <text
+                  id="_"
+                  data-name="-"
+                  transform="translate(8.572 52.98)"
+                  fill="#f7f3f0"
+                  font-size="56"
+                  font-family="Raleway-ExtraLight, Raleway"
+                  font-weight="200"
+                  letter-spacing="0.1em"
+                >
+                  <tspan x="0" y="-3" >
+                    -
+                  </tspan>
+                </text>
+              </g>
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40.101"
+              height="66"
+              viewBox="0 0 40.101 66"
+            >
+              <g
+                id="Grupo_90"
+                data-name="Grupo 90"
+                transform="translate(0 0.02)"
+              >
+                <path
+                  id="Trazado_85"
+                  data-name="Trazado 85"
+                  d="M20.05-.115C31.208,1.923,40.1,7.069,40.1,15.931S31.135,34.7,20.05,31.976,0,24.792,0,15.931,8.893-2.153,20.05-.115Z"
+                  transform="translate(0 18.055)"
+                  fill="#cecf70"
+                />
+                <text
+                  id="_"
+                  data-name="+"
+                  transform="translate(8.572 52.98)"
+                  fill="#f7f3f0"
+                  font-size="56"
+                  font-family="Raleway-ExtraLight, Raleway"
+                  font-weight="200"
+                  letter-spacing="0.1em"
+                >
+                  <tspan x="0" y="0">
+                    +
+                  </tspan>
+                </text>
+              </g>
+            </svg>
+          )}
+          
         </div>
       </div>
     );
@@ -152,14 +190,47 @@ const Service = () => {
           <div className="services-quiz-info">
             <span className="letter-spacing">Hey!</span>
             <h3>Didn’t find what you are looking for?</h3>
-            <Bubble background="#CECF70">Take our quiz!</Bubble>
+            <div className="bubble">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="83.984"
+                height="62.338"
+                viewBox="0 0 83.984 62.338"
+              >
+                <path
+                  id="Trazado_135"
+                  data-name="Trazado 135"
+                  d="M41.992.142C65.36,4.01,83.984,13.78,83.984,30.6S65.207,66.241,41.992,61.063,0,47.426,0,30.6,18.625-3.726,41.992.142Z"
+                  transform="translate(0 0.401)"
+                  fill="#cecf70"
+                />
+                <text
+                  id="TAKE_OUR_QUIZ"
+                  data-name="TAKE
+OUR QUIZ"
+                  transform="translate(42.282 28.781)"
+                  fill="#f7f3f0"
+                  font-size="10"
+                  font-family="Raleway-SemiBold, Raleway"
+                  font-weight="600"
+                  letter-spacing="0.1em"
+                >
+                  <tspan x="-13.935" y="0">
+                    TAKE
+                  </tspan>
+                  <tspan x="-27.575" y="12">
+                    OUR QUIZ
+                  </tspan>
+                </text>
+              </svg>
+            </div>
           </div>
           <div className="services-quiz-images">
             <div>
-              <Image src={image2} alt="" />
+              <Image src={image4} alt="" />
             </div>
             <div>
-              <Image src={image3} alt="" />
+              <Image src={image5} alt="" />
             </div>
           </div>
         </div>

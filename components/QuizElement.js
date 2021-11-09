@@ -57,9 +57,7 @@ const QuizElement = ({
   return (
     <div
       className={
-        (roomSelected && roomSelected.title === room.title) || (stylesSelected && stylesSelected.find(style => style.title === room.title))
-          ? "quiz-element active"
-          : "quiz-element"
+        "quiz-element"
       }
       onClick={handleClick}
     >
@@ -74,7 +72,7 @@ const QuizElement = ({
         </div>
       )}
 
-      <div className="quiz-element-image">
+      <div className={(roomSelected && roomSelected.title === room.title) || (stylesSelected && stylesSelected.find(style => style.title === room.title))? "quiz-element-image active" : "quiz-element-image"}>
         <Image src={room.image} alt="" />
       </div>
       <div className="quiz-element-title">

@@ -11,21 +11,19 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import useWindowDimensions from "../hooks/useWindowsDimensions";
 import { NavbarContext } from "../context/NavProvider";
-import {BsArrowRight, BsArrowLeft} from 'react-icons/bs'
+import project2 from "../images/home/project2.png";
 SwiperCore.use([Navigation]);
 
 export default function Home() {
-  console.log(<BsArrowRight/>, 'algo')
   const { height, width } = useWindowDimensions();
-  const {useNavColor, colors, open} = useContext(NavbarContext)
+  const { useNavColor, colors, open } = useContext(NavbarContext);
 
   const [mouse, setMouse] = useState(colors.white);
 
-  useNavColor(mouse)
+  useNavColor(mouse);
 
   return (
     <div className="home">
-      <BsArrowRight/>
       <div className="home-image-wrapper">
         <div className="home-image home-image-left"></div>
         <div className="home-image home-image-right"></div>
@@ -39,7 +37,36 @@ export default function Home() {
           <div className="home-about-title">
             <h3>New ways of transforming your space.</h3>
             <div className="bubble-container">
-              <Bubble background="#CECF70">Learn More</Bubble>
+              <div className="bubble">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="90.985"
+                  height="66.717"
+                  viewBox="0 0 90.985 66.717"
+                >
+                  <path
+                    id="Trazado_135"
+                    data-name="Trazado 135"
+                    d="M45.492.18c25.315,4.14,45.492,14.6,45.492,32.6s-20.342,38.141-45.492,32.6S0,50.785,0,32.78,20.177-3.96,45.492.18Z"
+                    transform="translate(0 0.401)"
+                    fill="#cecf70"
+                  />
+                  <text
+                    id="LEARN_MORE"
+                    data-name="LEARN MORE"
+                    transform="translate(9.421 36.717)"
+                    fill="#f7f3f0"
+                    font-size="10"
+                    font-family="Raleway-SemiBold, Raleway"
+                    font-weight="600"
+                    letter-spacing="0.1em"
+                  >
+                    <tspan x="0" y="0">
+                      LEARN MORE
+                    </tspan>
+                  </text>
+                </svg>
+              </div>
             </div>
           </div>
           <div className="home-about-info">
@@ -127,7 +154,7 @@ export default function Home() {
             </div>
           </div>
           <div className="home-projects-image">
-            <Image src={project1}/>
+            <Image src={project2} />
           </div>
         </div>
       </section>

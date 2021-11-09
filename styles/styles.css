@@ -299,6 +299,7 @@ section {
 .home-about-wrapper .home-about-title .bubble-container {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  margin-top: 180px;
 }
 
 .home-about-wrapper .home-about-title .bubble {
@@ -365,7 +366,8 @@ section {
 
 @media (max-width: 1300px) {
   .home-about-wrapper .home-about-info p {
-    width: 400px;
+    width: 500px;
+    font-size: 12px;
   }
 }
 
@@ -427,6 +429,7 @@ section {
 }
 
 .home-service-wrapper .home-service-header-wrapper .home-service-header h3 {
+  line-height: 1;
   font-size: 80px;
 }
 
@@ -505,7 +508,7 @@ section {
 
 @media (max-width: 1280px) {
   .home-service-wrapper .home-service-carousel .slide-info {
-    padding: 30px;
+    padding: 30px 15px;
   }
 }
 
@@ -513,9 +516,6 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -532,12 +532,13 @@ section {
 }
 
 .home-service-wrapper .home-service-carousel .slide-info .slide-header h3 {
+  margin-right: 60px;
   font-size: 7vh;
 }
 
 @media (max-width: 1280px) {
   .home-service-wrapper .home-service-carousel .slide-info .slide-header h3 {
-    font-size: 4vh;
+    font-size: 5vh;
   }
 }
 
@@ -562,7 +563,7 @@ section {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  padding: 100px;
+  padding: 70px;
   background-color: #F7F3F0;
   color: #242424;
   height: auto !important;
@@ -625,10 +626,6 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.home-projects-wrapper .home-projects-info .home-projects-header h3 {
-  line-height: 1;
 }
 
 @media (max-width: 1000px) {
@@ -716,6 +713,12 @@ section {
 .home-projects-wrapper .home-projects-info .bubble {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.home-projects-wrapper .home-projects-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width: 1500px) {
@@ -831,7 +834,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0px 150px;
+  padding: 0px 70px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -896,9 +899,6 @@ section {
 }
 
 .navbar-open .navbar-open-container .navbar-social {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -976,7 +976,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  width: 100%;
 }
 
 @media (max-width: 1023px) {
@@ -990,10 +990,16 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 60px;
+}
+
+.navbar-open .navbar-open-container .navbar-links-wrapper .navbar-pairs a:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 @media (max-width: 1023px) {
@@ -1343,6 +1349,18 @@ section {
   }
 }
 
+@media only screen and (max-width: 1280px) {
+  .projects-fixed .bubble-container {
+    margin-left: -200px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .projects-fixed .bubble-container {
+    margin-left: 0px;
+  }
+}
+
 @media (max-width: 1180px) {
   .projects-fixed {
     position: static;
@@ -1384,8 +1402,6 @@ section {
 .projects-fixed-container-title .bubble {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin-bottom: 50px;
-  margin-left: -100px;
 }
 
 .projects-gallery-container {
@@ -1669,15 +1685,15 @@ section {
   }
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1367px) {
   .services .services-info {
-    padding: 150px 280px;
+    padding: 180px 300px;
   }
 }
 
 @media (max-width: 1280px) {
   .services .services-info {
-    padding: 150px;
+    padding: 200px 200px;
   }
 }
 
@@ -1706,6 +1722,12 @@ section {
   font-size: 13px;
   line-height: 30px;
   padding: 20px;
+}
+
+@media (max-width: 1280px) {
+  .services .services-info p {
+    padding: 20px 80px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -1928,11 +1950,12 @@ section {
   z-index: 10;
   width: 100%;
   text-align: start;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 1400px) {
   .services-options-container .services-option-header .services-title-subtitle h4 {
-    font-size: 50px;
+    font-size: 54px;
   }
 }
 
@@ -1974,11 +1997,12 @@ section {
   text-align: initial;
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 @media (max-width: 1280px) {
   .services-options-container .open .services-title-subtitle h4 {
-    font-size: 5vh;
+    font-size: 54px;
   }
 }
 
@@ -2128,7 +2152,7 @@ section {
 
 @media (max-width: 1280px) {
   .services-quiz-info h3 {
-    font-size: 8vh;
+    font-size: 80px;
   }
 }
 
@@ -2451,7 +2475,7 @@ section {
           justify-content: center;
   background-color: #F7F3F0;
   color: #242424;
-  padding: 0px 200px;
+  padding: 0px 70px;
 }
 
 @media (max-width: 1180px) {
@@ -2561,27 +2585,32 @@ section {
 .contact-wrapper .contact-form ::-webkit-input-placeholder {
   color: #CECF70;
   font-weight: 600;
+  font-size: 10px;
 }
 
 .contact-wrapper .contact-form :-ms-input-placeholder {
   color: #CECF70;
   font-weight: 600;
+  font-size: 10px;
 }
 
 .contact-wrapper .contact-form ::-ms-input-placeholder {
   color: #CECF70;
   font-weight: 600;
+  font-size: 10px;
 }
 
 .contact-wrapper .contact-form ::placeholder {
   color: #CECF70;
   font-weight: 600;
+  font-size: 10px;
 }
 
 .contact-wrapper .contact-form label {
   opacity: 0.8;
   letter-spacing: 2px;
   margin-top: 40px;
+  font-size: 12px;
 }
 
 .contact-wrapper .contact-form input,
@@ -2728,11 +2757,6 @@ section {
   }
 }
 
-.quiz-game-container .active {
-  -webkit-filter: grayscale(0.8);
-          filter: grayscale(0.8);
-}
-
 .quiz-game-container .quiz-element {
   position: relative;
   color: #F7F3F0;
@@ -2740,6 +2764,11 @@ section {
   overflow: hidden;
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+.quiz-game-container .quiz-element .active {
+  -webkit-filter: grayscale(0.8);
+          filter: grayscale(0.8);
 }
 
 .quiz-game-container .quiz-element .element-selected {
@@ -2757,7 +2786,7 @@ section {
   color: #F7F3F0;
   border-radius: 50%;
   border: 1px solid #F7F3F0;
-  background-color: green;
+  background-color: #CECF70;
   font-size: 50px;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;

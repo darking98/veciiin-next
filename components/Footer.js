@@ -4,7 +4,6 @@ import footer2 from "../images/footer/footer2.jpg";
 import footer3 from "../images/footer/footer3.jpg";
 import footer4 from "../images/footer/footer4.jpg";
 import Image from "next/image";
-import {BsArrowRight} from 'react-icons/bs'
 SwiperCore.use([Navigation]);
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
@@ -79,7 +78,6 @@ const Footer = () => {
           <span>Instagram</span>
           <span>Facebook</span>
           <span>Pinterest</span>
-          <BsArrowRight/>
         </div>
       </footer>
     </div>
