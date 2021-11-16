@@ -71,9 +71,10 @@
       .bubble-container {
         align-self: flex-end;
         margin-top: 180px;
-
+        margin-right: 30px;
         @media(max-width:1000px){
           margin-top: 0px;
+          margin-right: 0px;
         }
       }
       .bubble {

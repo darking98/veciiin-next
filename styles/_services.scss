@@ -149,19 +149,29 @@
           }
         }
 
-        img {
+        .image-container{
           position: absolute;
-          width: 600px;
-          height: 300px;
-          object-fit: cover;
-          transform: translateX(-50%) translateY(-50%);
+          width: 300px;
+          //height: 1000px;
           top: 50%;
-          left: 50%;
-          z-index: 9;
-          opacity: 0;
-          visibility: hidden;
+          //left: 50%;
           pointer-events: none;
+          transform: translate(-50%, -50%);
+          overflow: hidden;
+          opacity: 0;
+          transform: scale(0.1);
+          transition: opacity .3s ease-out;
+          transition: transform .3s ease-out;
+          img {
+            width: 100% !important;
+            height: 400px !important;
+            object-fit:cover;
+            position: relative;
+            transition: all .3s ease-out;
+            mix-blend-mode: difference;
+          }
         }
+        
 
         .services-title-subtitle {
           display: flex;
@@ -183,7 +193,7 @@
             font-size: 16px;
             text-decoration: underline;
             text-transform: uppercase;
-
+            z-index: 10;
             &:hover {
               opacity: 0.8;
             }

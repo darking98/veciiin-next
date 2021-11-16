@@ -13,13 +13,6 @@ const Service = () => {
   const [mouse, setMouse] = useState(colors.white);
 
   useNavColor(mouse);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      window.scrollY < 800 ? setMouse(colors.white) : setMouse(colors.red);
-    });
-  }, [mouse]);
-
   const options = [
     {
       title: "Styling Refresh",
@@ -53,23 +46,33 @@ const Service = () => {
 
   const ServiceOption = ({ title, subtitle, order, img }) => {
     const [toggleOption, setToggleOption] = useState(false);
-    const imageHover = useRef(null);
-
+    const imageHover = useRef({});
+    const handleMouseLeave = (e) =>{
+      imageHover.current.style.opacity = 0;
+      imageHover.current.style.transform = `translate(-50%, -50%) rotate(-5deg)`;
+      imageHover.current.style.transform = 'scale(0.8, 0.8)';
+    } 
+    const handleMouseMove = (e) => {
+      if(toggleOption){
+        imageHover.current.style.opacity = 0;
+        imageHover.current.style.transform = `translate(-50%, -50%) rotate(-5deg)`;
+        imageHover.current.style.transform = 'scale(0.8, 0.8)';
+      }else{
+        imageHover.current.style.opacity = 1;
+        imageHover.current.style.transform = `translate(-100%, -50% ) rotate(5deg)`;
+        //imageHover.current.style.transform = 'scale(1, 1)';
+        imageHover.current.style.left = e.clientX + "px";
+      }
+      
+    }
     return (
       <div
         className={
           toggleOption ? "services-option open" : "services-option closed"
         }
         onClick={() => setToggleOption(!toggleOption)}
-        onMouseEnter={(e) => gsap.to(imageHover.current, { autoAlpha: 1 })}
-        onMouseLeave={(e) => gsap.to(imageHover.current, { autoAlpha: 0 })}
-        onMouseMove={(e) =>
-          !toggleOption
-            ? gsap.set(imageHover.current, {
-                x: e.clientX - 1000 + "px",
-              })
-            : gsap.to(imageHover.current, { autoAlpha: 0 })
-        }
+        onMouseMove={(e) => handleMouseMove(e)}
+        onMouseLeave={(e) => handleMouseLeave(e)}
       >
         <div className="services-option-header">
           <span>{order}</span>
@@ -78,7 +81,9 @@ const Service = () => {
             <p className="service-option-text">{subtitle}</p>
             <span className="service-option-text">Inquire</span>
           </div>
-          <Image src={img} alt="" ref={imageHover} />
+            <div className="image-container" ref={imageHover} >
+            <Image src={img} alt="" />
+            </div>
           {toggleOption ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
