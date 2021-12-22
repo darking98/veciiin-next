@@ -14,7 +14,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import useWindowDimensions from "../hooks/useWindowsDimensions";
 import { NavbarContext } from "../context/NavProvider";
-import project2 from "../images/home/servicios.jpg";
+import project2 from "../images/home/servicios.JPG";
 import hero1 from "../images/home/01.jpg";
 import hero2 from "../images/home/02.jpg";
 import hero3 from "../images/home/03.jpg";
