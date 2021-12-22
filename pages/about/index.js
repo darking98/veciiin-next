@@ -3,8 +3,9 @@ import { NavbarContext } from "../../context/NavProvider";
 import Image from "next/image";
 import Bubble from "../../components/Bubble";
 import aboutImages from "../../images/about/about-images.png";
+//import aboutHorizontal from "../../images/about/asd.webp";
 import aboutHorizontal from "../../images/about/fotoNaty.png";
-import aboutFeatured from '../../images/about/Imagen-22.png'
+import aboutFeatured from "../../images/about/Imagen-22.png";
 import naty from "../../images/about/naty.png";
 const About = () => {
   const { useNavColor, colors, open } = useContext(NavbarContext);
@@ -13,11 +14,10 @@ const About = () => {
   useNavColor(mouse);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      (window.scrollY < 1600)? setMouse(colors.red) : setMouse(colors.white)
-    })
-    
-  },[mouse])
+    window.addEventListener("scroll", () => {
+      window.scrollY < 1600 ? setMouse(colors.red) : setMouse(colors.white);
+    });
+  }, [mouse]);
   return (
     <div className="about-container">
       <div className="about">
@@ -25,30 +25,19 @@ const About = () => {
           <div className="about-profile-col">
             <div className="col-header">
               <div className="col-header-div">
-                <h3>Natalie</h3>
-                <Bubble size="small" background="#CECF70">
+                <div>
+                  <h3>BEHIND VECIIIN STUDIO THE FOUNDER’S STORY</h3>
+                </div>
+                <Bubble background="#CECF70">
                   Projects
                 </Bubble>
               </div>
-              <div className="col-header-div">
-                <h3>Vecino</h3>
-              </div>
             </div>
-          </div>
-          <div className="about-profile-col">
-            <p>
-              Comenzó su recorrido en el mundo del arte en el 2012 en Nueva York
-              donde estudió Strategic Design and Management en Parsons, una
-              carrera enfocada en la administración estratégica del diseño.
-              Además, realizó cursos para aprender artes plásticas en Aschan,
-              una academia de arte asiática.
-            </p>
           </div>
         </div>
         <div className="about-image">
           <div className="about-image-horizontal">
-            <Image src={aboutHorizontal}/>
-
+            <Image src={aboutHorizontal} />
           </div>
           <div className="about-image-vertical">
             <Image src={naty} />
@@ -57,51 +46,56 @@ const About = () => {
         <div className="about-profile second-about">
           <div className="about-profile-col second-profile-col">
             <p className="second-paragraph ">
-              En 2015 Nueva York le abrió las puertas a su primer trabajo en
-              diseño de interiores dentro de la Marks and Frantz cuyas socias
-              son las creadoras de los sets de diseño de Sex and the city, el
-              diablo viste a la moda, entre otras películas famosas. Gracias a
-              esta experiencia, Natalie desarrolló un interés por el diseño de
-              interiores y es por eso que en 2016 decidió mudarse nuevamente,
-              pero esta vez a Miami para seguir aprendiendo. Allí, tuvo la
-              oportunidad de trabajar en Art, Basel, Boconcept, y Beainteriors.
-              Luego de adquirir una vasta experiencia, en 2018 decidió volver a
-              Colombia donde tuvo la oportunidad de trabajar un tiempo con
-              Verónica Mishaan en Bogotá
+              Natalie Vecino’s journey into the art world began in 2012 in New
+              York where she studied Strategic Design and Management at Parsons
+              School of Art & Design, a career focused on strategic design
+              management.
+            </p>
+            <p className="second-paragraph">
+              In addition, she took courses to learn plastic arts at Aschan, an
+              Asian art academy.</p> 
+              <p>In 2015, she was offered her first job in
+              interior design at a firm whose partners are the creators of many
+              famous movie sets such as Sex and the City and The Devil Wears
+              Prada. As a result of this experience, Natalie developed an
+              interest in interior design and that is why in 2016 she decided to
+              move to Miami to continue learning.
             </p>
           </div>
           <div className="about-profile-col third-profile-col">
             <p className="second-paragraph">
-              Finalmente en 2019 Natalie decidió crear su propio estudio,
-              Veciiin, con enfoque en el diseño de producto y mobiliario para
-              proyectos residenciales y comerciales. El objetivo del estudio es
-              proponer ideas frescas, contemporáneas para así plantear diseños
-              funcionales que generen conversación. Actualmente, el estudio
-              Veciiin ha completado muchos proyectos entre Barranquilla, Bogotá,
-              Cartagena y varios proyectos residenciales en Miami.
+              Having gained a great deal of experience, two years later she
+              returns to Colombia and in 2019 Natalie creates her studio,
+              Veciiin. A studio with a focus on product and furniture design for
+              residential and commercial projects.
+            </p>
+            <p className="second-paragraph">
+              The objective of the studio is to propose fresh, contemporary
+              ideas to create functional designs that spark conversation.
+            </p>
+            <p className="second-paragraph">
+              Currently, Veciiin studio has completed various projects in
+              Colombia and the United States.
             </p>
           </div>
         </div>
       </div>
-      
+
       <div className="about-featured" style={{ height: "100vh" }}>
         <div className="about-featured-header">
           <span>Studios Veciiin has been</span>
           <h3>Featured On</h3>
         </div>
         <div className="about-featured-companies">
-        <div className="about-image-horizontal">
-            <Image src={aboutImages}/>
-
+          <div className="about-image-horizontal">
+            <Image src={aboutImages} />
           </div>
           <div className="about-image-vertical">
             <Image src={aboutFeatured} />
           </div>
         </div>
       </div>
-      
-
-      </div>
+    </div>
   );
 };
 

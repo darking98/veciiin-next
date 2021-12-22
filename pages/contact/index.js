@@ -13,8 +13,7 @@ const Contact = () => {
           <span className="letter-spacing">Get in touch</span>
           <h3>Let's work together!</h3>
           <div className="contact-info-paragraph">
-            <p>Our studio is located in Bogotá, Colombia.</p>
-            <p>Opening times: Monday to Friday 8am to 5pm.</p>
+            <p>Our studio is located in Bogotá, Colombia. Opening times: Monday to Friday 8am to 5pm.</p>
           </div>
         </div>
         <form action="" className="contact-form">

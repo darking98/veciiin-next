@@ -15,7 +15,7 @@ import image13 from "../../images/quiz/image13.jpg";
 import image14 from "../../images/quiz/image14.jpg";
 import image15 from "../../images/quiz/image15.jpg";
 import image16 from "../../images/quiz/image16.jpg";
-import QuizElement from '../../components/QuizElement'
+import QuizElement from "../../components/QuizElement";
 import { NavbarContext } from "../../context/NavProvider";
 import Bubble from "../../components/Bubble";
 
@@ -106,11 +106,8 @@ const Quiz = () => {
     <div className="quiz">
       <div className="quiz-info">
         <span>Take our quick Quiz</span>
-        <h3>Choose a room For us to design</h3>
-        <p>
-          If you need work on mutiple rooms, you’ll be able to address that with
-          your designer at your consultation.
-        </p>
+        <h3>WHAT SPACE WOULD</h3>
+        <h3>YOU LIKE TO CHANGE?</h3>
       </div>
       <div className="quiz-game-container">
         {rooms.map((room) => (
@@ -124,12 +121,9 @@ const Quiz = () => {
       {roomSelected && (
         <>
           <div className="quiz-info">
-            <h3>Pick the styles you like</h3>
-            <p>
-              Wich of these inspire you? 
-            </p>
-            <p>Don't overthink it; go with your
-              instinct.</p>
+            <h3>WHAT STYLES</h3>
+            <h3>DEFINE YOU?</h3>
+            <p>Choose as many as you’d like!</p>
           </div>
           <div className="quiz-game-container">
             {styles.map((room) => (
@@ -147,9 +141,11 @@ const Quiz = () => {
           <div className="contact-wrapper">
             <div className="contact-info">
               <span>We will get in touch</span>
-              <h3 className="quiz-h3">Let’s build your space</h3>
+              <h3 className="quiz-h3">LET’S CREATE</h3>
+              <h3 className="quiz-h3">THE SPACE OF</h3>
+              <h3 className="quiz-h3">YOUR DREAMS</h3>
             </div>
-            <form className="contact-form">
+            <form className="contact-form" style={{ width: "50%" }}>
               <label for="name">NAME</label>
               <input type="text" placeholder="Enter your name" id="name" />
               <label for="email">EMAIL</label>
@@ -162,7 +158,7 @@ const Quiz = () => {
               />
               <label for="message">MESSAGE</label>
               <input name="" placeholder="Enter your message" id="message" />
-              <Bubble background="#CECF70">Send</Bubble>
+              <Bubble background="#CECF70">Submit</Bubble>
             </form>
           </div>
         </div>

@@ -15,31 +15,33 @@ const Service = () => {
   useNavColor(mouse);
   const options = [
     {
-      title: "Styling Refresh",
-      subtitle:
-        "Este proyecto es para las personas que quieren un diseño de más de un espacio, manejo de proyectos, obras civiles, etc).",
+      title: "Styling Tips",
+      subtitle: `· Experience a stress-free full interior design or makeover of one or more space.\n· Contact us to learn more about our face-to-face personalised consultations, installation services, 3D rendering, \nFurniture design, quotes, shopping lists, interior architecture and renovations.`,
       order: "01",
       img: serviceImage,
     },
     {
-      title: "E-Home Styling",
-      subtitle:
-        "Este proyecto es para las personas que quieren un diseño de más de un espacio, manejo de proyectos, obras civiles, etc).",
+      title: "Deco Essentials",
+      subtitle: `· Experience a stress-free full interior design or makeover of one or more space.\n· Contact us to learn more about our face-to-face personalised consultations, installation services, 3D rendering, \nFurniture design, quotes, shopping lists, interior architecture and renovations.`,
       order: "02",
       img: serviceImage,
     },
     {
-      title: "Standard Home Styling",
-      subtitle:
-        "Este proyecto es para las personas que quieren un diseño de más de un espacio, manejo de proyectos, obras civiles, etc).",
+      title: "Interior Design Development",
+      subtitle: `· Experience a stress-free full interior design or makeover of one or more space.\n· Contact us to learn more about our face-to-face personalised consultations, installation services, 3D rendering, \nFurniture design, quotes, shopping lists, interior architecture and renovations.`,
       order: "03",
       img: serviceImage,
     },
     {
-      title: "Premium Home Styling",
-      subtitle:
-        "Este proyecto es para las personas que quieren un diseño de más de un espacio, manejo de proyectos, obras civiles, etc).",
+      title: "The Veciiin Design",
+      subtitle: `· Experience a stress-free full interior design or makeover of one or more space.\n· Contact us to learn more about our face-to-face personalised consultations, installation services, 3D rendering, \nFurniture design, quotes, shopping lists, interior architecture and renovations.`,
       order: "04",
+      img: serviceImage,
+    },
+    {
+      title: "Art Consultation",
+      subtitle: `· Experience a stress-free full interior design or makeover of one or more space.\n· Contact us to learn more about our face-to-face personalised consultations, installation services, 3D rendering, \nFurniture design, quotes, shopping lists, interior architecture and renovations.`,
+      order: "05",
       img: serviceImage,
     },
   ];
@@ -47,24 +49,23 @@ const Service = () => {
   const ServiceOption = ({ title, subtitle, order, img }) => {
     const [toggleOption, setToggleOption] = useState(false);
     const imageHover = useRef({});
-    const handleMouseLeave = (e) =>{
+    const handleMouseLeave = (e) => {
       imageHover.current.style.opacity = 0;
       imageHover.current.style.transform = `translate(-50%, -50%) rotate(-5deg)`;
-      imageHover.current.style.transform = 'scale(0.8, 0.8)';
-    } 
+      imageHover.current.style.transform = "scale(0.8, 0.8)";
+    };
     const handleMouseMove = (e) => {
-      if(toggleOption){
+      if (toggleOption) {
         imageHover.current.style.opacity = 0;
         imageHover.current.style.transform = `translate(-50%, -50%) rotate(-5deg)`;
-        imageHover.current.style.transform = 'scale(0.8, 0.8)';
-      }else{
+        imageHover.current.style.transform = "scale(0.8, 0.8)";
+      } else {
         imageHover.current.style.opacity = 1;
         imageHover.current.style.transform = `translate(-100%, -50% ) rotate(5deg)`;
         //imageHover.current.style.transform = 'scale(1, 1)';
         imageHover.current.style.left = e.clientX + "px";
       }
-      
-    }
+    };
     return (
       <div
         className={
@@ -78,12 +79,17 @@ const Service = () => {
           <span>{order}</span>
           <div className="services-title-subtitle">
             <h4>{title}</h4>
-            <p className="service-option-text">{subtitle}</p>
+            <p
+              className="service-option-text"
+              style={{ whiteSpace: "pre-line" }}
+            >
+              {subtitle}
+            </p>
             <span className="service-option-text">Inquire</span>
           </div>
-            <div className="image-container" ref={imageHover} >
+          <div className="image-container" ref={imageHover}>
             <Image src={img} alt="" />
-            </div>
+          </div>
           {toggleOption ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +119,7 @@ const Service = () => {
                   font-weight="200"
                   letter-spacing="0.1em"
                 >
-                  <tspan x="0" y="-3" >
+                  <tspan x="0" y="-3">
                     -
                   </tspan>
                 </text>
@@ -155,7 +161,6 @@ const Service = () => {
               </g>
             </svg>
           )}
-          
         </div>
       </div>
     );
@@ -165,20 +170,20 @@ const Service = () => {
     <div className="services">
       <div className="services-info">
         <span className="letter-spacing">Our Services</span>
-        <h3>Encontrá el servicio para vos</h3>
+        <h3>ELEVATE</h3>
+        <h3>YOUR SPACE</h3>
         <p>
-          Pregunta por nuestras asesorías especializadas para ti con visitas
-          presenciales, servicio de instalaciones, 3d renders, diseño de
-          mobiliario, cotizaciones, lista de compras, arquitectura de interiores
+          A space that generates conversation or helps you relax. You name it,
+          we do it for you.
         </p>
       </div>
 
-      <div className="services-images-container">
+      {/*<div className="services-images-container">
         <div className="service-image image1" />
         <div className="service-image image2" />
         <div className="service-image image3" />
         <div className="service-image image4" />
-      </div>
+  </div>*/}
 
       <div className="services-options-container">
         {options.map((element) => (
@@ -194,7 +199,11 @@ const Service = () => {
         <div className="services-quiz-wrapper">
           <div className="services-quiz-info">
             <span className="letter-spacing">Hey!</span>
-            <h3>Didn’t find what you are looking for?</h3>
+            <h3>CAN’T FIND   </h3>
+            <h3>WHAT YOU</h3>
+            <h3>ARE LOOKING</h3>
+            <div style={{display:'flex'}}>
+            <h3>FOR?</h3>
             <div className="bubble">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -228,6 +237,8 @@ OUR QUIZ"
                   </tspan>
                 </text>
               </svg>
+            </div>
+
             </div>
           </div>
           <div className="services-quiz-images">

@@ -22,6 +22,8 @@
     position: sticky;
     top: 80px;
     height: 100%;
+    width: 90%;
+    text-transform: uppercase;
 
     .bubble-container {
       display: flex;
@@ -32,16 +34,8 @@
       font-size: 10px;
       text-transform: uppercase;
       font-family: $raleway;
-      margin-top: -80px;
-      @media (max-width: 1500px) {
-        margin-top: 0px;
-      }
-      @media only screen and (max-width:1280px){
-        margin-left:-200px;
-      }
-      @media(max-width:1180px){
-        margin-left:0px;
-      }
+      margin-left: 20px;
+      margin-bottom: 20px;
     }
     
     @media (max-width: 1180px) {
@@ -50,19 +44,22 @@
     }
     span {
       text-transform: uppercase;
-      opacity: 0.7;
-      font-size: 12px;
+      font-size: 10px;
+      margin-bottom: 10px;
     }
     &-container-title {
       //width: 631px;
       display: flex;
-      white-space: pre-wrap;
+      flex-direction: column;
+      white-space: pre;
+
       @media (max-width: 1180px) {
         width: auto;
       }
       h3 {
+
         font-weight: 400;
-        font-size: 10vh;
+        font-size: 70px;
         line-height: 1;
         @media (max-width: 1180px) {
           font-size: 7vh;
@@ -186,6 +183,7 @@
     text-transform: uppercase;
     opacity: 0.7;
     font-size: 12px;
+    margin-bottom: 30px;
   }
 
   &-title {
@@ -194,10 +192,13 @@
     div {
       display: flex;
       justify-content: center;
+      .header-container{
+        flex: 1;
+        justify-content: flex-end;
+      }
       .bubble {
         margin-left: 20px;
         color: $white;
-        font-weight: 600;
         letter-spacing: 1px;
         font-size: 12px;
         text-transform: uppercase;
@@ -207,7 +208,8 @@
     h3 {
       font-size: 8vh;
       opacity: 0.8;
-
+      line-height: 1;
+      text-transform: uppercase;
       @media (max-width: 1180px) {
         font-size: 6vh;
       }

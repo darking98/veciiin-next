@@ -3,50 +3,48 @@ import React from "react";
 const Bubble = ({ children, size }) => {
   return (
     <div className="bubble">
-      <div>{children}</div>
+      <div className={!size && 'small-bubble'}>{children}</div>
       {size === "big" ? (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="209"
-          height="134.235"
-          viewBox="0 0 209 134.235"
-        >
-          <path
-            id="Trazado_191"
-            data-name="Trazado 191"
-            d="M101.4,1.078c56.426,7.681,101.4,27.082,101.4,60.489s-45.341,70.77-101.4,60.489S0,94.974,0,61.567,44.973-6.6,101.4,1.078Z"
-            transform="matrix(0.999, -0.052, 0.052, 0.999, 0, 10.614)"
-            fill="#cecf70"
-          />
-        </svg>
+        <div className="svg-container">
+          <svg
+            width="110"
+            height="84"
+            viewBox="0 0 110 84"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M36.7609 7.80983C67.532 -3.00183 96.0259 -4.15491 106.021 14.643C116.016 33.441 104.317 66.628 72.9557 75.8824C41.5945 85.1369 13.6907 87.8472 3.69569 69.0492C-6.29936 50.2513 5.99219 18.6259 36.7609 7.80983Z"
+              fill="#CECF70"
+            />
+          </svg>
+        </div>
       ) : size === "medium" ? (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="122.268"
-          height="81.581"
-          viewBox="0 0 122.268 81.581"
-        >
-          <path
-            id="Trazado_173"
-            data-name="Trazado 173"
-            d="M59.24.657c32.966,4.684,59.24,16.514,59.24,36.884S91.99,80.694,59.24,74.425,0,57.912,0,37.541,26.274-4.027,59.24.657Z"
-            transform="matrix(0.999, -0.052, 0.052, 0.999, 0, 6.201)"
-            fill="#cecf70"
-          />
-        </svg>
+        <div className="svg-container">
+          <svg
+            width="70"
+            height="55"
+            viewBox="0 0 70 55"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22.9844 4.33712C42.2566 -2.15383 60.3033 -2.27518 67.0685 10.4483C73.8337 23.1718 67.1649 44.97 47.4831 50.4124C27.8013 55.8547 10.1642 57.0247 3.39901 44.3012C-3.36619 31.5777 3.71379 10.8311 22.9844 4.33712Z"
+              fill="#CECF70"
+            />
+          </svg>
+        </div>
       ) : (
         <svg
+          width="85"
+          height="63"
+          viewBox="0 0 85 63"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          width="71.762"
-          height="57.081"
-          viewBox="0 0 71.762 57.081"
         >
           <path
-            id="Trazado_168"
-            data-name="Trazado 168"
-            d="M35.881.1C55.848,3.638,71.762,12.584,71.762,27.988S55.717,60.621,35.881,55.88,0,43.392,0,27.988,15.914-3.446,35.881.1Z"
-            transform="translate(0 0.401)"
-            fill="#cecf70"
+            d="M42.343 0.54049C65.905 4.39349 84.686 14.1255 84.686 30.8835C84.686 47.6415 65.752 66.3835 42.343 61.2275C18.934 56.0715 0 47.6415 0 30.8835C0 14.1255 18.78 -3.31251 42.343 0.54049Z"
+            fill="#CECF70"
           />
         </svg>
       )}

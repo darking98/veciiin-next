@@ -1,7 +1,7 @@
 .about {
   display: flex;
   flex-direction: column;
-  padding: 200px 100px;
+  padding: 200px 70px 50px 70px;
 
   @media(max-width:1024px){
     padding: 150px 30px;
@@ -51,12 +51,11 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-
-      
+      margin-bottom: 40px;
+      //padding: 0px 60px;
       p{
-          font-size: 12px;
-          opacity: 0.8;
-          line-height: 1.5rem;
+          font-size: 14px;
+          line-height: 2rem;
           @media(max-width:767px){
             font-size: 10px;
           }
@@ -68,14 +67,12 @@
       .col-header {
         display: flex;
         flex-direction: column;
-        margin-right: 200px;
-        margin-bottom:60px;
         @media(max-width:1024px){
           margin-right: 0px;
           margin-bottom: 20px;
         }
         .bubble {
-          margin-left: 40px;
+          align-self: flex-end;
           color: $white;
           font-weight: 600;
           letter-spacing: 1px;
@@ -96,12 +93,13 @@
         &-div {
           display: flex;
           justify-content: flex-end;
+          padding: 0px 60px;
           @media(max-width:1024px){
             justify-content: center;
           }
         }
         h3 {
-          font-size: 12vh;
+          font-size: 10vh;
           font-weight: 400;
           opacity: 0.9;
           line-height: 1;

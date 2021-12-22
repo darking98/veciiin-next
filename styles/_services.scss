@@ -11,7 +11,10 @@
     justify-content: center;
     align-items: center;
     padding: 200px 450px;
-
+    background-image: url('../images/services/Services.jpg');
+    background-position: center center;
+    background-size: contain;
+    height: 100vh;
     @media (max-width: 1500px) {
       padding: 150px 250px;
     }
@@ -36,9 +39,10 @@
     }
     p {
       text-align: center;
-      font-size: 13px;
+      font-size: 17px;
       line-height: 30px;
       padding: 20px;
+      font-weight: lighter;
       @media(max-width:1280px){
         padding: 20px 80px;
       }
@@ -49,13 +53,10 @@
       }
     }
     h3 {
-      font-size: 12vh;
+      font-size: 90px;
       line-height: 1;
       margin-top: 20px;
-      @media(max-width:1280px){
-        font-size: 13vh;
-
-      }
+      
       @media (max-width: 1000px) {
         font-size: 7vh;
         margin: 30px 0px;
@@ -195,7 +196,7 @@
             text-transform: uppercase;
             z-index: 10;
             &:hover {
-              opacity: 0.8;
+              //opacity: 0.8;
             }
           }
 
@@ -205,7 +206,7 @@
             z-index: 10;
             width: 100%;
             text-align: start;
-            margin-bottom: 30px;
+            //margin-bottom: 30px;
             @media(max-width:1400px){
               font-size: 54px;
             }
@@ -252,6 +253,7 @@
         .service-option-text {
           opacity: 1;
           margin-top: 0;
+          line-height: 2;
           @media (max-width: 1000px) {
             padding: 0px 20px;
             //text-align: center;
@@ -276,7 +278,7 @@
     min-height: 100vh;
     background-color: $white;
     color: $black;
-    padding: 100px 80px;
+    padding: 100px 70px;
 
     @media(max-width:1000px){
       padding: 100px 30px;
@@ -286,11 +288,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      width: 100%;
     }
     &-images {
       display: flex;
       flex-direction: column;
-      width:60%;
+      //width:60%;
       :first-child{
         @media(max-width:1500px){
           margin-right: 40px;
@@ -335,7 +338,7 @@
         //width: 720px;
         line-height: 1;
         @media(max-width:1280px){
-          font-size:80px;
+          font-size:70px;
         }
         @media(max-width:1000px){
           font-size: 6vh;

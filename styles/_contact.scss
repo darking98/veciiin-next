@@ -24,12 +24,13 @@
       flex-direction: column;
       justify-content: center;
       span {
-        opacity: 0.7;
-        font-size: 12px;
+        font-size: 10px;
         text-transform: uppercase;
+        margin-bottom: 15px;
       }
       .quiz-h3{
-        font-size:10vh;
+        font-size:70px;
+        margin: 0px 100px 0px 0px;
         @media(max-width:1180px){
           font-size: 7vh;
         }
@@ -37,19 +38,24 @@
       h3 {
         line-height: 1;
         font-size: 10vh;
-        margin: 40px 0px;
-        @media(max-width:1180px){
-          font-size:8vh;
+        margin-bottom: 40px;
+        margin-top: 10px;
+        //margin: 40px 0px;
+        text-transform: uppercase;
+        @media(max-width:978px){
+          font-size:7vh;
+          margin-bottom: 0px;
         }
       }
       &-paragraph {
         display: flex;
         flex-direction: column;
         line-height: 30px;
+        font-size: 12px;
 
         @media(max-width:1180px){
           font-size: .8rem;
-          margin: 30px 0px;
+          margin: 10px 0px;
         }
       }
     }
@@ -57,7 +63,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      width: 50%;
+      width: 70%;
       font-family: $raleway;
 
       @media(max-width:1180px){
@@ -65,12 +71,10 @@
       }
       ::placeholder {
         color: $yellow;
-        font-weight: 600;
         font-size: 10px;
       }
       label {
         opacity: 0.8;
-        letter-spacing: 2px;
         margin-top:40px;
         font-size: 12px;
       }
@@ -86,7 +90,7 @@
         font-family: $raleway;
         width: 100%;
         opacity: 0.8;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
       }
       input {
         padding: 10px 0px;
@@ -97,9 +101,8 @@
       .bubble {
         align-self: flex-start;
         color: $white;
-        font-weight: 600;
         letter-spacing: 1px;
-        font-size: 12px;
+        font-size: 10px;
         text-transform: uppercase;
       }
     }

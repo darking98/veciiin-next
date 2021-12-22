@@ -1,4 +1,5 @@
-import {useContext} from 'react'
+import { useContext } from "react";
+import Link from 'next/link'
 import image1 from "../../images/projects/image1.jpg";
 import image2 from "../../images/projects/image2.jpg";
 import image3 from "../../images/projects/image3.jpg";
@@ -13,9 +14,9 @@ const Projects = () => {
   const imagesGroup1 = [image1, image2, image4, image6];
   const imagesGroup2 = [image3, image5, image7, image7];
 
-  const {useNavColor, colors, open} = useContext(NavbarContext)
+  const { useNavColor, colors, open } = useContext(NavbarContext);
 
-  useNavColor(colors.red)
+  useNavColor(colors.red);
 
   return (
     <div className="projects-container">
@@ -23,15 +24,25 @@ const Projects = () => {
         <div className="projects-fixed">
           <span className="letter-spacing">Our Work</span>
           <div className="projects-fixed-container-title">
-            <h3>A curated selection of projects.</h3>
+            <div style={{ display: "flex" }}>
+              <h3>A curated</h3>
+              <div className="bubble-container">
+              <Link href="/services">
+                <a>
+                <Bubble background="#CECF70">
+                Services
+              </Bubble>
+                </a>
+              </Link>
+              
+              </div>
+              
+            </div>
+            <h3>selection of</h3>
+            <h3>our projects.</h3>
             {/*<Bubble background="#CECF70">Services</Bubble>*/}
-            <div className="bubble-container">
-            <Bubble size="small" background="#CECF70">
-              Services
-            </Bubble>
+            <div className="bubble-container"></div>
           </div>
-          </div>
-          
         </div>
 
         <div className="projects-gallery-container">
@@ -73,8 +84,11 @@ const Projects = () => {
         <span className="letter-spacing">Have a question?</span>
         <div className="projects-asked-question-title">
           <div>
-            <h3>Frequently</h3>
-            <Bubble size="small" background="#CECF70">
+            <div className="header-container">
+              <h3>Frequently</h3>
+
+            </div>
+            <Bubble background="#CECF70">
               Inquire
             </Bubble>
           </div>
