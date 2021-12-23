@@ -62,7 +62,7 @@
         font-size: 70px;
         line-height: 1;
         @media (max-width: 1180px) {
-          font-size: 7vh;
+          font-size: 8vh;
         }
         @media(max-width:700px){
           font-size: 6vh;
@@ -89,7 +89,7 @@
         margin-left: 20px;
       }
     }
-    @media (min-width: 320px) and (max-width: 767px) {
+    @media (min-width: 280px) and (max-width: 767px) {
       flex-direction: column;
       margin-left: 0px;
       align-items: center;
@@ -198,12 +198,19 @@
   &-title {
     text-align: center;
     margin-bottom: 100px;
+    @media (min-width: 280px) and (max-width: 767px) {
+      margin-bottom: 50px;
+    }
     div {
       display: flex;
       justify-content: center;
       .header-container{
         flex: 1;
         justify-content: flex-end;
+        @media (max-width:1024px){
+          flex: auto;
+          justify-content: center;
+        }
       }
       .bubble {
         margin-left: 20px;
@@ -212,6 +219,10 @@
         font-size: 12px;
         text-transform: uppercase;
         font-family: $raleway;
+
+        @media(max-width:1024px){
+          justify-self: flex-end;
+        }
       }
     }
     h3 {

@@ -37,7 +37,10 @@ const Projects = () => {
             <h3>selection of</h3>
             <h3>our projects.</h3>
 
-            <div className="bubble-container show-responsive" style={{alignSelf:'flex-end', marginTop:'20px'}}>
+            <div
+              className="bubble-container show-responsive"
+              style={{ alignSelf: "flex-end", marginTop: "20px" }}
+            >
               <Link href="/services">
                 <a>
                   <Bubble background="#CECF70">Services</Bubble>
@@ -89,9 +92,14 @@ const Projects = () => {
             <div className="header-container">
               <h3>Frequently</h3>
             </div>
-            <Bubble background="#CECF70">Inquire</Bubble>
+            <div className="hide-responsive">
+              <Bubble background="#CECF70">Inquire</Bubble>
+            </div>
           </div>
           <h3>Asked Questions</h3>
+          <div className="show-responsive">
+            <Bubble background="#CECF70">Inquire</Bubble>
+          </div>
         </div>
         <div className="projects-asked-question-grid">
           <div className="asked-question-grid-item">

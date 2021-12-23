@@ -106,8 +106,7 @@ const Quiz = () => {
     <div className="quiz">
       <div className="quiz-info">
         <span>Take our quick Quiz</span>
-        <h3>WHAT SPACE WOULD</h3>
-        <h3>YOU LIKE TO CHANGE?</h3>
+        <h3>{`WHAT SPACE WOULD\nYOU LIKE TO CHANGE?`}</h3>
       </div>
       <div className="quiz-game-container">
         {rooms.map((room) => (
@@ -121,8 +120,7 @@ const Quiz = () => {
       {roomSelected && (
         <>
           <div className="quiz-info">
-            <h3>WHAT STYLES</h3>
-            <h3>DEFINE YOU?</h3>
+            <h3>{`WHAT STYLES\nDEFINE YOU?`}</h3>
             <p>Choose as many as you’d like!</p>
           </div>
           <div className="quiz-game-container">
@@ -141,11 +139,9 @@ const Quiz = () => {
           <div className="contact-wrapper">
             <div className="contact-info">
               <span>We will get in touch</span>
-              <h3 className="quiz-h3">LET’S CREATE</h3>
-              <h3 className="quiz-h3">THE SPACE OF</h3>
-              <h3 className="quiz-h3">YOUR DREAMS</h3>
+              <h3 className="quiz-h3">{`LET’S CREATE\nTHE SPACE OF\nYOUR DREAMS`}</h3>
             </div>
-            <form className="contact-form" style={{ width: "50%" }}>
+            <form className="contact-form form-quiz">
               <label for="name">NAME</label>
               <input type="text" placeholder="Enter your name" id="name" />
               <label for="email">EMAIL</label>

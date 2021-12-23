@@ -11,27 +11,29 @@
     //height: 80vh;
     text-align: center;
     padding: 180px 0px 120px 0px;
-    @media(max-width:1500px){
-    }
 
-    @media(max-width:1000px){
+    @media (max-width: 1000px) {
       padding: 50px 30px;
-      text-align: start;
-      align-items: flex-start;
+      //align-items: flex-start;
       margin: 0px;
     }
     h3 {
+      white-space: pre;
       font-size: 11.5vh;
       line-height: 1;
-      //margin: 20px 0px;
-      @media(max-width:1500px){
+      text-align: center;
+      @media (max-width: 1500px) {
         font-size: 90px;
       }
-      @media(max-width:1000px){
-        font-size: 8vh;
+      @media (max-width: 1000px) {
+        font-size: 4.5vh;
+      }
+
+      @media(max-width:280px){
+        font-size: 3.8vh;
       }
     }
-    p{
+    p {
       font-size: 12px;
       margin-top: 30px;
     }
@@ -52,13 +54,13 @@
     gap: 40px;
     padding: 40px;
 
-    @media(max-width:1180px){
-      grid-template-columns: repeat(2,1fr);
+    @media (min-width: 768px) and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
     }
-    @media(max-width:1000px){
-      grid-template-columns: repeat(1,1fr);
+    @media (min-width: 280px) and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
     }
-    
+
     .quiz-element {
       position: relative;
       color: $white;
@@ -68,7 +70,7 @@
       .active {
         filter: grayscale(0.8);
       }
-      .element-selected{
+      .element-selected {
         display: flex;
         align-items: center;
         position: absolute;
@@ -89,7 +91,7 @@
         transition: 500ms ease-in-out;
 
         &:hover {
-            transform: scale(1.2);
+          transform: scale(1.2);
         }
         img {
           width: 100%;
@@ -101,7 +103,7 @@
         position: absolute;
         top: 90%;
 
-        @media(max-width:1000px){
+        @media (max-width: 1000px) {
           top: 85%;
         }
         p {
@@ -110,7 +112,7 @@
           position: relative;
           margin: 0px 20px;
           letter-spacing: 1px;
-          @media(max-width:1280px){
+          @media (max-width: 1280px) {
             font-size: 12px;
           }
           &:after {
@@ -128,9 +130,14 @@
   }
 }
 
-.contact-quiz{
-  padding: 0px 40px !important;
-
+.form-quiz {
+  width: 50% !important;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: auto !important;
+  }
+  @media (min-width: 280px) and (max-width: 767px) {
+    width: auto !important;
+  }
   /*.contact-info{
     width: 30%;
 

@@ -39,11 +39,19 @@ const NavbarOpen = ({ active, handleActive }) => {
         path: "/quiz",
       },
       {
-        title: "Contact",
+        title: "Shop",
         order: "06",
-        path: "/contact",
+        path: "/shop",
       },
+      
     ],
+    [
+      {
+        title: "Contact",
+        order: "07",
+        path: "/contact",
+      }
+    ]
   ];
   return (
     <div className={active ? "navbar-open nav-transititon" : "navbar-open"}>

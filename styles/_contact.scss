@@ -31,8 +31,17 @@
       .quiz-h3{
         font-size:70px;
         margin: 0px 100px 0px 0px;
+        white-space: pre;
+        
         @media(max-width:1180px){
           font-size: 7vh;
+        }
+        @media(max-width:768px){
+          font-size: 6vh;
+        }
+
+        @media(max-width:280px){
+          font-size: 4vh;
         }
       }
       h3 {

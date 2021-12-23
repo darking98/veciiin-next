@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <div className="home">
-      {/*<div className="home-image-wrapper">
+      <div className="home-image-wrapper">
         <Swiper slidesPerView={1} autoplay={{ delay: 3000 }} spaceBetween={0}>
           <SwiperSlide>
             <div className="example">
@@ -54,7 +54,7 @@ export default function Home() {
             </div>
           </SwiperSlide>
         </Swiper>
-  </div>*/}
+      </div>
 
       <section className="home-about-wrapper">
         <div className="home-about-header">
