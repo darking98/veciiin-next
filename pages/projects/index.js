@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Link from 'next/link'
+import Link from "next/link";
 import image1 from "../../images/projects/image1.jpg";
 import image2 from "../../images/projects/image2.jpg";
 import image3 from "../../images/projects/image3.jpg";
@@ -26,22 +26,24 @@ const Projects = () => {
           <div className="projects-fixed-container-title">
             <div style={{ display: "flex" }}>
               <h3>A curated</h3>
-              <div className="bubble-container">
-              <Link href="/services">
-                <a>
-                <Bubble background="#CECF70">
-                Services
-              </Bubble>
-                </a>
-              </Link>
-              
+              <div className="bubble-container hide-responsive">
+                <Link href="/services">
+                  <a>
+                    <Bubble background="#CECF70">Services</Bubble>
+                  </a>
+                </Link>
               </div>
-              
             </div>
             <h3>selection of</h3>
             <h3>our projects.</h3>
-            {/*<Bubble background="#CECF70">Services</Bubble>*/}
-            <div className="bubble-container"></div>
+
+            <div className="bubble-container show-responsive" style={{alignSelf:'flex-end', marginTop:'20px'}}>
+              <Link href="/services">
+                <a>
+                  <Bubble background="#CECF70">Services</Bubble>
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -86,11 +88,8 @@ const Projects = () => {
           <div>
             <div className="header-container">
               <h3>Frequently</h3>
-
             </div>
-            <Bubble background="#CECF70">
-              Inquire
-            </Bubble>
+            <Bubble background="#CECF70">Inquire</Bubble>
           </div>
           <h3>Asked Questions</h3>
         </div>

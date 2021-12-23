@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <div className="home">
-      <div className="home-image-wrapper">
+      {/*<div className="home-image-wrapper">
         <Swiper slidesPerView={1} autoplay={{ delay: 3000 }} spaceBetween={0}>
           <SwiperSlide>
             <div className="example">
@@ -54,7 +54,7 @@ export default function Home() {
             </div>
           </SwiperSlide>
         </Swiper>
-      </div>
+  </div>*/}
 
       <section className="home-about-wrapper">
         <div className="home-about-header">
@@ -62,37 +62,40 @@ export default function Home() {
         </div>
         <div className="home-about-text">
           <div className="home-about-title">
-            <h3>MAKE A SPACE YOUR OWN PERSONAL STATEMENT.</h3>
-            <div className="bubble-container">
-              <div className="bubble">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="90.985"
-                  height="66.717"
-                  viewBox="0 0 90.985 66.717"
-                >
-                  <path
-                    id="Trazado_135"
-                    data-name="Trazado 135"
-                    d="M45.492.18c25.315,4.14,45.492,14.6,45.492,32.6s-20.342,38.141-45.492,32.6S0,50.785,0,32.78,20.177-3.96,45.492.18Z"
-                    transform="translate(0 0.401)"
-                    fill="#cecf70"
-                  />
-                  <text
-                    id="LEARN_MORE"
-                    data-name="LEARN MORE"
-                    transform="translate(9.421 36.717)"
-                    fill="#f7f3f0"
-                    font-size="10"
-                    font-family="Raleway-SemiBold, Raleway"
-                    font-weight="600"
-                    letter-spacing="0.1em"
+            <h3>MAKE A SPACE YOUR OWN</h3>
+            <div className="responsive-text">
+              <h3>PERSONAL STATEMENT.</h3>
+              <div className="bubble-container">
+                <div className="bubble">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="90.985"
+                    height="66.717"
+                    viewBox="0 0 90.985 66.717"
                   >
-                    <tspan x="0" y="0">
-                      LEARN MORE
-                    </tspan>
-                  </text>
-                </svg>
+                    <path
+                      id="Trazado_135"
+                      data-name="Trazado 135"
+                      d="M45.492.18c25.315,4.14,45.492,14.6,45.492,32.6s-20.342,38.141-45.492,32.6S0,50.785,0,32.78,20.177-3.96,45.492.18Z"
+                      transform="translate(0 0.401)"
+                      fill="#cecf70"
+                    />
+                    <text
+                      id="LEARN_MORE"
+                      data-name="LEARN MORE"
+                      transform="translate(9.421 36.717)"
+                      fill="#f7f3f0"
+                      font-size="10"
+                      font-family="Raleway-SemiBold, Raleway"
+                      font-weight="600"
+                      letter-spacing="0.1em"
+                    >
+                      <tspan x="0" y="0">
+                        LEARN MORE
+                      </tspan>
+                    </text>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -130,13 +133,14 @@ export default function Home() {
                   <h3>01 · Styling Tips</h3>
                 </div>
                 <div className="slide-text">
-                  <p>Decorate micro spaces and surfaces such as tables, bookshelves & more.</p>
+                  <p>
+                    Decorate micro spaces and surfaces such as tables,
+                    bookshelves & more.
+                  </p>
                 </div>
                 <div className="slide-link">
-                  <Link href='/'>
-                    <a>
-                      View service
-                    </a>
+                  <Link href="/">
+                    <a>View service</a>
                   </Link>
                 </div>
               </div>
@@ -150,13 +154,13 @@ export default function Home() {
                   <h3>02 · Deco Essentials</h3>
                 </div>
                 <div className="slide-text">
-                  <p>Study of the space or room you are looking to transform.</p>
+                  <p>
+                    Study of the space or room you are looking to transform.
+                  </p>
                 </div>
                 <div className="slide-link">
-                  <Link href='/'>
-                    <a>
-                      View service
-                    </a>
+                  <Link href="/">
+                    <a>View service</a>
                   </Link>
                 </div>
               </div>
@@ -170,13 +174,14 @@ export default function Home() {
                   <h3>01 · Styling Tips</h3>
                 </div>
                 <div className="slide-text">
-                  <p>Decorate micro spaces and surfaces such as tables, bookshelves & more.</p>
+                  <p>
+                    Decorate micro spaces and surfaces such as tables,
+                    bookshelves & more.
+                  </p>
                 </div>
                 <div className="slide-link">
-                  <Link href='/'>
-                    <a>
-                      View service
-                    </a>
+                  <Link href="/">
+                    <a>View service</a>
                   </Link>
                 </div>
               </div>
@@ -190,13 +195,13 @@ export default function Home() {
                   <h3>02 · Deco Essentials</h3>
                 </div>
                 <div className="slide-text">
-                  <p>Study of the space or room you are looking to transform.</p>
+                  <p>
+                    Study of the space or room you are looking to transform.
+                  </p>
                 </div>
                 <div className="slide-link">
-                  <Link href='/'>
-                    <a>
-                      View service
-                    </a>
+                  <Link href="/">
+                    <a>View service</a>
                   </Link>
                 </div>
               </div>

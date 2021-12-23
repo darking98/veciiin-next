@@ -46,6 +46,9 @@
           font-size:7vh;
           margin-bottom: 0px;
         }
+        @media(max-width:375px){
+          font-size: 5vh;
+        }
       }
       &-paragraph {
         display: flex;

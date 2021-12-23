@@ -25,7 +25,7 @@ const Contact = () => {
           <input type="phone" placeholder="Enter your phone number" id="phone"/>
           <label for="message">MESSAGE</label>
           <input name="" placeholder="Enter your message" id="message"/>
-          <Bubble size="small" background="#CECF70">Submit</Bubble>
+          <Bubble background="#CECF70">Submit</Bubble>
         </form>
       </div>
     </div>

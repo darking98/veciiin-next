@@ -65,20 +65,18 @@
     }
     .home-about-title {
       display: flex;
+      flex-direction: column;
       position: relative;
       @media (max-width: 1024px) {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 30px;
+        display: inline;
+        //flex-direction: column;
+        //justify-content: center;
+        //align-items: center;
+        //margin-bottom: 30px;
       }
       .bubble-container {
-        //align-self: flex-end;
-        //margin-top: 180px;
-        //margin-right: 30px;
-        right: 0;
-        bottom: -5%;
-        position: absolute;
+        margin-top:60px ;
+        margin-left: 20px;
         @media (max-width: 1000px) {
           margin-top: 0px;
           margin-right: 0px;
@@ -269,6 +267,9 @@
       width: 100%;
       justify-content: space-between;
       max-height: 100vh;
+      @media(max-width:1300px){
+        max-height:none;
+      }
       @media (max-width: 1000px) {
         flex-direction: column;
       }
