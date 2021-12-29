@@ -1,25 +1,31 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useRef } from "react";
 import { NavbarContext } from "../../context/NavProvider";
 import Image from "next/image";
 import botella from "../../images/shop/botella.png";
 import copa from "../../images/shop/copa.png";
 import vaso from "../../images/shop/vaso.png";
 import productos from "../../images/shop/productos.png";
-import firma from "../../images/shop/firma.png";
+import firma from "../../images/shop/firma.svg";
 import producto1 from '../../images/shop/producto1.png'
 import producto2 from '../../images/shop/producto2.png'
 import producto3 from '../../images/shop/producto3.png'
 import producto4 from '../../images/shop/producto4.png'
 import producto5 from '../../images/shop/producto5.png'
 import producto6 from '../../images/shop/producto6.png'
+import arrow from '../../images/Arrow.svg'
 const index = () => {
   const { useNavColor, colors } = useContext(NavbarContext);
   const [mouse, setMouse] = useState(colors.white);
+  const myRef = useRef(null);
+  const executeScroll = () => myRef.current.scrollIntoView();
 
   useNavColor(mouse);
   return (
     <>
       <div className="shop-hero">
+        <div className="arrow" onClick={executeScroll}>
+          <Image src={arrow}/>
+        </div>
         <div className="shop-hero_info">
           <span>Elevate your space</span>
           <div className="shop-hero_title">
@@ -27,7 +33,7 @@ const index = () => {
           </div>
         </div>
       </div>
-      <div className="shop-grid-container">
+      <div className="shop-grid-container" ref={myRef}>
         <div className="shop-grid-item">
           <Image src={copa} />
           <div className="shop-grid-item_info">

@@ -4,9 +4,8 @@ import Image from "next/image";
 import Bubble from "../../components/Bubble";
 import aboutImages from "../../images/about/about-images.png";
 //import aboutHorizontal from "../../images/about/asd.webp";
-import aboutHorizontal from "../../images/about/fotoNaty.png";
+import naty from "../../images/about/NATYVECINO.jpg";
 import aboutFeatured from "../../images/about/Imagen-22.png";
-import naty from "../../images/about/naty.png";
 const About = () => {
   const { useNavColor, colors, open } = useContext(NavbarContext);
   const [mouse, setMouse] = useState(colors.red);
@@ -28,23 +27,18 @@ const About = () => {
                 <div>
                   <h3>{`BEHIND VECIIIN STUDIO\nTHE FOUNDER’S STORY`}</h3>
                 </div>
-                <Bubble background="#CECF70">
-                  Projects
-                </Bubble>
+                <Bubble background="#CECF70">Projects</Bubble>
               </div>
             </div>
           </div>
         </div>
-        <div className="about-image">
-          <div className="about-image-horizontal">
-            <Image src={aboutHorizontal} />
+        <div className="about-wrapper">
+          <div className="about-image">
+            <div className="about-image-horizontal">
+              <Image src={naty} />
+            </div>
           </div>
-          <div className="about-image-vertical">
-            <Image src={naty} />
-          </div>
-        </div>
-        <div className="about-profile second-about">
-          <div className="about-profile-col second-profile-col">
+          <div className="about-profile second-about">
             <p className="second-paragraph ">
               Natalie Vecino’s journey into the art world began in 2012 in New
               York where she studied Strategic Design and Management at Parsons
@@ -53,16 +47,13 @@ const About = () => {
             </p>
             <p className="second-paragraph">
               In addition, she took courses to learn plastic arts at Aschan, an
-              Asian art academy.</p> 
-              <p>In 2015, she was offered her first job in
+              Asian art academy. In 2015, she was offered her first job in
               interior design at a firm whose partners are the creators of many
               famous movie sets such as Sex and the City and The Devil Wears
               Prada. As a result of this experience, Natalie developed an
               interest in interior design and that is why in 2016 she decided to
               move to Miami to continue learning.
             </p>
-          </div>
-          <div className="about-profile-col third-profile-col">
             <p className="second-paragraph">
               Having gained a great deal of experience, two years later she
               returns to Colombia and in 2019 Natalie creates her studio,
@@ -72,8 +63,6 @@ const About = () => {
             <p className="second-paragraph">
               The objective of the studio is to propose fresh, contemporary
               ideas to create functional designs that spark conversation.
-            </p>
-            <p className="second-paragraph">
               Currently, Veciiin studio has completed various projects in
               Colombia and the United States.
             </p>

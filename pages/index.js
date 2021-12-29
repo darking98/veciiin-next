@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Bubble from "../components/Bubble";
@@ -19,19 +19,23 @@ import hero1 from "../images/home/01.jpg";
 import hero2 from "../images/home/02.jpg";
 import hero3 from "../images/home/03.jpg";
 import hero4 from "../images/home/04.jpg";
+import arrow from '../images/Arrow.svg'
 SwiperCore.use([Navigation]);
 SwiperCore.use([Autoplay]);
 export default function Home() {
   const { height, width } = useWindowDimensions();
   const { useNavColor, colors, open } = useContext(NavbarContext);
-
   const [mouse, setMouse] = useState(colors.white);
-
+  const myRef = useRef(null);
+  const executeScroll = () => myRef.current.scrollIntoView();
   useNavColor(mouse);
 
   return (
     <div className="home">
       <div className="home-image-wrapper">
+        <div className="arrow" onClick={executeScroll}>
+          <Image src={arrow}/>
+        </div>
         <Swiper slidesPerView={1} autoplay={{ delay: 3000 }} spaceBetween={0}>
           <SwiperSlide>
             <div className="example">
@@ -56,54 +60,51 @@ export default function Home() {
         </Swiper>
       </div>
 
-      <section className="home-about-wrapper">
+      <section className="home-about-wrapper" ref={myRef}>
         <div className="home-about-header">
           <span className="letter-spacing">About the Studio</span>
         </div>
         <div className="home-about-text">
           <div className="home-about-title">
-            <h3>MAKE A SPACE YOUR OWN</h3>
-            <div className="responsive-text">
-              <h3>PERSONAL STATEMENT.</h3>
-              <div className="bubble-container">
-                <div className="bubble">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="90.985"
-                    height="66.717"
-                    viewBox="0 0 90.985 66.717"
-                  >
-                    <path
-                      id="Trazado_135"
-                      data-name="Trazado 135"
-                      d="M45.492.18c25.315,4.14,45.492,14.6,45.492,32.6s-20.342,38.141-45.492,32.6S0,50.785,0,32.78,20.177-3.96,45.492.18Z"
-                      transform="translate(0 0.401)"
-                      fill="#cecf70"
-                    />
-                    <text
-                      id="LEARN_MORE"
-                      data-name="LEARN MORE"
-                      transform="translate(9.421 36.717)"
-                      fill="#f7f3f0"
-                      font-size="10"
-                      font-family="Raleway-SemiBold, Raleway"
-                      font-weight="600"
-                      letter-spacing="0.1em"
-                    >
-                      <tspan x="0" y="0">
-                        LEARN MORE
-                      </tspan>
-                    </text>
-                  </svg>
-                </div>
-              </div>
-            </div>
+            <h3>{`MAKE A SPACE YOUR OWN\nPERSONAL STATEMENT.`}</h3>
           </div>
           <div className="home-about-info">
             <p>
               We give the places you love a modern, defiant and daring new style
               that you have always dreamed of.
             </p>
+          </div>
+          <div className="bubble-container">
+            <div className="bubble">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="90.985"
+                height="66.717"
+                viewBox="0 0 90.985 66.717"
+              >
+                <path
+                  id="Trazado_135"
+                  data-name="Trazado 135"
+                  d="M45.492.18c25.315,4.14,45.492,14.6,45.492,32.6s-20.342,38.141-45.492,32.6S0,50.785,0,32.78,20.177-3.96,45.492.18Z"
+                  transform="translate(0 0.401)"
+                  fill="#cecf70"
+                />
+                <text
+                  id="LEARN_MORE"
+                  data-name="LEARN MORE"
+                  transform="translate(9.421 36.717)"
+                  fill="#f7f3f0"
+                  font-size="10"
+                  font-family="Raleway-SemiBold, Raleway"
+                  font-weight="600"
+                  letter-spacing="0.1em"
+                >
+                  <tspan x="0" y="0">
+                    LEARN MORE
+                  </tspan>
+                </text>
+              </svg>
+            </div>
           </div>
         </div>
       </section>
@@ -139,7 +140,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="slide-link">
-                  <Link href="/">
+                  <Link href="/services">
                     <a>View service</a>
                   </Link>
                 </div>
@@ -156,6 +157,46 @@ export default function Home() {
                 <div className="slide-text">
                   <p>
                     Study of the space or room you are looking to transform.
+                  </p>
+                </div>
+                <div className="slide-link">
+                  <Link href="/services">
+                    <a>View service</a>
+                  </Link>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="slide-img">
+                <Image src={primero} alt="" />
+              </div>
+              <div className="slide-info">
+                <div className="slide-header">
+                  <h3>03 · Interior Design Development</h3>
+                </div>
+                <div className="slide-text">
+                  <p>
+                    Complete styling of 1 space.
+                  </p>
+                </div>
+                <div className="slide-link">
+                  <Link href="/services">
+                    <a>View service</a>
+                  </Link>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="slide-img">
+                <Image src={segundo} alt="" />
+              </div>
+              <div className="slide-info">
+                <div className="slide-header">
+                  <h3>04 · The Veciiin Design</h3>
+                </div>
+                <div className="slide-text">
+                  <p>
+                    Experience a stress-free full interior design or makeover of one or more spaces.
                   </p>
                 </div>
                 <div className="slide-link">
@@ -171,32 +212,11 @@ export default function Home() {
               </div>
               <div className="slide-info">
                 <div className="slide-header">
-                  <h3>01 · Styling Tips</h3>
+                  <h3>05 · Art Consultation</h3>
                 </div>
                 <div className="slide-text">
                   <p>
-                    Decorate micro spaces and surfaces such as tables,
-                    bookshelves & more.
-                  </p>
-                </div>
-                <div className="slide-link">
-                  <Link href="/">
-                    <a>View service</a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slide-img">
-                <Image src={segundo} alt="" />
-              </div>
-              <div className="slide-info">
-                <div className="slide-header">
-                  <h3>02 · Deco Essentials</h3>
-                </div>
-                <div className="slide-text">
-                  <p>
-                    Study of the space or room you are looking to transform.
+                    Experience a stress-free full interior design or makeover of one or more spaces.
                   </p>
                 </div>
                 <div className="slide-link">

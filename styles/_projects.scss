@@ -249,6 +249,12 @@
           font-family: $raleway;
           font-weight: lighter;
           font-size: 24px;
+          white-space: pre;
+
+          @media (min-width: 280px) and (max-width: 767px){
+            white-space: normal;
+
+          }
         }
         margin-bottom: 20px;
       }

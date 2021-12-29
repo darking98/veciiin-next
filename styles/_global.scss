@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 .bubble {
   display: flex;
   justify-content: center;
@@ -115,5 +120,29 @@ section {
   display: none !important;
   @media(max-width:1024px){
     display: block !important;
+  }
+}
+
+.arrow{
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 99;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  &:hover{
+    animation: arrowAnimation;
+    animation-duration: 300ms;
+    bottom: 6%;
+  }
+}
+
+@keyframes arrowAnimation{
+  0%{
+    bottom: 4%;
+  }
+  100%{
+    bottom: 6%;
   }
 }

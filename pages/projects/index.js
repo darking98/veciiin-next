@@ -104,7 +104,7 @@ const Projects = () => {
         <div className="projects-asked-question-grid">
           <div className="asked-question-grid-item">
             <div className="grid-item-title">
-              <h3>This is the frequently asked q 01?</h3>
+              <h3>What design services do you offer?</h3>
             </div>
             <div className="grid-item-description">
               <p>
@@ -118,7 +118,7 @@ const Projects = () => {
           </div>
           <div className="asked-question-grid-item">
             <div className="grid-item-title">
-              <h3>This is the frequently asked q 02?</h3>
+              <h3>How much do you charge?</h3>
             </div>
             <div className="grid-item-description">
               <p>
@@ -132,7 +132,7 @@ const Projects = () => {
           </div>
           <div className="asked-question-grid-item">
             <div className="grid-item-title">
-              <h3>This is the frequently asked q 03?</h3>
+              <h3>How long does the design process take?</h3>
             </div>
             <div className="grid-item-description">
               <p>
@@ -146,7 +146,35 @@ const Projects = () => {
           </div>
           <div className="asked-question-grid-item">
             <div className="grid-item-title">
-              <h3>This is the frequently asked q 04?</h3>
+              <h3>Can I ask for changes on the proposal?</h3>
+            </div>
+            <div className="grid-item-description">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                suscipit, leo non bibendum bibendum, erat ligula molestie magna,
+                nec egestas orci massa ac elit. Nam pellentesque at diam finibus
+                imperdiet. Aliquam gravida enim eleifend, elementum odio in,
+                iaculis turpis.{" "}
+              </p>
+            </div>
+          </div>
+          <div className="asked-question-grid-item">
+            <div className="grid-item-title">
+              <h3>Hacen asesoría en decoración?</h3>
+            </div>
+            <div className="grid-item-description">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                suscipit, leo non bibendum bibendum, erat ligula molestie magna,
+                nec egestas orci massa ac elit. Nam pellentesque at diam finibus
+                imperdiet. Aliquam gravida enim eleifend, elementum odio in,
+                iaculis turpis.{" "}
+              </p>
+            </div>
+          </div>
+          <div className="asked-question-grid-item">
+            <div className="grid-item-title">
+              <h3>Tienen consultoría en arte?</h3>
             </div>
             <div className="grid-item-description">
               <p>
