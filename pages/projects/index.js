@@ -1,18 +1,19 @@
 import { useContext } from "react";
 import Link from "next/link";
-import image1 from "../../images/projects/image1.jpg";
-import image2 from "../../images/projects/image2.jpg";
-import image3 from "../../images/projects/image3.jpg";
-import image4 from "../../images/projects/image4.jpg";
-import image5 from "../../images/projects/image5.jpg";
-import image6 from "../../images/projects/image6.jpg";
-import image7 from "../../images/projects/image7.jpg";
+import image1 from "../../images/projects/new/image1.png";
+import image2 from "../../images/projects/new/image2.png";
+import image3 from "../../images/projects/new/image3.png";
+import image4 from "../../images/projects/new/image4.png";
+import image5 from "../../images/projects/new/image5.png";
+import image6 from "../../images/projects/new/image6.png";
+import image7 from "../../images/projects/new/image7.png";
+import image8 from "../../images/projects/new/image8.png";
 import { NavbarContext } from "../../context/NavProvider";
 import Image from "next/dist/client/image";
 import Bubble from "../../components/Bubble";
 const Projects = () => {
-  const imagesGroup1 = [image1, image2, image4, image6];
-  const imagesGroup2 = [image3, image5, image7, image7];
+  const imagesGroup1 = [image1, image3, image5, image7];
+  const imagesGroup2 = [image2, image4, image6, image8];
 
   const { useNavColor, colors, open } = useContext(NavbarContext);
 

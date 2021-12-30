@@ -1619,7 +1619,7 @@ section {
 }
 
 .projects-gallery-container .projects-gallery-element .projects-gallery-info h4 {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 @media (max-width: 1500px) {
@@ -3351,10 +3351,6 @@ section {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-}
-
-.shop-collection-info_header div img {
-  margin-left: 20px !important;
 }
 
 .shop-collection-info_header h3 {

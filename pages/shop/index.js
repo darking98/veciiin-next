@@ -88,7 +88,7 @@ const index = () => {
         <div className="shop-collection-info">
           <div className="shop-collection-info_header">
             <div>
-              <h3>The</h3>
+              <h3 style={{marginRight:'20px'}}>The</h3>
               <Image src={firma} />
             </div>
             <h3>Collection</h3>
