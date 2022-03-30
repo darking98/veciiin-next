@@ -25,7 +25,7 @@ const About = () => {
             <div className="col-header">
               <div className="col-header-div">
                 <div>
-                  <h3>{`BEHIND VECIIIN STUDIO\nTHE FOUNDER’S STORY`}</h3>
+                  <h3>{`BEHIND VECIIIN STUDIO/ THE\nFOUNDER’S STORY`}</h3>
                 </div>
                 <Bubble background="#CECF70">Projects</Bubble>
               </div>
@@ -34,9 +34,7 @@ const About = () => {
         </div>
         <div className="about-wrapper">
           <div className="about-image">
-            <div className="about-image-horizontal">
               <Image src={naty} />
-            </div>
           </div>
           <div className="about-profile second-about">
             <p className="second-paragraph ">

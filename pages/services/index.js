@@ -1,13 +1,12 @@
 import React, { useState, useRef, useContext, useEffect } from "react";
 import Collapsible from "react-collapsible";
-import serviceImage from "../../images/services/image1.jpg";
-import serviceImage1 from '../../images/projects/image1.jpg'
-import serviceImage2 from '../../images/projects/image2.jpg'
-import serviceImage3 from '../../images/projects/image3.jpg'
-import serviceImage4 from '../../images/projects/image4.jpg'
-import serviceImage5 from '../../images/projects/image5.jpg'
-import image4 from "../../images/services/image4.png";
-import image5 from "../../images/services/image5.png";
+import serviceImage1 from "../../images/projects/image1.jpg";
+import serviceImage2 from "../../images/projects/image2.jpg";
+import serviceImage3 from "../../images/projects/image3.jpg";
+import serviceImage4 from "../../images/projects/image4.jpg";
+import serviceImage5 from "../../images/projects/image5.jpg";
+import image4 from "../../images/services/image1.jpg";
+import image5 from "../../images/services/image2.jpg";
 import { NavbarContext } from "../../context/NavProvider";
 import arrow from "../../images/Arrow.svg";
 import Image from "next/image";
@@ -69,29 +68,45 @@ Quotes are subject to the project of choice.\n`,
       img: serviceImage4,
     },
     {
+      title: "The Veciiin Design Plus",
+      subtitle: `· Experience a stress-free full interior design or makeover of one or more spaces.\n· 
+This service includes the design or redesign of more than one space or the service of the project manager.\n· 
+Contact us to learn more about our face-to-face personalized consultations, installation services, 3D renderings,\n 
+furniture design, quotes, shopping lists, interior architecture, and renovations.\n· 
+Quotes are subject to the project of choice.\n`,
+      order: "05",
+      img: serviceImage4,
+    },
+    {
       title: "Art Consultation",
       subtitle: `· Experience a stress-free full interior design or makeover of one or more space.\n
 ·Contact us to learn more about our face-to-face personalised consultations, installation services, 3D rendering, \n
       Furniture design, quotes, shopping lists, interior architecture and renovations.`,
-      order: "05",
+      order: "06",
+      img: serviceImage5,
+    },
+    {
+      title: "Furniture Design",
+      subtitle: `· Experience a stress-free full interior design or makeover of one or more space.\n
+·Contact us to learn more about our face-to-face personalised consultations, installation services, 3D rendering, \n
+      Furniture design, quotes, shopping lists, interior architecture and renovations.`,
+      order: "07",
       img: serviceImage5,
     },
   ];
-
 
   const CollapsibleHeader = ({ title, order, img }) => {
     const [toggleOption, setToggleOption] = useState(false);
     const imageHover = useRef({});
     const handleMouseLeave = (e) => {
-      if(width > 1000){
+      if (width > 1000) {
         imageHover.current.style.opacity = 0;
         imageHover.current.style.transform = `translate(-50%, -50%) rotate(-5deg)`;
         imageHover.current.style.transform = "scale(0.8, 0.8)";
       }
-      
     };
     const handleMouseMove = (e) => {
-      if(width > 1000){
+      if (width > 1000) {
         if (toggleOption) {
           imageHover.current.style.opacity = 0;
           imageHover.current.style.transform = `translate(-50%, -50%) rotate(-5deg)`;
@@ -103,13 +118,12 @@ Quotes are subject to the project of choice.\n`,
           imageHover.current.style.left = e.clientX + "px";
         }
       }
-      
     };
     return (
       <div
         onClick={() => setToggleOption(!toggleOption)}
         onMouseMove={(e) => handleMouseMove(e)}
-        onMouseLeave={(e) => handleMouseLeave(e) }
+        onMouseLeave={(e) => handleMouseLeave(e)}
       >
         <div className="services-option-header">
           <span>{order}</span>
@@ -250,53 +264,85 @@ Quotes are subject to the project of choice.\n`,
         <div className="services-quiz-wrapper">
           <div className="services-quiz-info">
             <span className="letter-spacing">Hey!</span>
-            <h3>CAN’T FIND </h3>
-            <h3>WHAT YOU</h3>
-            <h3>ARE LOOKING</h3>
-            <div style={{ display: "flex" }}>
-              <h3>FOR?</h3>
-              <div className="bubble">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="83.984"
-                  height="62.338"
-                  viewBox="0 0 83.984 62.338"
-                >
-                  <path
-                    id="Trazado_135"
-                    data-name="Trazado 135"
-                    d="M41.992.142C65.36,4.01,83.984,13.78,83.984,30.6S65.207,66.241,41.992,61.063,0,47.426,0,30.6,18.625-3.726,41.992.142Z"
-                    transform="translate(0 0.401)"
-                    fill="#cecf70"
-                  />
-                  <text
-                    id="TAKE_OUR_QUIZ"
-                    data-name="TAKE
-OUR QUIZ"
-                    transform="translate(42.282 28.781)"
-                    fill="#f7f3f0"
-                    font-size="10"
-                    font-family="Raleway-SemiBold, Raleway"
-                    font-weight="600"
-                    letter-spacing="0.1em"
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div style={{ display: "flex" }}>
+                <h3>CAN’T FIND </h3>
+                <div className="bubble">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="83.984"
+                    height="62.338"
+                    viewBox="0 0 83.984 62.338"
                   >
-                    <tspan x="-13.935" y="0">
-                      TAKE
-                    </tspan>
-                    <tspan x="-27.575" y="12">
-                      OUR QUIZ
-                    </tspan>
-                  </text>
-                </svg>
+                    <path
+                      id="Trazado_135"
+                      data-name="Trazado 135"
+                      d="M41.992.142C65.36,4.01,83.984,13.78,83.984,30.6S65.207,66.241,41.992,61.063,0,47.426,0,30.6,18.625-3.726,41.992.142Z"
+                      transform="translate(0 0.401)"
+                      fill="#cecf70"
+                    />
+                    <text
+                      id="TAKE_OUR_QUIZ"
+                      data-name="TAKE OUR QUIZ"
+                      transform="translate(42.282 28.781)"
+                      fill="#f7f3f0"
+                      font-size="10"
+                      font-family="Raleway-SemiBold, Raleway"
+                      font-weight="600"
+                      letter-spacing="0.1em"
+                    >
+                      <tspan x="-13.935" y="0">
+                        TAKE
+                      </tspan>
+                      <tspan x="-27.575" y="12">
+                        OUR QUIZ
+                      </tspan>
+                    </text>
+                  </svg>
+                </div>
               </div>
+              <h3>{`WHAT YOU ARE\nLOOKING FOR?`}</h3>
+              <div className="bubble-responsive">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="83.984"
+                    height="62.338"
+                    viewBox="0 0 83.984 62.338"
+                  >
+                    <path
+                      id="Trazado_135"
+                      data-name="Trazado 135"
+                      d="M41.992.142C65.36,4.01,83.984,13.78,83.984,30.6S65.207,66.241,41.992,61.063,0,47.426,0,30.6,18.625-3.726,41.992.142Z"
+                      transform="translate(0 0.401)"
+                      fill="#cecf70"
+                    />
+                    <text
+                      id="TAKE_OUR_QUIZ"
+                      data-name="TAKE OUR QUIZ"
+                      transform="translate(42.282 28.781)"
+                      fill="#f7f3f0"
+                      font-size="10"
+                      font-family="Raleway-SemiBold, Raleway"
+                      font-weight="600"
+                      letter-spacing="0.1em"
+                    >
+                      <tspan x="-13.935" y="0">
+                        TAKE
+                      </tspan>
+                      <tspan x="-27.575" y="12">
+                        OUR QUIZ
+                      </tspan>
+                    </text>
+                  </svg>
+                </div>
             </div>
           </div>
           <div className="services-quiz-images">
             <div>
-              <Image src={image4} alt="" />
+              <Image src={image4} alt="" height="300px" width="400px" />
             </div>
             <div>
-              <Image src={image5} alt="" />
+              <Image src={image5} alt="" height="300px" width="400px" />
             </div>
           </div>
         </div>

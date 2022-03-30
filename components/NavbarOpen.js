@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Bubble from "./Bubble";
 import useWindowDimensions from "../hooks/useWindowsDimensions";
+import {BiShoppingBag} from 'react-icons/bi'
 const NavbarOpen = ({ active, handleActive }) => {
   const { height, width } = useWindowDimensions();
   const router = useRouter();
@@ -95,13 +96,20 @@ const NavbarOpen = ({ active, handleActive }) => {
         <div className="navbar-social">
           <div className="navbar-social-links">
             <Link href="https://instagram.com">
-              <a>
+              <a className="span-link">
                 <span>Instagram</span>
               </a>
             </Link>
             <Link href="https://facebook.com">
-              <a>
+              <a className="span-link">
                 <span>Facebook</span>
+              </a>
+            </Link>
+            <Link href="/cart">
+              <a onClick={handleActive}>
+                <div className="cart-container">
+                  <BiShoppingBag/>
+                </div>
               </a>
             </Link>
           </div>

@@ -7,7 +7,7 @@
   align-items: center;
   padding: 20px 70px;
   //color: $white;
-  z-index: 99;
+  z-index: 999;
   transition: 300ms ease-in-out;
 
   @media(max-width:1023px){
@@ -42,8 +42,6 @@
       display: none;
     }
 
-    .bubble-nav{
-    }
     
   }
 
@@ -59,7 +57,7 @@
     background-color: $white;
     font-family: $ogg;
     transition: 300ms ease-in-out;
-    z-index: 98;
+    z-index: 998;
     overflow-y: hidden;
     
     @media(max-width:1023px){
@@ -98,6 +96,22 @@
           flex-direction: row;
           margin-bottom: 30px;
         }
+
+        &-links{
+          @media(max-width:1023px){
+            display: flex;
+            align-items: center;
+          }
+        }
+        .span-link{
+          transform: rotate(90deg);
+          @media(max-width:1023px){
+            transform: rotate(0deg);
+          }
+          &:hover{
+            color: $yellow;
+          }
+        }
         a{
           display: flex;
           align-content: center;
@@ -107,14 +121,33 @@
           letter-spacing: 2px;
           font-size: 0.8rem;
           margin:100px 0px;
-          transform: rotate(90deg);
           transition: all 300ms ease-in-out;
-          &:hover{
-            color: $yellow;
-          }
+          
           @media(max-width:1023px){
             margin: 0px 20px;
             transform: rotate(0deg);
+          }
+        }
+
+        .cart-container{
+          position:relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;          
+          border-radius: 50%;
+          background-color: $yellow;  
+          height: 50px;
+          width: 50px;
+          svg{
+            font-size: 30px;
+          }
+          .cart-length{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            //transform: translate(-50%, -50%);
+            font-size: 18px;
+            //right: 0;
           }
         }
       }
@@ -125,6 +158,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        text-transform: uppercase;
         @media(max-width:1023px){
           width: auto;
           margin-top:40px;

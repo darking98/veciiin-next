@@ -1,14 +1,10 @@
-import { useState, useEffect, useContext, useRef } from "react";
+import { useState, useContext, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Bubble from "../components/Bubble";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Autoplay } from "swiper";
-import carousel1 from "../images/home/carousel1.png";
-import primero from "../images/home/01.png";
-import segundo from "../images/home/02.png";
-import carousel2 from "../images/home/carousel2.png";
-import project1 from "../images/home/project1.jpg";
+import services from "../shared/services/services";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -19,47 +15,70 @@ import hero1 from "../images/home/01.jpg";
 import hero2 from "../images/home/02.jpg";
 import hero3 from "../images/home/03.jpg";
 import hero4 from "../images/home/04.jpg";
-import arrow from '../images/Arrow.svg'
+import hero5 from "../images/home/05.jpg";
+import hero6 from "../images/home/06.jpg";
+import hero7 from "../images/home/07.jpg";
+import hero8 from "../images/home/08.jpg";
+import arrow from "../images/Arrow.svg";
+import heromobile1 from "../images/home/home-mobile/01.jpg";
+import heromobile2 from "../images/home/home-mobile/02.jpg";
+import heromobile3 from "../images/home/home-mobile/03.jpg";
+import heromobile4 from "../images/home/home-mobile/04.jpg";
+import heromobile5 from "../images/home/home-mobile/05.jpg";
+import heromobile6 from "../images/home/home-mobile/06.jpg";
+import heromobile7 from "../images/home/home-mobile/07.jpg";
+import heromobile8 from "../images/home/home-mobile/08.jpg";
+
 SwiperCore.use([Navigation]);
 SwiperCore.use([Autoplay]);
 export default function Home() {
   const { height, width } = useWindowDimensions();
-  const { useNavColor, colors, open } = useContext(NavbarContext);
-  const [mouse, setMouse] = useState(colors.white);
+  const { useNavColor, colors } = useContext(NavbarContext);
+  const [mouse, setMouse] = useState(colors.red);
   const myRef = useRef(null);
   const executeScroll = () => myRef.current.scrollIntoView();
   useNavColor(mouse);
-
+  const homeImages = [hero1, hero2, hero3, hero4, hero5, hero6, hero7, hero8];
+  const homeMobileImages = [
+    heromobile1,
+    heromobile2,
+    heromobile3,
+    heromobile4,
+    heromobile5,
+    heromobile6,
+    heromobile7,
+    heromobile8,
+  ];
   return (
     <div className="home">
-      <div className="home-image-wrapper">
+      <div className="home-image-wrapper desktop">
         <div className="arrow" onClick={executeScroll}>
-          <Image src={arrow}/>
+          <Image src={arrow} />
         </div>
         <Swiper slidesPerView={1} autoplay={{ delay: 3000 }} spaceBetween={0}>
-          <SwiperSlide>
-            <div className="example">
-              <Image src={hero1} objectFit="cover" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="example">
-              <Image src={hero2} />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="example">
-              <Image src={hero3} />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="example">
-              <Image src={hero4} />
-            </div>
-          </SwiperSlide>
+          {homeImages.map((image) => (
+            <SwiperSlide>
+              <div className="example">
+                <Image src={image} objectFit="cover" priority={true} loading="eager" />
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
-
+      <div className="home-image-wrapper mobile">
+        <div className="arrow" onClick={executeScroll}>
+          <Image src={arrow} />
+        </div>
+        <Swiper slidesPerView={1} autoplay={{ delay: 3000 }} spaceBetween={0}>
+          {homeMobileImages.map((image) => (
+            <SwiperSlide>
+              <div className="example">
+                <Image src={image} objectFit="cover" priority={true} loading="eager"/>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
       <section className="home-about-wrapper" ref={myRef}>
         <div className="home-about-header">
           <span className="letter-spacing">About the Studio</span>
@@ -125,107 +144,26 @@ export default function Home() {
             onSlideChange={() => console.log("slide change")}
             //autoplay={{ delay: 3000 }}
           >
-            <SwiperSlide>
-              <div className="slide-img">
-                <Image src={primero} alt="" />
-              </div>
-              <div className="slide-info">
-                <div className="slide-header">
-                  <h3>01 · Styling Tips</h3>
+            {services.map((service) => (
+              <SwiperSlide>
+                <div className="slide-img">
+                  <Image src={service.image} alt="" />
                 </div>
-                <div className="slide-text">
-                  <p>
-                    Decorate micro spaces and surfaces such as tables,
-                    bookshelves & more.
-                  </p>
+                <div className="slide-info">
+                  <div className="slide-header">
+                    <h3>{service.title}</h3>
+                  </div>
+                  <div className="slide-text">
+                    <p>{service.description}</p>
+                  </div>
+                  <div className="slide-link">
+                    <Link href={service.path}>
+                      <a>View service</a>
+                    </Link>
+                  </div>
                 </div>
-                <div className="slide-link">
-                  <Link href="/services">
-                    <a>View service</a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slide-img">
-                <Image src={segundo} alt="" />
-              </div>
-              <div className="slide-info">
-                <div className="slide-header">
-                  <h3>02 · Deco Essentials</h3>
-                </div>
-                <div className="slide-text">
-                  <p>
-                    Study of the space or room you are looking to transform.
-                  </p>
-                </div>
-                <div className="slide-link">
-                  <Link href="/services">
-                    <a>View service</a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slide-img">
-                <Image src={primero} alt="" />
-              </div>
-              <div className="slide-info">
-                <div className="slide-header">
-                  <h3>03 · Interior Design Development</h3>
-                </div>
-                <div className="slide-text">
-                  <p>
-                    Complete styling of 1 space.
-                  </p>
-                </div>
-                <div className="slide-link">
-                  <Link href="/services">
-                    <a>View service</a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slide-img">
-                <Image src={segundo} alt="" />
-              </div>
-              <div className="slide-info">
-                <div className="slide-header">
-                  <h3>04 · The Veciiin Design</h3>
-                </div>
-                <div className="slide-text">
-                  <p>
-                    Experience a stress-free full interior design or makeover of one or more spaces.
-                  </p>
-                </div>
-                <div className="slide-link">
-                  <Link href="/">
-                    <a>View service</a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slide-img">
-                <Image src={primero} alt="" />
-              </div>
-              <div className="slide-info">
-                <div className="slide-header">
-                  <h3>05 · Art Consultation</h3>
-                </div>
-                <div className="slide-text">
-                  <p>
-                    Experience a stress-free full interior design or makeover of one or more spaces.
-                  </p>
-                </div>
-                <div className="slide-link">
-                  <Link href="/">
-                    <a>View service</a>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </section>
@@ -234,10 +172,7 @@ export default function Home() {
           <div className="home-projects-info">
             <p className="letter-spacing">ABOUT THE STUDIO</p>
             <div className="home-projects-header">
-              <h3>Fresh,</h3>
-              <h3>contemporary</h3>
-              <h3>ideas &</h3>
-              <h3>functional</h3>
+              <h3>{`Fresh,\ncontemporary\nideas &\nfunctional`}</h3>
               <div style={{ display: "flex" }}>
                 <Link href="/projects">
                   <h3>designs.</h3>

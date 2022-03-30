@@ -86,6 +86,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
+      {/*
       <div className="projects-asked-question">
         <span className="letter-spacing">Have a question?</span>
         <div className="projects-asked-question-title">
@@ -188,7 +189,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-      </div>
+            </div>*/}
     </div>
   );
 };

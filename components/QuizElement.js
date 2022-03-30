@@ -73,7 +73,7 @@ const QuizElement = ({
       )}
 
       <div className={(roomSelected && roomSelected.title === room.title) || (stylesSelected && stylesSelected.find(style => style.title === room.title))? "quiz-element-image active" : "quiz-element-image"}>
-        <Image src={room.image} alt="" />
+        <Image src={room.image} alt="" priority={true} loading="eager" />
       </div>
       <div className="quiz-element-title">
         <p>{room.title}</p>

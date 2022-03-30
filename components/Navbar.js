@@ -7,11 +7,11 @@ import Bubble from "./Bubble";
 import Link from "next/link";
 import BubbleNav from "./BubbleNav";
 const Navbar = () => {
-  const { navColor, handleOpenNavbar, open } = useContext(NavbarContext);
+  const { navColor, handleOpenNavbar, open, navBackground } = useContext(NavbarContext);
 
   return (
     <>
-      <nav className="navbar">
+      <nav className="navbar" style={{background:navBackground}}>
         <div className="bubble-container">
           <BubbleNav border={navColor}>Let's Chat!</BubbleNav>
         </div>

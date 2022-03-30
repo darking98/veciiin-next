@@ -6,6 +6,7 @@
   justify-content: space-between;
   @media (max-width: 1180px) {
     justify-content: space-between;
+    height: auto;
   }
   &-follow {
     display: flex;
@@ -60,7 +61,7 @@
       width: 100%;
       border: 1px solid $yellow;
       padding: 20px;
-      @media (max-width: 1024px) {
+      @media (max-width: 1000px) {
         padding: 20px;
         border: none;
       }

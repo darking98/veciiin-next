@@ -15,6 +15,10 @@ import image13 from "../../images/quiz/image13.jpg";
 import image14 from "../../images/quiz/image14.jpg";
 import image15 from "../../images/quiz/image15.jpg";
 import image16 from "../../images/quiz/image16.jpg";
+import image17 from "../../images/quiz/image17.jpg";
+import image18 from "../../images/quiz/image18.jpg";
+import image19 from "../../images/quiz/image19.jpg";
+import image20 from "../../images/quiz/image20.jpg";
 import QuizElement from "../../components/QuizElement";
 import { NavbarContext } from "../../context/NavProvider";
 import Bubble from "../../components/Bubble";
@@ -39,65 +43,82 @@ const Quiz = () => {
       image: image3,
     },
     {
-      title: "Outdoor",
+      title: "Kitchen",
       image: image4,
     },
     {
-      title: "Kitchen",
+      title: "Comercial",
       image: image5,
     },
     {
-      title: "Office",
+      title: "Kid's Rooms",
       image: image6,
     },
     {
-      title: "Kid's Rooms",
+      title: "Family Room",
       image: image7,
     },
     {
-      title: "Family Room",
+      title: "Bathroom",
       image: image8,
+    },
+    {
+      title: "HomeOffice",
+      image: image9,
+    },
+    {
+      title: "Bar",
+      image: image10,
+    },
+    {
+      title: "PowderRoom",
+      image: image11,
     },
   ];
   const styles = [
     {
-      title: "Parisian Chic",
-      image: image9,
-      type: "style",
-    },
-    {
-      title: "Coastal Charm",
-      image: image10,
-      type: "style",
-    },
-    {
-      title: "Modern Glamour",
-      image: image11,
-      type: "style",
-    },
-    {
-      title: "American Classic",
+      title: "Minimal Scandinavian",
       image: image12,
       type: "style",
     },
     {
-      title: "Cabin Refinement",
+      title: "Mid Century Modern",
       image: image13,
       type: "style",
     },
     {
-      title: "Modern Ease",
+      title: "Spanish Rustic",
       image: image14,
       type: "style",
     },
     {
-      title: "Bohemian Allure",
+      title: "Contemporary",
       image: image15,
       type: "style",
     },
     {
-      title: "European Rustic",
+      title: "Bohemian Artsy",
       image: image16,
+      type: "style",
+    },
+    {
+      title: "Traditional",
+      image: image17,
+      type: "style",
+    },
+    {
+      title: "Modern Glam",
+      image: image19,
+      type: "style",
+    },
+    {
+      title: "Industrial",
+      image: image18,
+      type: "style",
+    },
+    {
+      title: "Chinoiserie Chic",
+      image: image20,
       type: "style",
     },
   ];
