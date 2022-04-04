@@ -49,9 +49,7 @@ const Contact = () => {
           />
           <label for="message">MESSAGE</label>
           <input name="" placeholder="Enter your message" id="message" />
-          <button type="submit">
             <Bubble background="#CECF70">Submit</Bubble>
-          </button>
         </form>
       </div>
     </div>
