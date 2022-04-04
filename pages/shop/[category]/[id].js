@@ -7,13 +7,16 @@ import { NavbarContext } from "../../../context/NavProvider";
 import Bubble from "../../../components/Bubble";
 import BuyButtton from "../../../components/BuyButtton";
 import Alert from "../../../components/Alert";
+import Collapsible from "react-collapsible";
+
 const Product = () => {
   const router = useRouter();
   const { id, category } = router.query;
-  const {cart, handleCart, useNavColor, colors } = useContext(NavbarContext);
+  const { cart, handleCart, useNavColor, colors } = useContext(NavbarContext);
   const [product, setProduct] = useState();
   const [amount, setAmount] = useState(1);
   const [productQueue, setProductQueue] = useState([]);
+
   useNavColor(colors.red);
 
   useEffect(() => {
@@ -35,6 +38,16 @@ const Product = () => {
     handleCart(product);
     setProductQueue([...productQueue, product]);
   };
+
+  const CollapsibleHeader = ({text}) => {
+    const [open, setOpen] = useState(false)
+    return(
+    <div className="collapsible-header" onClick={() => setOpen(!open)}>
+      <p>{text}</p>
+      <p>{open ? '-' : '+'}</p>
+    </div>
+    )
+  }
 
   return (
     <>
@@ -85,13 +98,30 @@ const Product = () => {
               <BuyButtton item={product} />
             </div>
             <div className="product-general">
-              <p>General information</p>
+              <Collapsible
+                overflowWhenOpen={"visible"}
+                trigger={
+                  <CollapsibleHeader text={'General Information'}/>
+                    
+                }
+              >
+               <span>Here comes the General Information of the product.</span>
+              </Collapsible>
+              <Collapsible
+                overflowWhenOpen={"visible"}
+                trigger={
+                  <CollapsibleHeader text={'Product Delivery'}/>
+                    
+                }
+              >
+                <span>3 weeks production + Shipping.</span>
+              </Collapsible>
             </div>
           </div>
         </div>
       )}
       {productQueue &&
-        productQueue.map((element,idx) => (
+        productQueue.map((element, idx) => (
           <Alert
             key={idx}
             text={element && element.title}

@@ -2627,7 +2627,7 @@ section {
   }
 }
 
-.Collapsible {
+.services .Collapsible {
   position: relative;
   border-top: 1px solid #CECF70;
   border-bottom: 1px solid #CECF70;
@@ -2635,7 +2635,7 @@ section {
   cursor: pointer;
 }
 
-.Collapsible .Collapsible__contentOuter {
+.services .Collapsible .Collapsible__contentOuter {
   -webkit-transition: all 300ms ease-in-out !important;
   transition: all 300ms ease-in-out !important;
 }
@@ -4468,5 +4468,33 @@ section {
   white-space: pre;
   text-transform: uppercase;
   font-family: "Raleway";
+}
+
+.product-wrapper .product-general {
+  margin-top: 50px;
+}
+
+.product-wrapper .Collapsible {
+  border-bottom: 1px solid black;
+  margin-bottom: 40px;
+  font-family: "Raleway";
+}
+
+.product-wrapper .Collapsible .Collapsible__contentInner {
+  padding-bottom: 30px;
+  font-size: 13px;
+}
+
+.product-wrapper .Collapsible .collapsible-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 12px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -233,14 +233,7 @@ const Service = () => {
             />
           </Collapsible>
         ))}
-        {/*options.map((element) => (
-          <ServiceOption
-            order={element.order}
-            title={element.title}
-            subtitle={element.subtitle}
-            img={element.img}
-          />
-        ))*/}
+
       </div>
       <div className="services-quiz">
         <div className="services-quiz-wrapper">

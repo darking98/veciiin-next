@@ -81,4 +81,31 @@
       }
     }
   }
+
+  .product-general{
+    margin-top: 50px;
+  }
+  .Collapsible{
+    border-bottom: 1px solid black;
+    //padding-bottom: 30px;
+    margin-bottom: 40px;
+    font-family: $raleway;
+
+    span{
+      //display: block;
+      //margin-top: 40px;
+    }
+    .Collapsible__contentInner{
+      padding-bottom: 30px;
+      font-size: 13px;
+    }
+    .collapsible-header{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 12px;
+    }
+  }
 }
