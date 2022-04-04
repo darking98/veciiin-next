@@ -42,10 +42,13 @@ const NavProvider = ({ children }) => {
   };
 
   const handleCart = (product) => {
-    const productFound = cart.find((element) => element.id == product.id);
+    const productFound = cart.find((element) => element.id == product.id)
     if (productFound) {
-      productFound.amount = productFound.amount += product.amount;
-      productFound.total = productFound.amount * productFound.price;
+      //setCart(cart.map())
+      productFound.amount = productFound.amount + product.amount
+      //productFound.map(_product => ({..._product, amount:_product.amount +=product.amount}))
+      //productFound.amount += product.amount;
+      //productFound.total = productFound.amount * productFound.price;
     } else {
       setCart([...cart, product]);
     }
@@ -62,12 +65,12 @@ const NavProvider = ({ children }) => {
       productFound.amount = productFound.amount + 1;
       productFound.total = productFound.amount * productFound.price;
     } else if (action === "-") {
-        if(productFound.amount === 1){
-            removeFromCart(product)
-        }else{
-            productFound.amount = productFound.amount - 1;
-            productFound.total = productFound.amount * productFound.price;
-        }
+      if (productFound.amount === 1) {
+        removeFromCart(product);
+      } else {
+        productFound.amount = productFound.amount - 1;
+        productFound.total = productFound.amount * productFound.price;
+      }
     }
   };
 

@@ -3,7 +3,7 @@ import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import axios from "axios";
 const BuyButtton = ({ item }) => {
   useEffect(() => {
-    console.log(item);
+    //console.log(item);
   }, [item]);
   return (
     <div>

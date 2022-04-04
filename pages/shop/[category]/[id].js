@@ -10,10 +10,10 @@ import Alert from "../../../components/Alert";
 const Product = () => {
   const router = useRouter();
   const { id, category } = router.query;
-  const { cart, handleCart, useNavColor, colors } = useContext(NavbarContext);
+  const {cart, handleCart, useNavColor, colors } = useContext(NavbarContext);
   const [product, setProduct] = useState();
   const [amount, setAmount] = useState(1);
-  const [productQueue, setProductQueue] = useState([])
+  const [productQueue, setProductQueue] = useState([]);
   useNavColor(colors.red);
 
   useEffect(() => {
@@ -21,15 +21,22 @@ const Product = () => {
       const foundProduct = products[category].find(
         (element) => element.id == id
       );
-      setProduct({ ...foundProduct, amount, total: foundProduct.price * amount, singleProduct:true });
+
+      setProduct({
+        ...foundProduct,
+        amount,
+        total: foundProduct.price * amount,
+        singleProduct: true,
+      });
     }
-  }, [id, amount]);
+  }, [id, amount, cart]);
 
   const handleAddCart = () => {
+    console.log(amount)
     handleCart(product);
-    setProductQueue([...productQueue, product])
+    console.log(product)
+    setProductQueue([...productQueue, product]);
   };
-
 
   return (
     <>
@@ -51,28 +58,32 @@ const Product = () => {
               {product.description}
               {product.description}
               {product.description}
-              {product.description}{product.description}
-              {product.description}{product.description}
               {product.description}
-              {product.description}{product.description}
-              {product.description}{product.description}
+              {product.description}
+              {product.description}
+              {product.description}
+              {product.description}
+              {product.description}
+              {product.description}
+              {product.description}
+              {product.description}
               {product.description}
               {product.description}
             </p>
             <div className="product-cart-container">
-              <div style={{display:'flex'}}>
-              <div className="product-cart-handle">
-                <p onClick={() => amount > 1 && setAmount(amount - 1)}>-</p>
-                <span>{amount}</span>
-                <p onClick={() => setAmount(amount + 1)}>+</p>
-              </div>
-              <div>
-                <div className="container" onClick={handleAddCart}>
-                  <Bubble background={"#CECF70"}>Add to cart</Bubble>
+              <div style={{ display: "flex" }}>
+                <div className="product-cart-handle">
+                  <p onClick={() => amount > 1 && setAmount(amount - 1)}>-</p>
+                  <span>{amount}</span>
+                  <p onClick={() => setAmount(amount + 1)}>+</p>
+                </div>
+                <div>
+                  <div className="container" onClick={handleAddCart}>
+                    <Bubble background={"#CECF70"}>Add to cart</Bubble>
+                  </div>
                 </div>
               </div>
-              </div>
-              
+
               <BuyButtton item={product} />
             </div>
             <div className="product-general">
@@ -81,9 +92,15 @@ const Product = () => {
           </div>
         </div>
       )}
-      {productQueue && productQueue.map(element => (
-        <Alert text={element && element.title} active={true} amount={element.amount}/>
-      ))}
+      {productQueue &&
+        productQueue.map((element,idx) => (
+          <Alert
+            key={idx}
+            text={element && element.title}
+            active={true}
+            amount={amount}
+          />
+        ))}
     </>
   );
 };
