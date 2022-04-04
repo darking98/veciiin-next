@@ -44,11 +44,8 @@ const NavProvider = ({ children }) => {
   const handleCart = (product) => {
     const productFound = cart.find((element) => element.id == product.id)
     if (productFound) {
-      //setCart(cart.map())
       productFound.amount = productFound.amount + product.amount
-      //productFound.map(_product => ({..._product, amount:_product.amount +=product.amount}))
-      //productFound.amount += product.amount;
-      //productFound.total = productFound.amount * productFound.price;
+      productFound.total = productFound.amount * productFound.price;
     } else {
       setCart([...cart, product]);
     }

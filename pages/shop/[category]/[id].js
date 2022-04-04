@@ -32,9 +32,7 @@ const Product = () => {
   }, [id, amount, cart]);
 
   const handleAddCart = () => {
-    console.log(amount)
     handleCart(product);
-    console.log(product)
     setProductQueue([...productQueue, product]);
   };
 
