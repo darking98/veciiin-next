@@ -6,16 +6,15 @@ import products from "../../products/products";
 import Link from "next/link";
 import axios from "axios";
 import Papa from "papaparse";
-const index = ({nuevo}) => {
+const index = ({ nuevo }) => {
   const { useNavColor, colors } = useContext(NavbarContext);
   const [mouse, setMouse] = useState(colors.white);
   const myRef = useRef(null);
   const executeScroll = () => myRef.current.scrollIntoView();
   useNavColor(mouse);
 
-  const { glass, books, sculpture } = products;
+  const { glass, books, sculpture, services } = products;
   console.log(nuevo);
-  
 
   return (
     <>
@@ -36,7 +35,9 @@ const index = ({nuevo}) => {
       <div className="shop-grid-container-3-1" ref={myRef}>
         {glass.map((element) => (
           <div className="shop-grid-item">
-            <Image src={element.image} />
+            <div className="shop-grid-item_image">
+              <Image src={element.image} />
+            </div>
             <div className="shop-grid-item_info">
               <div>
                 <div className="shop-grid-item_title">
@@ -63,14 +64,18 @@ const index = ({nuevo}) => {
       <div className="shop-grid-container-3-2">
         {books.map((element) => (
           <div className="shop-grid-item">
-            <Image src={element.image} />
+            <div className="shop-grid-item_image">
+              <Image src={element.image} />
+            </div>
             <div className="shop-grid-item_info">
               <div>
                 <div className="shop-grid-item_title">
                   <h5>{element.title}</h5>
                 </div>
                 <div className="shop-grid-item_description">
-                  <p>{element.description}</p>
+                  <p>
+                    {element.currency} {element.price}
+                  </p>
                 </div>
               </div>
               <div className="shop-grid-item_link">
@@ -90,18 +95,53 @@ const index = ({nuevo}) => {
       <div className="shop-grid-container-2">
         {sculpture.map((element) => (
           <div className="shop-grid-item">
-            <Image src={element.image} />
+            <div className="shop-grid-item_image">
+              <Image src={element.image} />
+            </div>
             <div className="shop-grid-item_info">
               <div>
                 <div className="shop-grid-item_title">
                   <h5>{element.title}</h5>
                 </div>
                 <div className="shop-grid-item_description">
-                  <p>{element.description}</p>
+                  <p>
+                    {element.currency} {element.price}
+                  </p>
                 </div>
               </div>
               <div className="shop-grid-item_link">
                 <Link href={`/shop/sculpture/${element.id}`}>
+                  <a>
+                    <span>Shop Now</span>
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="shop-header-products">
+        <h3>Our Services</h3>
+      </div>
+      <div className="shop-grid-container-3-2">
+        {services.map((element) => (
+          <div className="shop-grid-item">
+            <div className="shop-grid-item_image">
+              <Image src={element.image} />
+            </div>
+            <div className="shop-grid-item_info">
+              <div>
+                <div className="shop-grid-item_title">
+                  <h5>{element.title}</h5>
+                </div>
+                <div className="shop-grid-item_description">
+                  <p>
+                    {element.currency} {element.price}
+                  </p>
+                </div>
+              </div>
+              <div className="shop-grid-item_link">
+                <Link href={`/shop/services/${element.id}`}>
                   <a>
                     <span>Shop Now</span>
                   </a>
@@ -127,18 +167,18 @@ export async function getStaticProps() {
       Papa.parse(res.data, {
         header: true,
         complete: (result) => {
-          console.log(result)
+          console.log(result);
           return result;
         },
-        error:(error) => {
+        error: (error) => {
           return error.message;
-        }
+        },
       })
     );
-    const nuevo = JSON.stringify(productos)
+  const nuevo = JSON.stringify(productos);
   return {
-    props: {nuevo}, // will be passed to the page component as props
-  }
+    props: { nuevo }, // will be passed to the page component as props
+  };
 }
 
 export default index;

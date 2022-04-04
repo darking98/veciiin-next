@@ -1,10 +1,12 @@
 .cart {
+  
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  //justify-content: center;
+  //align-items: center;
   font-family: $raleway;
   flex-direction: column;
+  padding:100px 0px ;
 
   .table-container{
       display: flex;
@@ -36,12 +38,8 @@
       td {
         padding: 20px 0px;
       }
-
-      tr:nth-child(odd) {
-        //background-color: #242424ad;
-      }
-      tr:nth-child(even) {
-        //background-color: #cdcf7093;
+      tr{
+        border-bottom: 1px solid $yellow;
       }
       .td-title {
         display: flex;
@@ -105,17 +103,27 @@
       display: flex;
       justify-content: flex-end;
         align-self: flex-end;
-
+      margin-top: 40px;
+      margin-right: 70px;
       flex: 1;
-
+      @media(max-width:600px){
+        flex-direction: column;
+        margin: auto;
+      }
       p{
           font-size: 12px;
           text-transform: uppercase;
           margin: 0px 40px;
+          @media(max-width:600px){
+            margin:20px 0px;
+          }
       }
 
       .cart-total-value{
         font-weight: 600;
+        @media(max-width:600px){
+          margin-left: 20px;
+        }
       }
   }
 }

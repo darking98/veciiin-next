@@ -97,9 +97,9 @@
         }
       }
       h3 {
-        font-size: 11vh;
+        font-size: 9vh;
         @media (max-width: 1300px) {
-          font-size: 10vh;
+          font-size: 8vh;
         }
         @media (max-width: 1024px) {
           font-size: 6vh;
@@ -133,7 +133,7 @@
     flex-direction: column;
     background-color: $red;
     color: $white;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     height: auto !important;
     @media (max-width: 1000px) {
       justify-content: center;
@@ -142,9 +142,9 @@
     .home-service-header-wrapper {
       width: 100%;
       display: flex;
-      padding: 30px 248px 30px 60px;
+      padding: 30px 248px 80px 60px;
       @media (max-width: 1000px) {
-        padding: 20px 30px 50px 30px;
+        padding: 20px 30px 40px 30px;
         align-items: center;
       }
       .home-service-header {
@@ -235,10 +235,8 @@
             font-family: $raleway;
           }
           h3 {
-            font-size: 5vh;
-            @media (max-width: 1280px) {
-              font-size: 5vh;
-            }
+            font-size: 4vh;
+            
 
             @media(max-width:900px){
               text-align: center;

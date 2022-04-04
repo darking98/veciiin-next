@@ -35,6 +35,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 40%;
+    margin-bottom: 50px;
     @media(max-width:1400px){
       width: 50%;
     }
@@ -44,8 +45,9 @@
     .second-paragraph{
       //margin-bottom: 40px;
       font-size: 16px;
-      line-height: 1.5rem;
+      line-height: 2.5rem;
       @media(max-width:1400px){
+        line-height: 1.8rem;
         font-size: 13px;
       }
       @media(max-width:968px){
@@ -54,6 +56,20 @@
       }
     }
 
+    &-h3-bubble{
+      display: flex;
+      align-items: center;
+      @media(max-width:900px){
+        flex-direction: column;
+
+      }
+      .bubble{
+        margin-left: 20px;
+        @media(max-width:900px){
+          margin-left: 0px;
+        }
+      }
+    }
     @media(max-width:1400px){
       justify-content: space-between;
     }
@@ -101,7 +117,6 @@
           text-align: center;
         }
         .bubble {
-          align-self: flex-end;
           color: $white;
           font-weight: 600;
           letter-spacing: 1px;

@@ -18,6 +18,13 @@ import sculptureDetail1 from '../images/products/sculpture/detail/1.jpg'
 import sculptureDetail2 from '../images/products/sculpture/detail/2.jpg'
 import sculptureDetail3 from '../images/products/sculpture/detail/3.jpg'
 import sculptureDetail4 from '../images/products/sculpture/detail/4.jpg'
+import services1 from '../images/products/sevices/1.jpg'
+import services2 from '../images/products/sevices/2.jpg'
+import services3 from '../images/products/sevices/3.jpg'
+import services4 from '../images/products/sevices/4.jpg'
+import services5 from '../images/products/sevices/5.jpg'
+import services6 from '../images/products/sevices/6.jpg'
+
 const products = {
   glass: [
     {
@@ -142,6 +149,62 @@ const products = {
       detailImage:sculptureDetail4
     },
   ],
+  services :[
+    {
+      id:14, 
+      title:'Styling Tips',
+      price:40,
+      currency:"U$D",
+      description:'Little description',
+      image:services1,
+      detailImage:services1
+    },
+    {
+      id:15, 
+      title:'Deco Essentials',
+      price:40,
+      currency:"U$D",
+      description:'Little description',
+      image:services2,
+      detailImage:services2
+    },
+    {
+      id:16, 
+      title:'Furniture Design',
+      price:40,
+      currency:"U$D",
+      description:'Little description',
+      image:services3,
+      detailImage:services3
+    },
+    {
+      id:17, 
+      title:'The Veciiin Design',
+      price:40,
+      currency:"U$D",
+      description:'Little description',
+      image:services4,
+      detailImage:services4
+    },
+    {
+      id:18, 
+      title:'The Veciiin Design Plus',
+      price:40,
+      currency:"U$D",
+      description:'Little description',
+      image:services5,
+      detailImage:services5
+    },
+    {
+      id:19, 
+      title:'Art Consultation',
+      price:40,
+      currency:"U$D",
+      description:'Little description',
+      image:services6,
+      detailImage:services6
+    }
+  ]
 };
 
 export default products;

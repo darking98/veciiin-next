@@ -6,12 +6,14 @@ import Spinner from "../../../components/Spinner";
 import { NavbarContext } from "../../../context/NavProvider";
 import Bubble from "../../../components/Bubble";
 import BuyButtton from "../../../components/BuyButtton";
+import Alert from "../../../components/Alert";
 const Product = () => {
   const router = useRouter();
   const { id, category } = router.query;
   const { cart, handleCart, useNavColor, colors } = useContext(NavbarContext);
   const [product, setProduct] = useState();
   const [amount, setAmount] = useState(1);
+  const [productQueue, setProductQueue] = useState([])
   useNavColor(colors.red);
 
   useEffect(() => {
@@ -25,7 +27,10 @@ const Product = () => {
 
   const handleAddCart = () => {
     handleCart(product);
+    setProductQueue([...productQueue, product])
   };
+
+
   return (
     <>
       {!product ? (
@@ -76,6 +81,9 @@ const Product = () => {
           </div>
         </div>
       )}
+      {productQueue && productQueue.map(element => (
+        <Alert text={element && element.title} active={true} amount={element.amount}/>
+      ))}
     </>
   );
 };

@@ -114,7 +114,6 @@
       border-bottom: none !important;
     }
     :nth-child(6){
-      border-bottom: none !important;
       border-top: none !important;
     }
     .services-option {
@@ -394,7 +393,7 @@
   position: relative;
   border-top: 1px solid $yellow;
   border-bottom: 1px solid $yellow;
-  padding: 40px 40px;
+  padding: 50px;
   cursor: pointer;
   
   .Collapsible__contentOuter{
@@ -429,6 +428,7 @@
     flex: 3;
     display: flex;
     margin-left: -10px;
+    flex-direction: column;
     p{
       font-family: $raleway;
       font-size: 14px;
@@ -440,5 +440,24 @@
       }
     }
   
+  }
+
+  .collapsible-inquire{
+    display: flex;
+    white-space: pre;
+    margin-left: 20px;
+
+    a{
+      font-size: 15px;
+    color: $red;
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: $raleway;
+    }
+
+    p{
+      color: $yellow;
+      font-weight: bold;
+    }
   }
 }

@@ -78,8 +78,11 @@ const index = () => {
       )}
 
       <div className="cart-total">
-        <p>Cart total</p>
-        <p className="cart-total-value">U$D {cartTotal()}</p>
+        <div style={{display:'flex'}}>
+          <p>Cart total</p>
+          <p className="cart-total-value">U$D {cartTotal()}</p>
+
+        </div>
         <BuyButtton item={products}/>
       </div>
     </div>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Bubble from "../components/Bubble";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Autoplay } from "swiper";
+import SwiperCore, { Navigation, Autoplay, EffectFade } from "swiper";
 import services from "../shared/services/services";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -28,9 +28,11 @@ import heromobile5 from "../images/home/home-mobile/05.jpg";
 import heromobile6 from "../images/home/home-mobile/06.jpg";
 import heromobile7 from "../images/home/home-mobile/07.jpg";
 import heromobile8 from "../images/home/home-mobile/08.jpg";
-
 SwiperCore.use([Navigation]);
 SwiperCore.use([Autoplay]);
+SwiperCore.use([EffectFade]);
+import 'swiper/css/effect-fade';
+
 export default function Home() {
   const { height, width } = useWindowDimensions();
   const { useNavColor, colors } = useContext(NavbarContext);
@@ -55,11 +57,27 @@ export default function Home() {
         <div className="arrow" onClick={executeScroll}>
           <Image src={arrow} />
         </div>
-        <Swiper slidesPerView={1} autoplay={{ delay: 3000 }} spaceBetween={0}>
+        <Swiper
+          loop={true}
+          slidesPerView={1}
+          autoplay={{ delay: 1000 }}
+          spaceBetween={0}
+          effect="fade"
+          keyboard={{
+            enabled: true,
+            onlyInViewport: false,
+          }}
+          //fadeEffect={{ crossFade: true }}
+        >
           {homeImages.map((image) => (
             <SwiperSlide>
               <div className="example">
-                <Image src={image} objectFit="cover" priority={true} loading="eager" />
+                <Image
+                  src={image}
+                  objectFit="cover"
+                  priority={true}
+                  loading="eager"
+                />
               </div>
             </SwiperSlide>
           ))}
@@ -73,7 +91,12 @@ export default function Home() {
           {homeMobileImages.map((image) => (
             <SwiperSlide>
               <div className="example">
-                <Image src={image} objectFit="cover" priority={true} loading="eager"/>
+                <Image
+                  src={image}
+                  objectFit="cover"
+                  priority={true}
+                  loading="eager"
+                />
               </div>
             </SwiperSlide>
           ))}

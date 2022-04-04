@@ -25,9 +25,13 @@ const About = () => {
             <div className="col-header">
               <div className="col-header-div">
                 <div>
-                  <h3>{`BEHIND VECIIIN STUDIO/ THE\nFOUNDER’S STORY`}</h3>
+                  <h3>BEHIND VECIIIN STUDIO/ THE</h3>
+                  <div className="about-profile-h3-bubble">
+                    <h3>FOUNDER’S STORY</h3>
+                    <Bubble background="#CECF70">Projects</Bubble>
+                  </div>
+                  
                 </div>
-                <Bubble background="#CECF70">Projects</Bubble>
               </div>
             </div>
           </div>
