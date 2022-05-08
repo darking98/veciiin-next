@@ -22,7 +22,7 @@ import image20 from "../../images/quiz/image20.jpg";
 import QuizElement from "../../components/QuizElement";
 import { NavbarContext } from "../../context/NavProvider";
 import Bubble from "../../components/Bubble";
-
+import Head from "next/head";
 const Quiz = () => {
   const { useNavColor, colors, open } = useContext(NavbarContext);
   useNavColor(colors.red);
@@ -124,63 +124,68 @@ const Quiz = () => {
   ];
 
   return (
-    <div className="quiz">
-      <div className="quiz-info">
-        <span>Take our quick Quiz</span>
-        <h3>{`WHAT SPACE WOULD\nYOU LIKE TO CHANGE?`}</h3>
-      </div>
-      <div className="quiz-game-container">
-        {rooms.map((room) => (
-          <QuizElement
-            room={room}
-            roomSelected={roomSelected}
-            setRoomSelected={setRoomSelected}
-          />
-        ))}
-      </div>
-      {roomSelected && (
-        <>
-          <div className="quiz-info">
-            <h3>{`WHAT STYLES\nDEFINE YOU?`}</h3>
-            <p>Choose as many as you’d like!</p>
-          </div>
-          <div className="quiz-game-container">
-            {styles.map((room) => (
-              <QuizElement
-                room={room}
-                stylesSelected={stylesSelected}
-                setStylesSelected={setStylesSelected}
-              />
-            ))}
-          </div>
-        </>
-      )}
-      {stylesSelected.length === 2 && (
-        <div className="contact contact-quiz">
-          <div className="contact-wrapper">
-            <div className="contact-info">
-              <span>We will get in touch</span>
-              <h3 className="quiz-h3">{`LET’S CREATE\nTHE SPACE OF\nYOUR DREAMS`}</h3>
-            </div>
-            <form className="contact-form form-quiz">
-              <label for="name">NAME</label>
-              <input type="text" placeholder="Enter your name" id="name" />
-              <label for="email">EMAIL</label>
-              <input type="email" placeholder="Enter your email" id="email" />
-              <label for="phone">PHONE</label>
-              <input
-                type="phone"
-                placeholder="Enter your phone number"
-                id="phone"
-              />
-              <label for="message">MESSAGE</label>
-              <input name="" placeholder="Enter your message" id="message" />
-              <Bubble background="#CECF70">Submit</Bubble>
-            </form>
-          </div>
+    <>
+      <Head>
+        <title>Try our Quest</title>
+      </Head>
+      <div className="quiz">
+        <div className="quiz-info">
+          <span>Take our quick Quiz</span>
+          <h3>{`WHAT SPACE WOULD\nYOU LIKE TO CHANGE?`}</h3>
         </div>
-      )}
-    </div>
+        <div className="quiz-game-container">
+          {rooms.map((room) => (
+            <QuizElement
+              room={room}
+              roomSelected={roomSelected}
+              setRoomSelected={setRoomSelected}
+            />
+          ))}
+        </div>
+        {roomSelected && (
+          <>
+            <div className="quiz-info">
+              <h3>{`WHAT STYLES\nDEFINE YOU?`}</h3>
+              <p>Choose as many as you’d like!</p>
+            </div>
+            <div className="quiz-game-container">
+              {styles.map((room) => (
+                <QuizElement
+                  room={room}
+                  stylesSelected={stylesSelected}
+                  setStylesSelected={setStylesSelected}
+                />
+              ))}
+            </div>
+          </>
+        )}
+        {stylesSelected.length === 2 && (
+          <div className="contact contact-quiz">
+            <div className="contact-wrapper">
+              <div className="contact-info">
+                <span>We will get in touch</span>
+                <h3 className="quiz-h3">{`LET’S CREATE\nTHE SPACE OF\nYOUR DREAMS`}</h3>
+              </div>
+              <form className="contact-form form-quiz">
+                <label for="name">NAME</label>
+                <input type="text" placeholder="Enter your name" id="name" />
+                <label for="email">EMAIL</label>
+                <input type="email" placeholder="Enter your email" id="email" />
+                <label for="phone">PHONE</label>
+                <input
+                  type="phone"
+                  placeholder="Enter your phone number"
+                  id="phone"
+                />
+                <label for="message">MESSAGE</label>
+                <input name="" placeholder="Enter your message" id="message" />
+                <Bubble background="#CECF70">Submit</Bubble>
+              </form>
+            </div>
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 

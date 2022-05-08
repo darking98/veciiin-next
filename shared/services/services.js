@@ -8,25 +8,25 @@ import image6 from '../../images/home/services/06.jpg'
 const services = [
     {
         title:'01 · Styling Tips',
-        description:'Decorate spaces and surfaces such as tables, bookshelves & more.',
+        description:'Decorate spaces and surfaces such as tables, bookshelves & more',
         image:image1,
         path:'/services'
     },
     {
         title:'02 · Deco Essentials',
-        description:'Design consultation of the room you are looking to transform.',
+        description:'Design consultation of the room you are looking to transform',
         image:image2,
         path:'/services'
     },
     {
         title:'03 · The Veciiin Design',
-        description:'Complete styling of one space.',
+        description:'Complete styling of one space in 3D rendering',
         image:image3,
         path:'/services'
     },
     {
         title:'04 · The Veciiin Design Plus',
-        description:'Expeience a stress-free full interior design or makeover of one or more spaces.',
+        description:'Experience a stress-free full interior design or makeover of one or more spaces',
         image:image4,
         path:'/services'
     },

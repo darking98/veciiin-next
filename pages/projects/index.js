@@ -11,43 +11,62 @@ import image8 from "../../images/projects/new/image8.png";
 import { NavbarContext } from "../../context/NavProvider";
 import Image from "next/dist/client/image";
 import Bubble from "../../components/Bubble";
-const Projects = () => {
-  const imagesGroup1 = [image1, image3, image5, image7];
-  const imagesGroup2 = [image2, image4, image6, image8];
+import Head from "next/head";
 
+const Projects = () => {
+  //const imagesGroup1 = [image1, image3, image5, image7];
+  //const imagesGroup2 = [image2, image4, image6, image8];
+
+  const imagesGroup1 = [
+    {
+      image: image1,
+      title: "Chateau",
+    },
+    {
+      image: image3,
+      title: "Ferreti",
+    },
+    {
+      image: image5,
+      title: "Hayde",
+    },
+    {
+      image: image7,
+      title: "Mirage 57",
+    },
+  ];
+  const imagesGroup2 = [
+    {
+      image: image2,
+      title: "Di Mirage",
+    },
+    {
+      image: image4,
+      title: "Gallery",
+    },
+    {
+      image: image6,
+      title: "Lenox",
+    },
+    {
+      image: image8,
+      title: "OM",
+    },
+  ];
   const { useNavColor, colors, open } = useContext(NavbarContext);
 
   useNavColor(colors.red);
 
   return (
-    <div className="projects-container">
+    <>
+      <Head>
+        <title>Veciiin Projects</title>
+      </Head>
       <div className="projects">
         <div className="projects-fixed">
-          <span className="letter-spacing">Our Work</span>
           <div className="projects-fixed-container-title">
-            <div style={{ display: "flex" }}>
-              <h3>A curated</h3>
-              <div className="bubble-container hide-responsive">
-                <Link href="/services">
-                  <a>
-                    <Bubble background="#CECF70">Services</Bubble>
-                  </a>
-                </Link>
-              </div>
-            </div>
-            <h3>selection of</h3>
-            <h3>our projects.</h3>
-
-            <div
-              className="bubble-container show-responsive"
-              style={{ alignSelf: "flex-end", marginTop: "20px" }}
-            >
-              <Link href="/services">
-                <a>
-                  <Bubble background="#CECF70">Services</Bubble>
-                </a>
-              </Link>
-            </div>
+            <span className="letter-spacing">Our Work</span>
+            <h3>{`A curated selection\nof our projects`}</h3>
           </div>
         </div>
 
@@ -55,15 +74,9 @@ const Projects = () => {
           <div className="projects-gallery group1">
             {imagesGroup1.map((element) => (
               <div className="projects-gallery-element">
-                <Image src={element} alt="" />
+                <Image src={element.image} alt="" />
                 <div className="projects-gallery-info">
-                  <h4>Nombre Proyecto</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean urna urna, condimentum in velit a, pellentesque
-                    iaculis urna. Aliquam et urna erat. Donec luctus, dui ut
-                    scelerisque facilisis, quam purus.
-                  </p>
+                  <h4>{element.title}</h4>
                 </div>
               </div>
             ))}
@@ -71,21 +84,25 @@ const Projects = () => {
           <div className="projects-gallery group2">
             {imagesGroup2.map((element) => (
               <div className="projects-gallery-element">
-                <Image src={element} alt="" />
+                <Image src={element.image} alt="" />
                 <div className="projects-gallery-info">
-                  <h4>Nombre Proyecto</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean urna urna, condimentum in velit a, pellentesque
-                    iaculis urna. Aliquam et urna erat. Donec luctus, dui ut
-                    scelerisque facilisis, quam purus.
-                  </p>
+                  <h4>{element.title}</h4>
                 </div>
               </div>
             ))}
           </div>
         </div>
+        <div className="sticky-stop">
+          <Link href="/services">
+            <a>
+              <div className="bubble-container">
+                <Bubble background="#CECF70">Services</Bubble>
+              </div>
+            </a>
+          </Link>
+        </div>
       </div>
+
       {/*
       <div className="projects-asked-question">
         <span className="letter-spacing">Have a question?</span>
@@ -190,7 +207,7 @@ const Projects = () => {
           </div>
         </div>
             </div>*/}
-    </div>
+    </>
   );
 };
 

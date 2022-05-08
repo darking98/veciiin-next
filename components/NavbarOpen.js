@@ -22,37 +22,24 @@ const NavbarOpen = ({ active, handleActive }) => {
     ],
     [
       {
-        title: "Services",
+        title: "Projects",
         order: "03",
-        path: "/services",
+        path: "/projects",
       },
 
       {
-        title: "Projects",
-        order: "04",
-        path: "/projects",
-      },
-    ],
-    [
-      {
         title: "Quiz",
-        order: "05",
+        order: "04",
         path: "/quiz",
       },
-      {
-        title: "Shop",
-        order: "06",
-        path: "/shop",
-      },
-      
     ],
     [
       {
         title: "Contact",
-        order: "07",
+        order: "05",
         path: "/contact",
-      }
-    ]
+      },
+    ],
   ];
   return (
     <div className={active ? "navbar-open nav-transititon" : "navbar-open"}>
@@ -105,13 +92,7 @@ const NavbarOpen = ({ active, handleActive }) => {
                 <span>Facebook</span>
               </a>
             </Link>
-            <Link href="/cart">
-              <a onClick={handleActive}>
-                <div className="cart-container">
-                  <BiShoppingBag/>
-                </div>
-              </a>
-            </Link>
+            
           </div>
         </div>
       </div>

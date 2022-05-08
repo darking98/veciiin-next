@@ -1631,13 +1631,30 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
   background-color: #F7F3F0;
   padding-left: 150px;
   padding-right: 150px;
-  padding-top: 250px;
-  padding-bottom: 100px;
   color: #242424;
+}
+
+.projects .bubble-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #F7F3F0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: "Raleway";
 }
 
 @media (max-width: 1500px) {
@@ -1649,7 +1666,7 @@ section {
 
 @media (max-width: 1180px) {
   .projects {
-    padding: 100px 30px;
+    padding: 40px 30px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1668,33 +1685,23 @@ section {
           flex-direction: column;
   position: -webkit-sticky;
   position: sticky;
-  top: 80px;
-  height: 100%;
-  width: 90%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
   text-transform: uppercase;
-}
-
-.projects-fixed .bubble-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  color: #F7F3F0;
-  font-weight: 600;
-  letter-spacing: 1px;
-  font-size: 10px;
-  text-transform: uppercase;
-  font-family: "Raleway";
-  margin-left: 20px;
-  margin-bottom: 20px;
+  top: 0px;
 }
 
 @media (max-width: 1180px) {
   .projects-fixed {
     position: static;
-    margin-bottom: 40px;
+    margin: 40px 0px;
+    height: 30vh;
   }
 }
 
@@ -1705,6 +1712,7 @@ section {
 }
 
 .projects-fixed-container-title {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1713,6 +1721,7 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   white-space: pre;
+  text-align: center;
 }
 
 @media (max-width: 1180px) {
@@ -1722,6 +1731,7 @@ section {
 }
 
 .projects-fixed-container-title h3 {
+  z-index: 99;
   font-weight: 400;
   font-size: 70px;
   line-height: 1;
@@ -1729,13 +1739,13 @@ section {
 
 @media (max-width: 1180px) {
   .projects-fixed-container-title h3 {
-    font-size: 8vh;
+    font-size: 6vh;
   }
 }
 
 @media (max-width: 700px) {
   .projects-fixed-container-title h3 {
-    font-size: 6vh;
+    font-size: 4vh;
   }
 }
 
@@ -1748,11 +1758,10 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-left: 100px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -1794,7 +1803,6 @@ section {
 }
 
 .projects-gallery-container .group1 {
-  margin-top: -100px;
   margin-right: 20px;
 }
 
@@ -1811,17 +1819,35 @@ section {
   }
 }
 
-.projects-gallery-container .group2 :last-child {
-  margin-bottom: 0px;
+.projects-gallery-container .group2 {
+  margin-top: 200px;
+}
+
+.projects-gallery-container .group2 .projects-gallery-element:nth-child(2) {
+  margin-right: 100px;
+}
+
+@media (max-width: 1180px) {
+  .projects-gallery-container .group2 {
+    margin-top: 0px;
+  }
+  .projects-gallery-container .group2 .projects-gallery-element:nth-child(2) {
+    margin-right: 0px;
+  }
 }
 
 .projects-gallery-container .projects-gallery-element {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   color: #F7F3F0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 @media (max-width: 1180px) {
@@ -1835,14 +1861,14 @@ section {
 }
 
 .projects-gallery-container .projects-gallery-element .projects-gallery-info {
+  width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1912,139 +1938,27 @@ section {
   }
 }
 
-.projects-asked-question {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 150px;
-  padding-right: 150px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-@media (max-width: 1180px) {
-  .projects-asked-question {
-    padding: 100px 30px;
-  }
-}
-
-.projects-asked-question span {
-  text-transform: uppercase;
-  opacity: 0.7;
-  font-size: 12px;
-  margin-bottom: 30px;
-}
-
-.projects-asked-question-title {
-  text-align: center;
-  margin-bottom: 100px;
-}
-
-@media (min-width: 280px) and (max-width: 767px) {
-  .projects-asked-question-title {
-    margin-bottom: 50px;
-  }
-}
-
-.projects-asked-question-title div {
+.sticky-stop {
+  height: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.projects-asked-question-title div .header-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-@media (max-width: 1024px) {
-  .projects-asked-question-title div .header-container {
-    -webkit-box-flex: 1;
-        -ms-flex: auto;
-            flex: auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-.projects-asked-question-title div .bubble {
-  margin-left: 20px;
-  color: #F7F3F0;
-  letter-spacing: 1px;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-family: "Raleway";
-}
-
-@media (max-width: 1024px) {
-  .projects-asked-question-title div .bubble {
-    justify-self: flex-end;
-  }
-}
-
-.projects-asked-question-title h3 {
-  font-size: 8vh;
-  opacity: 0.8;
-  line-height: 1;
-  text-transform: uppercase;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 @media (max-width: 1180px) {
-  .projects-asked-question-title h3 {
-    font-size: 6vh;
+  .sticky-stop {
+    height: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 40px;
   }
-}
-
-.projects-asked-question-grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  gap: 100px;
-}
-
-@media (max-width: 1180px) {
-  .projects-asked-question-grid {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-.projects-asked-question-grid .asked-question-grid-item .grid-item-title {
-  margin-bottom: 20px;
-}
-
-.projects-asked-question-grid .asked-question-grid-item .grid-item-title h3 {
-  font-family: "Raleway";
-  font-weight: lighter;
-  font-size: 24px;
-  white-space: pre;
-}
-
-@media (min-width: 280px) and (max-width: 767px) {
-  .projects-asked-question-grid .asked-question-grid-item .grid-item-title h3 {
-    white-space: normal;
-  }
-}
-
-.projects-asked-question-grid .asked-question-grid-item .grid-item-description {
-  font-size: 12px;
-  line-height: 1.5rem;
 }
 
 .services {

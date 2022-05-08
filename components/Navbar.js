@@ -1,19 +1,21 @@
 import React, { useContext } from "react";
 import NavbarOpen from "./NavbarOpen";
-//import Bubble from "./Bubble";
 import { NavbarContext } from "../context/NavProvider";
-//import { Link } from "react-router-dom";
-import Bubble from "./Bubble";
 import Link from "next/link";
 import BubbleNav from "./BubbleNav";
 const Navbar = () => {
-  const { navColor, handleOpenNavbar, open, navBackground } = useContext(NavbarContext);
+  const { navColor, handleOpenNavbar, open, navBackground } =
+    useContext(NavbarContext);
 
   return (
     <>
-      <nav className="navbar" style={{background:navBackground}}>
+      <nav className="navbar" style={{ background: navBackground }}>
         <div className="bubble-container">
-          <BubbleNav border={navColor}>Let's Chat!</BubbleNav>
+          <Link href="https://wa.me/573145958238">
+            <a target="_blank">
+              <BubbleNav border={navColor}>Let's Chat!</BubbleNav>
+            </a>
+          </Link>
         </div>
         <div className="navbar-title">
           <Link href="/">
