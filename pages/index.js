@@ -12,12 +12,9 @@ import useWindowDimensions from "../hooks/useWindowsDimensions";
 import { NavbarContext } from "../context/NavProvider";
 import project2 from "../images/home/servicios.JPG";
 import hero1 from "../images/home/1.jpg";
-import hero2 from "../images/home/02.jpg";
 import hero3 from "../images/home/3.jpg";
 import hero4 from "../images/home/4.jpg";
 import hero5 from "../images/home/5.jpg";
-import hero6 from "../images/home/06.jpg";
-import hero7 from "../images/home/07.jpg";
 import hero8 from "../images/home/8.jpg";
 import arrow from "../images/Arrow.svg";
 import heromobile1 from "../images/home/home-mobile/01.jpg";
@@ -41,7 +38,7 @@ export default function Home() {
   const myRef = useRef(null);
   const executeScroll = () => myRef.current.scrollIntoView();
   useNavColor(mouse);
-  const homeImages = [hero1, hero2, hero3, hero4, hero5, hero6, hero7, hero8];
+  const homeImages = [hero1, hero3, hero4, hero5, hero8];
   const homeMobileImages = [
     heromobile1,
     heromobile2,
