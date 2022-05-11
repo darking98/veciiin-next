@@ -1538,6 +1538,10 @@ section {
   }
 }
 
+.footer-follow h3:hover {
+  color: #CECF70;
+}
+
 .footer-social-images {
   width: 100%;
   display: -webkit-box;

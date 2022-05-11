@@ -32,6 +32,10 @@
       @media(max-width:1000px){
         font-size: 8vh;
       }
+
+      &:hover{
+        color:$yellow;
+      }
     }
   }
   &-social-images {
