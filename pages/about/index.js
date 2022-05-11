@@ -76,20 +76,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="about-featured" style={{ height: "100vh" }}>
-          <div className="about-featured-header">
-            <span>Studios Veciiin has been</span>
-            <h3>Featured On</h3>
-          </div>
-          <div className="about-featured-companies">
-            <div className="about-image-horizontal">
-              <Image src={aboutImages} />
-            </div>
-            <div className="about-image-vertical">
-              <Image src={aboutFeatured} />
-            </div>
-          </div>
-        </div>
+        
       </div>
     </>
   );
