@@ -122,7 +122,7 @@ export default function Home() {
 
             <div className="bubble-container">
               <div className="bubble">
-                <Link href="/about">
+                <Link href="#">
                   <a>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +188,7 @@ export default function Home() {
                       <p>{service.description}</p>
                     </div>
                     <div className="slide-link">
-                      <Link href={service.path}>
+                      <Link href="#">
                         <a>View service</a>
                       </Link>
                     </div>
@@ -205,10 +205,10 @@ export default function Home() {
               <div className="home-projects-header">
                 <h3>{`Fresh,\ncontemporary\nideas &\nfunctional`}</h3>
                 <div style={{ display: "flex" }}>
-                  <Link href="/projects">
+                  <Link href="#">
                     <h3>designs</h3>
                   </Link>
-                  <Link href="/projects">
+                  <Link href="#">
                     <a>
                       <Bubble background={"#CECF70"}>Projects</Bubble>
                     </a>

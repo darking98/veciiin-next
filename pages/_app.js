@@ -15,7 +15,7 @@ const Navbar = dynamic(
 function MyApp({ Component, pageProps }) {
   return (
     <NavProvider>
-      <Navbar />
+      {/*<Navbar />*/}
       <Component {...pageProps} />
       <Footer />
     </NavProvider>
