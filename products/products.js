@@ -76,7 +76,7 @@ const products = {
     },
     {
       id: 6,
-      title: "Beso Carafe & Glass",
+      title: "Art House",
       price: 68,
       currency: "U$D",
       description: "Little description",

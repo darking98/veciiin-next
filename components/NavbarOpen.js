@@ -105,7 +105,13 @@ const NavbarOpen = ({ active, handleActive }) => {
                 <span>Facebook</span>
               </a>
             </Link>
-            
+            <Link href="/cart">
+              <a onClick={handleActive}>
+                <div className="cart-container">
+                  <BiShoppingBag/>
+                </div>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
