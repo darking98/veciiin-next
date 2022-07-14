@@ -155,18 +155,42 @@ const products = {
       title:'Styling Tips',
       price:40,
       currency:"U$D",
-      description:'Little description',
+      description:`
+· AVAILABLE ONLINE ONLY\n
+· Advice on how to decorate micro spaces and surfaces such as tables, bookshelves, and walls.\n
+·  20 Minute Call.\n
+·  1 Moodboard + 2 Rounds of revision.\n
+·  Basic Design Consultation on (choose one):\n
+    •      Choice of wallpaper\n
+    •      Choice of art\n
+    •      Choice of lighting\n
+    •      Choice of paint color\n
+    •      Choice of art and mirrors\n
+    •      Choice of decor and books\n
+    •      Choice of pillows and throws\n
+    •      Choice of rugs\n
+      `,
       image:services1,
-      detailImage:services1
+      detailImage:services1,
+      generalInformation:'Decorate spaces and surfaces such as tables, bookshelves & more'
     },
     {
       id:15, 
       title:'Deco Essentials',
-      price:40,
+      price:150,
       currency:"U$D",
-      description:'Little description',
+      description:`
+· AVAILABLE ONLINE ONLY\n
+· A personalized study on the current state of the room you are looking to transform.\n
+· Includes:\n
+    •      1 hour video call with design suggestions and answer any questions you may have.\n
+    •      Establishing a style and color palette.\n
+    •      Mood board of the space.\n
+    •      Shopping List.\n
+      `,
       image:services2,
-      detailImage:services2
+      detailImage:services2,
+      generalInformation:'Design consultation of the room you are looking to transform'
     },
     {
       id:16, 
@@ -180,20 +204,39 @@ const products = {
     {
       id:17, 
       title:'The Veciiin Design',
-      price:40,
+      price:450,
       currency:"U$D",
-      description:'Little description',
+      description:`
+· Complete styling of 1 room.\n
+· Includes:\n
+    •      A 1-hour meeting to learn about your needs and the current state of the room you want to design or redecorate.\n
+    •      2 style proposals, color palette, and choice of furniture.\n
+    •      2 different room plans to help you decide on the best location for your furniture.\n
+    •      A 1-hour conversation on the delivered 3D render of the final design of your room.\n
+    •      10% Discount on Veciiin furniture.\n
+      `,
       image:services4,
-      detailImage:services4
+      detailImage:services4,
+      generalInformation:'Complete styling of one space in 3D rendering'
     },
     {
       id:18, 
       title:'The Veciiin Design Plus',
       price:40,
       currency:"U$D",
-      description:'Little description',
+      description:`
+·  PERSONALIZED CONSULTATION: AVAILABLE ONLINE AND IN PERSON.\n
+·  Experience a stress-free tailored interior design service or makeover of one or more spaces.\n
+·  This service includes design direction and project management of more than one\n
+   space.\n
+·  Contact us to learn more about our face-to-face personalized consultations,\n
+   installation services, 3D renderings, furniture design, quotes, shopping lists, interior\n
+   architecture, and renovations.\n
+   <b>·  Quotes are subject to the project of choice.</b>
+      `,
       image:services5,
-      detailImage:services5
+      detailImage:services5,
+      generalInformation:'Experience a stress-free full interior design or makeover of one or more spaces'
     },
     {
       id:19, 

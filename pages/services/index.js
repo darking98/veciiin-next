@@ -7,6 +7,7 @@ import arrow from "../../images/Arrow.svg";
 import Image from "next/image";
 import useWindowDimensions from "../../hooks/useWindowsDimensions";
 import Link from "next/link";
+import Bubble from "../../components/Bubble";
 const Service = () => {
   const { height, width } = useWindowDimensions();
   const { useNavColor, colors } = useContext(NavbarContext);
@@ -18,6 +19,7 @@ const Service = () => {
     {
       title: "Styling Tips",
       subtitle: `
+      · AVAILABLE ONLINE ONLY\n
       · Advice on how to decorate micro spaces and surfaces such as tables, bookshelves, and walls.\n
       ·  20 Minute Call.\n
       ·  1 Moodboard + 2 Rounds of revision.\n
@@ -26,6 +28,10 @@ const Service = () => {
         •      Choice of art\n
         •      Choice of lighting\n
         •      Choice of paint color\n
+        •      Choice of art and mirrors\n
+        •      Choice of decor and books\n
+        •      Choice of pillows and throws\n
+        •      Choice of rugs\n
       `,
       order: "01",
       link: "14",
@@ -34,7 +40,8 @@ const Service = () => {
     {
       title: "Deco Essentials",
       subtitle: `
-      ·  A personalized study on the current state of the room you are looking to transform.\n
+      · AVAILABLE ONLINE ONLY\n
+      · A personalized study on the current state of the room you are looking to transform.\n
       · Includes:\n
         •      1 hour video call with design suggestions and answer any questions you may have.\n
         •      Establishing a style and color palette.\n
@@ -43,33 +50,34 @@ const Service = () => {
       `,
       order: "02",
       link: "15",
-      price: "40",
+      price: "150",
     },
     {
       title: "The Veciiin Design",
       subtitle: `
-      · Complete styling of 1 space.\n
+      · Complete styling of 1 room.\n
       · Includes:\n
         •      A 1-hour meeting to learn about your needs and the current state of the room you want to design or redecorate.\n
-        •      2 style proposals, color pallete, and choice of furniture.\n
+        •      2 style proposals, color palette, and choice of furniture.\n
         •      2 different room plans to help you decide on the best location for your furniture.\n
         •      A 1-hour conversation on the delivered 3D render of the final design of your room.\n
-        •      15% Discount on Veciiin furniture.\n
+        •      10% Discount on Veciiin furniture.\n
       `,
       order: "03",
       link: "17",
-      price: "40",
+      price: "450",
     },
     {
       title: "The Veciiin Design Plus",
       subtitle: `
-      ·  Experience a stress-free full interior design or makeover of one or more spaces.\n
+      ·  PERSONALIZED CONSULTATION: AVAILABLE ONLINE AND IN PERSON.\n
+      ·  Experience a stress-free tailored interior design service or makeover of one or more spaces.\n
       ·  This service includes design direction and project management of more than one\n
       space.\n
       ·  Contact us to learn more about our face-to-face personalized consultations,\n
       installation services, 3D renderings, furniture design, quotes, shopping lists, interior\n
       architecture, and renovations.\n
-      ·  Quotes are subject to the project of choice.
+      <b>·  Quotes are subject to the project of choice.</b>
       `,
       order: "04",
       link: "18",
@@ -190,10 +198,10 @@ const Service = () => {
         <div className="collapsible-subtitle">
           <div></div>
           <div className="collapsible-paragraph">
-            <p>{subtitle}</p>
+            <p dangerouslySetInnerHTML={{__html:subtitle}}></p>
             <div className="collapsible-inquire">
               <Link href={`shop/services/${id}`}>
-                <a>Inquire now</a>
+                <a><Bubble background={"#CECF70"}>Shop now</Bubble></a>
               </Link>
               <p>   U$D {price}</p>
             </div>

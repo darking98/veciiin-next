@@ -63,23 +63,7 @@ const Product = () => {
             <p className="product-price">
               {product.currency} {product.price}
             </p>
-            <p className="product-description">
-              {product.description}
-              {product.description}
-              {product.description}
-              {product.description}
-              {product.description}
-              {product.description}
-              {product.description}
-              {product.description}
-              {product.description}
-              {product.description}
-              {product.description}
-              {product.description}
-              {product.description}
-              {product.description}
-              {product.description}
-              {product.description}
+            <p className="product-description" dangerouslySetInnerHTML={{__html:product.description}}>
             </p>
             <div className="product-cart-container">
               <div style={{ display: "flex" }}>
@@ -94,8 +78,6 @@ const Product = () => {
                   </div>
                 </div>
               </div>
-
-              <BuyButtton item={product} />
             </div>
             <div className="product-general">
               <Collapsible
@@ -105,7 +87,7 @@ const Product = () => {
                     
                 }
               >
-               <span>Here comes the General Information of the product.</span>
+               <span>{product.generalInformation ? product.generalInformation : "Here comes the General Information of the product."}</span>
               </Collapsible>
               <Collapsible
                 overflowWhenOpen={"visible"}
