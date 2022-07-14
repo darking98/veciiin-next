@@ -4256,6 +4256,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 10vh;
 }
 
 @media (max-width: 960px) {
@@ -4264,6 +4265,7 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-top: 7vh;
   }
 }
 
@@ -4323,6 +4325,13 @@ section {
 .product-wrapper .product-info .product-description {
   margin-bottom: 20px;
   font-size: 14px;
+  white-space: pre;
+}
+
+@media (max-width: 960px) {
+  .product-wrapper .product-info .product-description {
+    white-space: break-spaces;
+  }
 }
 
 .product-wrapper .product-info .product-cart-container {
